@@ -19,14 +19,52 @@ body{
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
 .contact-form{
-    max-width: 550px;
-    margin: 0 auto;
-    background: rgba(0,0,0,0.8);
+    max-width: 300px;
+    margin: auto;
+    background: rgba(202, 202, 202, 0.85);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
+    padding: 30px;
+
+}
+.logo h1{
+    text-align: center;
+    margin-bottom: 10px;
+    clear: #D00A53;
+}
+
+.input-fields{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 12px;
+}
+
+.input{
+    margin: 0px 0px;
+    background: transparent;
+    border: 1.5px solid #D00A53;
+    text-align: center;
+    border-radius: 8px;
+    width: 100%;
+    padding: 10px;
+}
+
+.button{
+    margin:auto;
+    background: #D00A53;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+::-webkit-input-placeholder{
+color: #D00A53;;
+
 }

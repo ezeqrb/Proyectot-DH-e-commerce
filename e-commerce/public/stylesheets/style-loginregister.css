@@ -11,26 +11,27 @@
 body{
     background: url('/images/bg.jpg') no-repeat top center;
     background-size: cover;
-    height: 1000vh;
+    
 }
 
-.container{
+.container-login{
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    padding: 0 10px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    
+    
 }
 
 .contact-form{
-    max-width: 300px;
     margin: auto;
     background: rgba(202, 202, 202, 0.85);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     padding: 30px;
-
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.85);
 }
 .logo h1{
     text-align: center;

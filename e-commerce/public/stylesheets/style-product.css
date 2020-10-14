@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+    
+    font-size: 25px;
+};
+
+main{
+    
+}
+main .contenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+

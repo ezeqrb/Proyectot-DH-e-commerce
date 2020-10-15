@@ -69,3 +69,10 @@ body{
 color: #D00A53;;
 
 }
+
+.socialmedia {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 30px;
+}

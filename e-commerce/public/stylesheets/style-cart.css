@@ -23,14 +23,15 @@ body .container header .logo{
 
 main{
     display: flex;
-    flex-direction: row;
-    height: 600px;
+    flex-direction: column;
+    height: 320px;
     background-color: burlywood;
+    align-items: center;
 }
 
 .product {
-    width: 30%;
-    height: 300px;
+    width: 60%;
+    height: 320px;
     background-color: crimson;
     border: solid 1px white;
 }

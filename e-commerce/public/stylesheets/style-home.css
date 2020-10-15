@@ -1,0 +1,93 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:  'Roboto', sans-serif;
+}
+header{
+    background-color: rgb(190, 190, 190);
+    display: flex;
+    align-items: center;
+    margin: 0px auto ;
+
+
+}
+.titulo, .menu, .logo{
+    display: inline-block;
+    
+    
+    
+}
+.titulo{
+    
+    color: #fff;
+    padding: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: top;
+    padding:
+
+    
+}
+.menu{  
+    text-align: center;
+    padding: 30px;  
+}
+
+
+.logo{
+    text-align: center;
+    padding: 10px;
+}
+.carrito, .deseados, .entrar{
+    color: #fff;
+    padding: 3px;
+}
+.menu2, .envio{
+    display: inline-block;
+    padding-left: 50px;
+    
+ }
+ .envio{
+     text-align: center;
+     padding: ;
+     
+ }
+.categoria{
+    background: #eaeaea;
+    text-align: center;
+    
+}
+.menu2{
+    margin-right:50% ;
+}
+
+
+.formasdepago{
+    background-color:#E0FCCA;
+    text-align: center;
+    padding: 40px 0px 0px 0px;
+    margin: 0% 11%;
+    
+}
+
+.visa, .mercadopago, .mastercard, .paypal{
+    padding: 0px 30px;
+}
+.ofertaimagen{
+    text-align: center;
+    
+}
+
+.contenidoprincipal{
+    text-align: center;
+    padding: 15px 20px;
+    
+}
+.banner{
+    text-align: center;
+}
+

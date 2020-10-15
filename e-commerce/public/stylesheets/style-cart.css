@@ -20,3 +20,17 @@ body .container header .logo{
     padding-top: 70px;
     padding-bottom: 70px ;
 }
+
+main{
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+    background-color: burlywood;
+}
+
+.product {
+    width: 30%;
+    height: 300px;
+    background-color: crimson;
+    border: solid 1px white;
+}

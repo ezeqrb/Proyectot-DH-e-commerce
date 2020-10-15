@@ -53,13 +53,19 @@ justify-content: center;
 .options ul{
     display: flex;
     flex-direction: row;
- 
+    list-style-type: none;
+   
 
+}
+.options li{
+    margin-right: 10px;
 }
 
 }
 .description{
     display: flex;
+    flex-direction: row;
     justify-content: center;
+   
 }
 

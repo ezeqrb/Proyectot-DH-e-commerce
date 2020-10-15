@@ -26,21 +26,40 @@ header{
     flex-direction: row;
     background-color:red;
     justify-content: center;
-
+a
 }
 .table{
+    display: flex;
+    flex-direction: column;
     border: solid 1px black;
     
+
+}
+
+.imagen img{
+    width: 400px;
+}
+.imagen{
+display: flex;
+align-items: center;
+justify-content: center;
 }
 .options{
-    padding: 20px;
-    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
 }
 .options ul{
     display: flex;
     flex-direction: row;
+ 
+
 }
 
-.contenedor img{
-    width: 10%;
 }
+.description{
+    display: flex;
+    justify-content: center;
+}
+

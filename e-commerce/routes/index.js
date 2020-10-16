@@ -20,4 +20,7 @@ router.get('/cart', function(req, res, next) {
 router.get('/home', function(req, res, next) {
   res.render('home');
 });
-module.exports = router;
+router.get('/register', function(req, res, next) {
+  res.render('register');
+});
+module.exports = router ;

@@ -53,13 +53,67 @@ justify-content: center;
 .options ul{
     display: flex;
     flex-direction: row;
- 
+    list-style-type: none;
+   
 
+}
+.options li{
+    margin-right: 10px;
 }
 
 }
 .description{
     display: flex;
+    flex-direction: row;
     justify-content: center;
+   
+}
+footer{
+ 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: grey;
 }
 
+.contfoot{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    width: 75%;
+}
+
+footer .uno{
+    width: 24%;
+    background-color: teal;
+    border-right: solid 2px black;
+    height: 200px;
+}
+footer .uno img{
+    width: 70%;
+    height: 70%px;
+
+}
+footer .dos{
+    width: 24%;
+    background-color: teal;
+    border-right: solid 2px black;
+    border-left: solid 2px black;
+    height: 200px;
+}
+
+footer .tres{
+    width: 24%;
+    background-color: teal;
+    border-right: solid 2px black;
+    border-left: solid 2px black;
+    height: 200px;
+}
+
+footer .cuatro{
+    width: 24%;
+    background-color: teal;
+    border-left: solid 2px black;
+    height: 200px;
+}

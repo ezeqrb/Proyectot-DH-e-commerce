@@ -20,3 +20,25 @@ body .container header .logo{
     padding-top: 70px;
     padding-bottom: 70px ;
 }
+
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: burlywood;
+    align-items: center;
+}
+
+.product {
+    width: 60%;
+    height: 320px;
+    background-color: crimson;
+    border: solid 1px white;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    height: 50px;
+}

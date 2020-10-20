@@ -1,68 +1,113 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
 }
 body{
     font-family:  'Roboto', sans-serif;
 }
 header{
-    background-color: rgb(190, 190, 190);
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center ;
+}
+
+a:link {
+    color:black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: red;
+    background-color: transparent;
+    border-bottom: solid 2px red;
+}
+
+.search{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: solid black 2px;
+    border-radius: 30px;
+    width: 250px;
+}
+.search input{
+    border: none;
+    background-color: transparent;
+    padding: 3px;
+    font-size: 20px;
+}
+.search input:focus{
+    outline: none;
+    
+}
+.box1{
+    width: 100%;
+    height: 70%;
     display: flex;
     align-items: center;
-    margin: 0px auto ;
-
-
-}
-.titulo, .menu, .logo{
-    display: inline-block;
-    
-    
+    justify-content: space-between;
+    padding: 0 30px;
     
 }
-.titulo{
-    
-    color: #fff;
-    padding: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: top;
-    padding:
-
-    
+.box2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+    background-color: black;
+    color: white;
 }
+
+
 .menu{  
-    text-align: center;
+   
     padding: 30px;  
-}
-
-
-.logo{
-    text-align: center;
-    padding: 10px;
-}
-.carrito, .deseados, .entrar{
-    color: #fff;
-    padding: 3px;
-}
-.menu2, .envio{
-    display: inline-block;
-    padding-left: 50px;
+   
     
- }
- .envio{
-     text-align: center;
-     padding: ;
+}
+.menu a,i{
+    color: black;
+    margin-right: 10px;
+    font-size: 20px ;
+}
+
+
+ 
+
+.nav{
+    display: flex;
+}
+.nav ul{
      
- }
-.categoria{
-    background: #eaeaea;
-    text-align: center;
+    display: flex;
     
 }
-.menu2{
-    margin-right:50% ;
+.nav ul li{
+     
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 20px;
+    font-size: 20px;
+    
+}
+.nav ul li a{
+    color: black;
 }
 
 
@@ -91,3 +136,34 @@ header{
     text-align: center;
 }
 
+
+
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 200;
+    width: 80%;
+}
+
+.envios, .pagos , .contacto{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 100px;
+    margin: 0 50px;
+    border: 2px solid black;
+    border-radius: 30px;
+    height: 75px;
+    
+}
+
+.info i{
+   font-size: 40px;
+}
+.info h3{
+    font-size:22px;
+
+}

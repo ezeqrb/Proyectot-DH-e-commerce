@@ -111,33 +111,6 @@ a:link {
 }
 
 
-.formasdepago{
-    background-color:#E0FCCA;
-    text-align: center;
-    padding: 40px 0px 0px 0px;
-    margin: 0% 11%;
-    
-}
-
-.visa, .mercadopago, .mastercard, .paypal{
-    padding: 0px 30px;
-}
-.ofertaimagen{
-    text-align: center;
-    
-}
-
-.contenidoprincipal{
-    text-align: center;
-    padding: 15px 20px;
-    
-}
-.banner{
-    text-align: center;
-}
-
-
-
 .info{
     display: flex;
     flex-direction: row;
@@ -152,7 +125,7 @@ a:link {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0 100px;
+    padding: 0 110px;
     margin: 0 50px;
     border: 2px solid black;
     border-radius: 30px;
@@ -166,4 +139,58 @@ a:link {
 .info h3{
     font-size:22px;
 
+}
+
+.mosaico1{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 50px 2px 2px 2px;
+    
+    height: 400px;
+    
+}
+
+.mosaico2{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0px 2px; 
+    height: 400px;
+    
+}
+
+.img30{
+    width: 35%;
+}
+.img30 img{
+    width: 100%;
+    height: 100%;
+}
+
+.img20{
+    width:30%;
+
+}
+.img20 img{
+    width: 100%;
+    height: 100%;
+}
+
+.img60{
+    width: 60%;
+}
+.img60 img{
+    width: 100%;
+    height:100% ;
+}
+
+.img40{
+    width: 40%;
+}
+.img40 img{
+    width: 100%;
+    height: 100%;
 }

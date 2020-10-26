@@ -9,6 +9,8 @@
 body{
     font-family:  'Roboto', sans-serif;
 }
+
+/* HEADER*/
 header{
     height: 100px;
     display: flex;
@@ -16,13 +18,6 @@ header{
     align-items: center;
 }
 
-main{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center ;
-    position: relative;
-}
 
 a:link {
     color:black;
@@ -111,7 +106,16 @@ a:link {
     color: black;
 }
 
+/* MAIN*/
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center ;
+    position: relative;
+}
 
+/* PARTE SUPERIOR A LOS MOSAICOS DE IMAGENES */
 .info{
     display: flex;
     flex-direction: row;
@@ -141,7 +145,7 @@ a:link {
     font-size:22px;
 
 }
-
+/* MOSAICO 1*/
 .mosaico1{
     width: 70%;
     display: flex;
@@ -152,7 +156,7 @@ a:link {
     height: 400px;
     
 }
-
+/*MOSAICO 2*/
 .mosaico2{
     width: 70%;
     display: flex;
@@ -196,21 +200,29 @@ a:link {
     height: 100%;
 }
 
+/* CARRUSEL */
 .carrusel {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 90%;
+    margin-top: 40px;
 }
 
 .logos-marcas {
     display: flex;
-    width: 100%;
+    width:98%;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .imagen-logo {
     width: 20%;
-    height: 50px;
+    height: 200px;
 }
 
+.imagen-logo img {
+    width: 100%;
+    height: 100%;
+}

@@ -21,6 +21,7 @@ main{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center ;
+    position: relative;
 }
 
 a:link {
@@ -194,3 +195,22 @@ a:link {
     width: 100%;
     height: 100%;
 }
+
+.carrusel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logos-marcas {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.imagen-logo {
+    width: 20%;
+    height: 50px;
+}
+

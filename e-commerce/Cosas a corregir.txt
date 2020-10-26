@@ -1,0 +1,1 @@
+Home: Para que sea responsive faltaria adaptar la parte superior, principalmente la primer imagen que aparece en la pagina.

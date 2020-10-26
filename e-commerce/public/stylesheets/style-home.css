@@ -237,21 +237,21 @@ ______________________________________
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
-    margin-top: 40px;
+    width: 80%;
+    margin-top: 50px;
 }
 
 .logos-marcas {
     display: flex;
-    width:98%;
+    width:90%;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 
 .imagen-logo {
-    width: 20%;
-    height: 200px;
+    width: 150px;
+    height: 100px;
 }
 
 .imagen-logo img {

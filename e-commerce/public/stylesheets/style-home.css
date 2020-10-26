@@ -19,6 +19,13 @@ header{
 }
 
 
+/* 
+_____________________________________________________
+
+HEADER 
+_____________________________________________________
+*/
+
 a:link {
     color:black;
     background-color: transparent;
@@ -114,6 +121,13 @@ main{
     justify-content: center ;
     position: relative;
 }
+/* 
+_____________________________________________
+
+PRIMER BANNER 
+
+_____________________________________________
+*/
 
 /* PARTE SUPERIOR A LOS MOSAICOS DE IMAGENES */
 .info{
@@ -146,6 +160,15 @@ main{
 
 }
 /* MOSAICO 1*/
+
+/* 
+____________________________________________________
+
+IMAGENES
+
+____________________________________________________
+*/
+
 .mosaico1{
     width: 70%;
     display: flex;
@@ -200,7 +223,16 @@ main{
     height: 100%;
 }
 
-/* CARRUSEL */
+/*
+______________________________________
+
+CARRUSEL
+
+______________________________________
+
+*/
+
+
 .carrusel {
     display: flex;
     justify-content: space-between;

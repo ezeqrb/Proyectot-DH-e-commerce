@@ -143,7 +143,23 @@ main{
     background-color: #F3F2F3;
     position: relative;
 }
-
+.imagen{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+    flex-direction: column;
+}
+.cantidad{
+    display: flex;
+    justify-content: space-around;
+    
+    padding-left: 10%;
+}
 .caja1 {
     display: flex;
     flex-direction: row;
@@ -189,6 +205,8 @@ main{
     justify-content: center;
     background-color: red;
     align-items: center;
+    width: 310px;
+    text-align: center;
 
 }
     

@@ -1,78 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     outline: none;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'oswald', sans-serif;
 }
 
 body{
-    background: url('/images/bg.jpg') no-repeat top center;
-    background-size: cover;
-    
+    background-image: url(/images/bgw.jpg);
+    background-size: cover ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.container-login{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 400px;
-    
-    
-}
+
 
 .contact-form{
-    margin: auto;
-    background: rgba(202, 202, 202, 0.85);
+
+    background: rgb(243, 243, 243);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     padding: 30px;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.85);
+  
+    width: 350px;
+    height: 500px;
 }
-.logo h1{
+h1{
     text-align: center;
-    margin-bottom: 10px;
-    clear: #D00A53;
 }
-
+h3{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 5px;
+}
 .input-fields{
-    width: 100%;
-    margin: auto;
-    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
 }
 
-.input{
-    margin: 0px 0px;
+.input-fields input{
+    font-weight: 300;
+    font-size: 16px;
+    padding: 0px , 20px;
     background: transparent;
-    border: 1.5px solid #D00A53;
+    border: none;
+    border-bottom: 1.5px solid #616161;
     text-align: center;
-    border-radius: 8px;
     width: 100%;
     padding: 10px;
 }
+.send{
 
-.button{
-    margin:auto;
-    background: #D00A53;
-    padding: 10px;
-    border-radius: 8px;
-    width: 100%;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+    
+}
+.button {
+    transition-duration: 0.5s;
+    padding: 5px 100px;
+    border-radius: 17px;
+   border: 1px solid grey;
+   font-size: 15px;
+}
+  
+.button:hover {
+    background-color: #d6002a; /* Green */
     color: white;
+    
 }
 
 ::-webkit-input-placeholder{
-color: #D00A53;;
+color: #616161;
 
 }
 
-.socialmedia {
+.social {
     display: flex;
+    flex-direction: column;
     align-items: center;
+}
+
+.social ul{
+    display: flex;
     justify-content: space-around;
+    margin: 10px;
     font-size: 30px;
+    width: 50%;
+    list-style:none;
+}
+.register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.fab fa-facebook-square{
+    color: #3b5998;
+}
+a{
+    color:#d6002a
+    
 }

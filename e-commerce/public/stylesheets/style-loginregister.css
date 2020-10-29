@@ -10,6 +10,7 @@
 
 body{
     background-image: url(/images/bgw.jpg);
+    background-size: cover ;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -26,8 +27,8 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-   padding: 30px;
- 
+    padding: 30px;
+  
     width: 350px;
     height: 500px;
 }
@@ -38,6 +39,7 @@ h3{
     text-align: center;
     font-size: 14px;
     font-weight: 400;
+    margin-top: 5px;
 }
 .input-fields{
     display: flex;
@@ -48,7 +50,8 @@ h3{
 
 .input-fields input{
     font-weight: 300;
-    margin: 0px 0px;
+    font-size: 16px;
+    padding: 0px , 20px;
     background: transparent;
     border: none;
     border-bottom: 1.5px solid #616161;
@@ -61,13 +64,21 @@ h3{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center ;
+    
 }
-.send .button{
-    border-radius: 8px;
-
-    text-align: center;
-    color: grey;
-    border: 2px;
+.button {
+    transition-duration: 0.5s;
+    padding: 5px 100px;
+    border-radius: 17px;
+   border: 1px solid grey;
+   font-size: 15px;
+}
+  
+.button:hover {
+    background-color: #d6002a; /* Green */
+    color: white;
+    
 }
 
 ::-webkit-input-placeholder{
@@ -94,4 +105,12 @@ color: #616161;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+}
+
+.fab fa-facebook-square{
+    color: #3b5998;
+}
+a{
+    color:#d6002a
+    
 }

@@ -1,1 +1,23 @@
-Home: Para que sea responsive faltaria adaptar la parte superior, principalmente la primer imagen que aparece en la pagina.
+
+no olvidarse de EM Y ERM ! 
+
+HEADER responsive (ezequiel)
+HEADER MODULE
+FOOTER responsive 
+FOOTER MODULE
+CART responsive
+
+HOME
+
+BREAKPOINTS 
+0 - 480 
+481 - WRAP
+
+CARRITO ESTILOS
+
+VISTA DE SHOP 
+VISTA CHECKOUT
+VISTA ERROR 404 
+VISTA CARGAR PRODUCTO  
+VISTA CARGAR EDITAR *
+VISTA CARGAR VER *

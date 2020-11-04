@@ -1,6 +1,6 @@
 var controller = {
     index: function(req, res, next) {
-        res.render('index', { title: 'Express' });
+        res.redirect('home');
     },
     login: function(req, res, next) {
         res.render('login');

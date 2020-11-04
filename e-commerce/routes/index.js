@@ -1,26 +1,16 @@
 var express = require('express');
 var router = express.Router();
-
+var indexController = require('../controllers/indexController')
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
 
-router.get('/product', function(req, res, next) {
-  res.render('product');
-});
+router.get('/', indexController.index);
 
-router.get('/login', function(req, res, next) {
-  res.render('login');
-});
 
-router.get('/cart', function(req, res, next) {
-  res.render('cart');
-});
-router.get('/home', function(req, res, next) {
-  res.render('home');
-});
-router.get('/register', function(req, res, next) {
-  res.render('register');
-});
+
+router.get('/login', indexController.login);
+
+
+router.get('/home', indexController.home);
+router.get('/register',indexController.register);
+
 module.exports = router ;

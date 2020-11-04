@@ -110,7 +110,7 @@ a:link {
 .nav ul li a{
     color: black;
 }
-
+/*--------------------------------main----------------------------*/
 
 .contenedor{
     display: flex;
@@ -143,80 +143,97 @@ a:link {
 .opciones{
     padding: 30px;
     width: 40%;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     
 }
+
+.texto{
+    margin-bottom: 10px;
+}
+
+.color-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.colores{
+padding: 8px,0;
+display: flex;
+align-items: center;
+}
+
+.color{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 0 10px;
+    border: 5px solid red;
+}
+
+.color[color="rojo"]{
+    background-color: #f84848;
+    border-color: #f84848;
+}
+.color[color="azul"]{
+    background-color: #2175f5;
+    border-color: #2175f5;
+}
+.color[color="verde"]{
+    background-color: #29b864;
+    border-color: #29b864;
+}
+.color[color="naranja"]{
+    background-color: #ff5521;
+    border-color: #ff5521;
+}
+.color[color="negro"]{
+    background-color: #444;
+    border-color: #444;
+}
+
+
+.talle-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.talle{
+    padding: 10px 0;
+}
+.numeros ul{
+    display: flex;
+    margin: 0 10px;
+}
+
+.numeros ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    border: black solid 1px;
+    width: 40px;
+    height: 20px;
+}
+
+.agregar-container{
+    display: flex;
+    flex-direction: column;
+}
+.cantidad{
+    padding: 10px 10px;
+}
+
 .caja2{
     height: 200px;
     border-radius: 3%;
 }
-.color{
-    display: flex;
-    flex-direction: column;
-
-}
-.texto{
-    margin-bottom: 10;
-}
 .descripcion{
     inline:block;
-    padding: 20px 60px;
-}
-.etiquetas{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    
-}
-.etiquetas ul {
-    display: flex;
-}
-.etiquetas ul li{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-right: 20px;
-    border: black solid 1px;
-    width: 40px;
-    height: 20px;
-    color: white;
+    padding: 15px 40px;
 }
 
-#rojo{
-    background-color: red;
-}
-#azul{
-    background-color: blue;
-}
-#verde{
-    background-color: green;
-}
-#negro{
-    background-color: black;
-}
-
-.talle{
-    padding-bottom: 10px ;
-}
-
-.talle ul{
-    display: flex;
-    
-}
-
-.talle ul li{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 20px;
-    border: black solid 1px;
-    width: 40px;
-    height: 20px;
-}
 /*-----------------------//////////////--FOOTER--////////---------------*/
 footer{
     width: 100%;

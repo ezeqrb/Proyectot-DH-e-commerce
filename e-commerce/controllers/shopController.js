@@ -5,7 +5,9 @@ var controller = {
     product: function(req, res, next) {
         res.render('product');
       },
-
+    shop: function(req, res, next) {
+      res.render('shop');
+    }, 
 }
 
 module.exports = controller 

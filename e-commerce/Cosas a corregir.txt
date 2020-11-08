@@ -1,8 +1,8 @@
 
 no olvidarse de EM Y ERM ! 
 
-HEADER responsive (ezequiel)
-HEADER MODULE
+HEADER responsive  (ezequiel)  
+HEADER MODULE (ezequiel)  DONE
 FOOTER responsive 
 FOOTER MODULE
 CART responsive
@@ -15,7 +15,7 @@ BREAKPOINTS
 
 CARRITO ESTILOS
 
-VISTA DE SHOP 
+VISTA DE SHOP (ezequiel) 
 VISTA CHECKOUT
 VISTA ERROR 404 
 VISTA CARGAR PRODUCTO  

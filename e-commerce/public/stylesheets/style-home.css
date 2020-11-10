@@ -5,15 +5,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-<<<<<<< HEAD
-    font-family: "Poppins" ;
-    font-size: 16px;
-    background-image: url(/images/bgw.jpg);
-    background-size: cover ;
-=======
    
     
->>>>>>> 94ec3e0b0b629c909c30fa7a9e2b559c168f607d
 }
 body{
     font-family: 'Poppins', sans-serif;
@@ -27,13 +20,7 @@ header{
 
 }
 .box1{
-<<<<<<< HEAD
-    width: 100vw;
-    height: 70%;
-    display: flex;
-=======
     display: flex;   
->>>>>>> 94ec3e0b0b629c909c30fa7a9e2b559c168f607d
     align-items: center;
     padding: 20px;
     

@@ -5,110 +5,313 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
     <link rel="stylesheet" href="stylesheets/style-home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="container">
-        <header>
+   <!--  _______________________________________
+            HEADER
+            _______________________________________ -->
+    <header>
+        <div class="contenedor">
             
-            <div class="box2">
-                <div class="enviogratis">
-                    <h3>Envio gratis apartir de $2500</h3>
-                </div>
-            </div>
-
-            
-            <div class="box1">
+                <div class="box1">
                 
-                <div class="logo">
-                    <img  src="/images/LOGO.PNG" alt="sport.limits" width="70%">
-                </div>
+                    <div class="logo">
+                        <img  src="/images/LOGO.PNG" alt="sport.limits" width="50%">
+                    </div>
 
-                <nav class="nav">
-                    <ul>
-                        <li><a href="#">NOVEDADES</a></li>
-                        <li><a href="#">HOMBRE</a></li>
-                        <li><a href="#">MUJER</a></li>
-                        <li><a href="#">NIÑOS</a></li>
-                        <li><a href="#">MARCAS</a></li>
-                    </ul>
-                </nav>
+                    <nav class="nav">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Productos</a></li>
+                            <li><a href="#">Acerca de</a></li>
+                            <li><a href="#">Contacto</a></li>
+                            <li><a href="#">Cuenta</a></li>
+                        </ul>
+                    </nav>
+                    <img src="/images/cart.png" width="30px" height="30px">
 
-                <div class="search">
-                    <i class="fas fa-search"></i>
-                    <input type="text" class="buscar" placeholder="Buscá tu producto">
-                </div>
-
-                <div class="menu">
-                    <a class="entrar" href="/login"><i class="fas fa-user"></i>Entrar</a>
-                    <a class="carrito" href=""><i class="fas fa-shopping-cart"></i>Carrito</a>
-                    <a class="deseados" href=""><i class="fas fa-heart"></i>Deseados</a>
-                </div>
 
             </div>
-
+            
          
-
-        </header>
-        <aside></aside>
-        <main>
-            
-            
-            <div class="banner">
-
-                <img src="/images/main-banner.jpg" alt=""height="600">
-
+        </div>
+        <div class="row">
+            <div class="colmun1">
+                <h1>Da a tu entrenamiento<br>Un nuevo estilo!</h1>
+                <p>El éxito no siempre se trata de la grandeza. 
+                    <br>No se trata de coherencia.<br> 
+                   Se trata del trabajo duro, constancia y el éxito vendrá</p>
+                <a href="" class= "button"> Explora ahora &#8594;</a>    
             </div>
-
-            <div class="info">
-                <div class="envios">
-                    <i class="fas fa-truck"></i>
-                    <h3>Envios a <br> domicilio </h3>
-                </div>
-
-                
-                <div class="pagos">
-                    <i class="fas fa-wallet"></i>
-                    <h3>Ahora 12 y 18 </h3>
-                </div>
-
-                
-                <div class="contacto">
-                    <i class="fas fa-phone"></i>
-                    <h3>9 a 18 Hrs <br> Lunes a Sábados</h3>
-                </div>
-            </div>
-
-
-         
-            <div class="mosaico1">
-                <div class="img30"><img src="/images/foto chica.jpg" alt="img1"></div>
-                <div class="img20"><img src="/images/foto chica 2.jpg" alt="img2"></div>
-                <div class=img30> <img src="/images/moda 3.jpg" alt="img3"></div>
-                
-            </div>
-
-            <div class="mosaico2">
-                <div class="img60"><img src="/images/super imagen oferta.jpg" alt="img4" ></div>
-                <div class="img40"><img src="/images/foto chica.jpg" alt="img5"></div>
+            <div class="column1">
+                <img src="/images/image1.png" alt="">
             </div>
         
-            
-            <div class="carrusel">
-                <i class="fas fa-arrow-left"></i>
-                <div class="logos-marcas">
-                    <div class="imagen-logo"><img src="/images/Adidas_Logo.svg" alt="Logo Adidas"></div>
-                    <div class="imagen-logo"><img src="/images/Puma_AG.svg" alt="Logo Puma"></div>
-                    <div class="imagen-logo"><img src="/images/nike_swoosh_logo_black.png" alt="Logo Nike"></div>
-                    <div class="imagen-logo"><img src="/images/Jordan.jpg" alt="Logo Jordan"></div>
-                </div>
-                <i class="fas fa-arrow-right"></i>
-
             </div>
-            
-        </main>
-        <footer>
+
+    </header>
+    <aside>
+
+    </aside>
+    <main>
+       <!--  _______________________________________
+         las 3 imagenes abajo del header (categorias) 
+        _______________________________________ -->
+        <div class="categorias">
+            <h2 class="title">Categorias</h2>
+            <div class="small-container">
+                <div class="row">
+                    <div class="fila-img">
+                        <img src="/images/category-1.jpg" alt="">
+                    </div>
+                    <div class="fila-img">
+                        <img src="/images/category-2.jpg" alt="">
+                    </div>
+                    <div class="fila-img">
+                        <img src="/images/category-3.jpg" alt="">
+                    </div>
+    
+                </div>
+            </div>
+        </div>    
+            <!--  _______________________________________
+                              productos destacados
+        _______________________________________ -->
+
+        <div class="small-container">
+            <h2 class="title">Productos Destacados</h2>
+            <div class="row">
+                <div class="column4">
+                    <img src="/images/product-1.jpg" alt="">
+                    <h4 >Remera roja estampada</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+
+                    </div>
+                    <p>$1.500</p>
+                </div>
+
+                <div class="column4">
+                    <img src="/images/product-2.jpg" alt="">
+                    <h4>Zapatillas negras HRX</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+
+                    </div>
+                    <p>6.000</p>
+                </div>
+                <div class="column4">
+                    <img src="/images/product-3.jpg" alt="">
+                    <h4>jogging gris Adidas</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+
+                    </div>
+                    <p>$3.000</p>
+                </div>
+
+                <div class="column4">
+                    <img src="/images/product-4.jpg">
+                    <h4>Remera azul Puma</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+
+                    </div>
+                    <p>$1.500</p>
+                </div>
+                
+            </div> 
+            <!-- _______________________________________
+            NUEVOS Productos
+            _______________________________________ -->
+            <h2 class="title">Nuevos prodcutos</h2>
+            <div class="row">
+                <div class="column4">
+                    <img src="/images/product-5.jpg" alt="">
+                    <h4 >Zapatillas grises Nike</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+
+                    </div>
+                    <p>$1.500</p>
+                </div>
+
+                <div class="column4">
+                    <img src="/images/product-6.jpg" alt="">
+                    <h4>Remera negra Puma</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+
+                    </div>
+                    <p>6.000</p>
+                </div>
+                <div class="column4">
+                    <img src="/images/product-7.jpg" alt="">
+                    <h4>Medias HRX</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+
+                    </div>
+                    <p>$3.000</p>
+                </div>
+
+                <div class="column4">
+                    <img src="/images/product-8.jpg">
+                    <h4>Reloj negro Fossil</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+
+                    </div>
+                    <p>$1.500</p>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="column4">
+                    <img src="/images/product-9.jpg" alt="">
+                    <h4 >Relog negro</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+
+                    </div>
+                    <p>$1.500</p>
+                </div>
+
+                <div class="column4">
+                    <img src="/images/product-10.jpg" alt="">
+                    <h4>zapatillas HRX</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+
+                    </div>
+                    <p>6.000</p>
+                </div>
+                <div class="column4">
+                    <img src="/images/product-11.jpg" alt="">
+                    <h4>Zapatillas gris HRX</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+
+                    </div>
+                    <p>$3.000</p>
+                </div>
+
+                <div class="column4">
+                    <img src="/images/product-12.jpg">
+                    <h4>jogging gris Nike</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+
+                    </div>
+                    <p>$1.500</p>
+                </div>
+                
+            </div>  
+        </div>
+        <!-- _______________________________________
+        OFERTA
+        _______________________________________    -->   
+        <div class="offer">
+            <div class="small-container">
+                <div class="row">
+                    <div class="column1">
+                        <img src="/images/exclusive.png" class="offer-img">
+                    </div>
+                    <div class="column1">
+                        <p>Exclusiva disponible en redstore</p>
+                        <h4 class="title-relog">Smart Band 4</h4>
+                        <small>Xiaomi Mi Band 4, 
+                            análisis: la pantalla a color es un verdadero salto, 
+                            pero lo mejor es depender menos del móvil
+                        </small>
+                        <a href="" class="button">Compralo Ahora &#8594</a>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+        <!-- _______________________________________
+            SUPUESTO CAROUSEL (SON IMAGENES POR AHORA)
+            _______________________________________ -->
+        <div class="carousel">
+            <div class="small-container">
+                <div class="row">
+                    <div class="column5">
+                        <img src="/images/logo-adidas.png" alt="" width="190px">
+                    </div>
+                    <div class="column5">
+                        <img src="/images/logo-nike.png" alt="" width="190px">
+                    </div>
+                    <div class="column5">
+                        <img src="/images/tomy-logo.png" alt="" width="190px">
+                    </div>
+                    <div class="column5">
+                        <img src="/images/puma-logo.png" alt="" width="190px">
+                    </div>
+                    <div class="column5">
+                        <img src="/images/Lacoste-Logo.png" alt="" width="190px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+   <!--  _______________________________________
+    FOOTER
+    _______________________________________ -->
+    <footer>
+
             <div class="container-footer">
                 <div class="body-footer">
                     <div class="columna1">
@@ -174,11 +377,11 @@
                 
 
             
-        </footer>
+    </footer>
     
 
         
-    </div>
+    
     
 </body>
 </html>

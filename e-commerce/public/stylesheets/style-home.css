@@ -7,6 +7,8 @@
     box-sizing: border-box;
     font-family: "Poppins" ;
     font-size: 16px;
+    background-image: url(/images/bgw.jpg);
+    background-size: cover ;
 }
 body{
     font-family: "poppins"
@@ -55,7 +57,7 @@ a:link {
     
 }
 .box1{
-    width: 100%;
+    width: 100vw;
     height: 70%;
     display: flex;
     align-items: center;

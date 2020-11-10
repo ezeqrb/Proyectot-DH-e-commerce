@@ -5,7 +5,7 @@ HEADER responsive (ezequiel)
 HEADER MODULE
 FOOTER responsive 
 FOOTER MODULE
-CART responsive
+CART responsive Eial
 
 HOME
 

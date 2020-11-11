@@ -7,51 +7,15 @@
     <link rel="stylesheet" href="/stylesheets/style-cart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 </head>
-
+<body>
+    
     <header>
-        
-        <div class="box2">
-            <div class="enviogratis">
-                <h3>Envio gratis apartir de $2500</h3>
-            </div>
-        </div>
-
-        
-        <div class="box1">
-            
-            <div class="logo">
-                <img src="/images/LOGO.PNG" alt="sport.limits" width="70%">
-            </div>
-
-            <nav class="nav">
-                <ul>
-                    <li><a href="#">NOVEDADES</a></li>
-                    <li><a href="#">HOMBRE</a></li>
-                    <li><a href="#">MUJER</a></li>
-                    <li><a href="#">NIÑOS</a></li>
-                    <li><a href="#">MARCAS</a></li>
-                </ul>
-            </nav>
-
-            <div class="search">
-                <i class="fas fa-search"></i>
-                <input type="text" class="buscar" placeholder="Buscá tu producto">
-            </div>
-
-            <div class="menu">
-                <a class="entrar" href="/login"><i class="fas fa-user"></i>Entrar</a>
-                <a class="carrito" href=""><i class="fas fa-shopping-cart"></i>Carrito</a>
-                <a class="deseados" href=""><i class="fas fa-heart"></i>Deseados</a>
-            </div>
-
-        </div>
-
-     
-
+        <%- include("./partials/header.ejs")%>
     </header>
     <aside></aside>
     <main>
         <div class="contenedor">
+         <div class="product-details"> 
             <div class="caja1">
                 <div class="imagen">
                     <div class="foto">
@@ -78,7 +42,7 @@
                         <p>$5000</p>
 
                     </div>
-                    
+            </div>   
                 </div>
                 <div class="texto">
                     <label class="promocion">¿Tienes un codigo de promocion ?</label>
@@ -111,67 +75,7 @@
         
        
     </main>
-    <footer>
-        <div class="container-footer">
-            <div class="body-footer">
-                <div class="columna1">
-                    <h3>Mas Sobre nosotros</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and 
-                    typesetting industry. Lorem Ipsum has been the industry's 
-                    standard dummy text ever since the 1500s, when an unknown 
-                    printer took a galley of type and scrambled it to make a type 
-                    specimen book. It has survived not only five centuries, but 
-                    also the leap into electronic typesetting, remaining essentially</p>
-                </div>
-                <div class="columna2">
-                    <h3>Nuestras Redes</h3>
-                    <div class="redes">
-                        <i class="fab fa-facebook-square"></i>
-                        <label>Siguenos en Facebook</label>
-                    </div>
-                    <div class="redes">
-                        <i class="fab fa-instagram"></i>
-                        <label>Siguenos en Instagram</label>
-                    </div>
-                    <div class="redes">
-                        <i class="fab fa-twitter"></i>
-                        <label>Siguenos en Twitter</label>
-                    </div>
-                
-                </div>
-                <div class="columna3">
-                    <h3>Contacto</h3>
-                    <div class="contacto-copy">
-                        <i class="fas fa-home"></i>
-                        <label>Av.siempreviva 1768</label>
-                    </div>
-                    <div class="contacto-copy">
-                        <i class="fas fa-phone-alt"></i>
-                        <label>+541122334455</label>
-                    </div>
-                    <div class="contacto-copy">
-                        <i class="far fa-envelope"></i>
-                        <label>contacto@hotmail.com</label>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-abajo">
+   <%- include("./partials/footer")%>
 
-                <div class="copyright">
-                    © 2020  todos los derechos reservados
-                </div>
-
-                <div class="politica">
-                    <a href="">Informacion de la compañia |</a>
-                    <a href="">Policas y privasidad |</a>
-                    <a href="">Terminos y condiciones</a>
-                </div>
-            
-            </div>
-         
-       </div>  
-            
-
-        
-    </footer>
+</body>
 </html>

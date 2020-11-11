@@ -14,30 +14,7 @@
             HEADER
             _______________________________________ -->
     <header>
-        <div class="contenedor">
-            
-                <div class="box1">
-                
-                    <div class="logo">
-                        <img  src="/images/LOGO.PNG" alt="sport.limits" width="50%">
-                    </div>
-
-                    <nav class="nav">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Productos</a></li>
-                            <li><a href="#">Acerca de</a></li>
-                            <li><a href="#">Contacto</a></li>
-                            <li><a href="#">Cuenta</a></li>
-                        </ul>
-                    </nav>
-                    <img src="/images/cart.png" width="30px" height="30px">
-
-
-            </div>
-            
-         
-        </div>
+        <%- include("./partials/header.ejs")%>
         <div class="row">
             <div class="colmun1">
                 <h1>Da a tu entrenamiento<br>Un nuevo estilo!</h1>
@@ -310,74 +287,7 @@
    <!--  _______________________________________
     FOOTER
     _______________________________________ -->
-    <footer>
-
-            <div class="container-footer">
-                <div class="body-footer">
-                    <div class="columna1">
-                        <h3>Mas Sobre nosotros</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and 
-                        typesetting industry. Lorem Ipsum has been the industry's 
-                        standard dummy text ever since the 1500s, when an unknown 
-                        printer took a galley of type and scrambled it to make a type 
-                        specimen book. It has survived not only five centuries, but 
-                        also the leap into electronic typesetting, remaining essentially</p>
-                    </div>
-
-                    <div class="columna2">
-                        <h3>Nuestras Redes</h3>
-                        <div class="redes">
-                            <i class="fab fa-facebook-square"></i>
-                            <label>Siguenos en Facebook</label>
-                        </div>
-                        <div class="redes">
-                            <i class="fab fa-instagram"></i>
-                            <label>Siguenos en Instagram</label>
-                        </div>
-                        <div class="redes">
-                            <i class="fab fa-twitter"></i>
-                            <label>Siguenos en Twitter</label>
-                        </div>
-                    
-                    </div>
-
-                    <div class="columna3">
-                        <h3>Contacto</h3>
-                        <div class="contacto-copy">
-                            <i class="fas fa-home"></i>
-                            <label>Av.siempreviva 1768</label>
-                        </div>
-                        <div class="contacto-copy">
-                            <i class="fas fa-phone-alt"></i>
-                            <label>+541122334455</label>
-                        </div>
-                        <div class="contacto-copy">
-                            <i class="far fa-envelope"></i>
-                            <label>contacto@hotmail.com</label>
-                        </div>
-                    </div>
-
-                </div>
-                
-                <div class="footer-abajo">
-
-                    <div class="copyright">
-                        © 2020  todos los derechos reservados
-                    </div>
-
-                    <div class="politica">
-                        <a href="">Informacion de la compañia |</a>
-                        <a href="">Policas y privasidad |</a>
-                        <a href="">Terminos y condiciones</a>
-                    </div>
-                
-                </div>
-             
-           </div>  
-                
-
-            
-    </footer>
+    <%- include("./partials/footer")%>
     
 
         

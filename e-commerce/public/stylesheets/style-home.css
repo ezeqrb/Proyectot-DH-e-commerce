@@ -201,12 +201,10 @@ ____________________________________________________________________________ */
     filter: grayscale(0%);
 
  }
- .logoNike img {
-     background-color: red;
- }
+
 /*--------------------------------FOOTER-------------------------------------*/
 footer{
-    width: 100%;
+    width: 100vw;
     background-color: #202020;
     color: white;
     padding: 20px;
@@ -229,7 +227,7 @@ footer{
 
 }
 .columna1{
-    max-width: 40%;
+    max-width: 400px;
 }
 .columna1 h3{
     font-size: 22px;
@@ -240,7 +238,7 @@ footer{
     margin-top: 20px;
 }
 .columna2 {
-    max-width: 30%;
+    max-width: 300px;
 
 }
 .columna2 h3{
@@ -258,7 +256,7 @@ footer{
 }
 .columna3{
 
-    max-width: 30%;   
+    max-width: 300px;   
 }
 .columna3 h3{
     font-size: 22px;

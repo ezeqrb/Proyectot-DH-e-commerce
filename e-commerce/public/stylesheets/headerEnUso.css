@@ -48,12 +48,6 @@ p{
 .header-container{
     max-width:100vw ;
     margin:auto;
-    /* No entiendo para que esta este padding 
-    padding-left:25px ;
-    padding-right: 25px;
-    */
-
-
 }
 .row{
     display: flex;

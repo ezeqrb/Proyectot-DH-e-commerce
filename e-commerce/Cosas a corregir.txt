@@ -4,7 +4,7 @@ no olvidarse de EM Y ERM !
 HEADER responsive  (ezequiel)  
 HEADER MODULE (ezequiel)  DONE
 FOOTER responsive Eial
-FOOTER MODULE 
+FOOTER MODULE Eial
 CART responsive
 
 HOME

@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+    
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    /* font-family:  'Roboto', sans-serif; */
+}
+
 footer{
     width: 100%;
     background-color: #202020;
@@ -19,10 +33,11 @@ footer{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    flex-direction: row; 
 
 }
 .columna1{
-    max-width: 40%;
+    max-width: 300px;
 }
 .columna1 h3{
     font-size: 22px;
@@ -33,7 +48,7 @@ footer{
     margin-top: 20px;
 }
 .columna2 {
-    max-width: 30%;
+    max-width: 300px;
 
 }
 .columna2 h3{
@@ -51,7 +66,7 @@ footer{
 }
 .columna3{
 
-    max-width: 30%;   
+    max-width: 300px;   
 }
 .columna3 h3{
     font-size: 22px;
@@ -80,4 +95,17 @@ footer{
     display: flex;
     justify-content: center;
     margin-top: 30px;
+ }
+
+ @media (max-width: 481px){
+     .body-footer{
+         flex-direction: column;
+     }
+     .footer-abajo{
+         flex-direction: column;
+     }
+     .politica{
+         display: flex;
+         flex-direction: column;
+     }
  }

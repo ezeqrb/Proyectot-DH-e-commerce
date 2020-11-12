@@ -60,10 +60,16 @@ footer{
     align-items: center;
 
 }
-.redes label, i {
 
-     color: #c7c7c7
+.redes i  {
+    color: #c7c7c7;
+    margin-right: 10px;
+     
 }
+
+    
+
+
 .columna3{
 
     max-width: 300px;   

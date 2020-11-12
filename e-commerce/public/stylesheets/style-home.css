@@ -13,6 +13,41 @@ body{
     /* font-family:  'Roboto', sans-serif; */
 }
 
+/* ---------------------- NUEVO HEADER----------------------------*/
+header{
+    background: radial-gradient(#fff,#ffd6d6);
+
+
+}
+.box1{
+    display: flex;   
+    align-items: center;
+    padding: 20px;
+    
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;   
+}
+
+
+a{
+    text-decoration: none;
+    color: #555;
+
+}
+p{
+    color: #555;
+}
 
  /*//////////////////////////// NUEVO MAIN //////////////////////////////*/ 
 .categorias{

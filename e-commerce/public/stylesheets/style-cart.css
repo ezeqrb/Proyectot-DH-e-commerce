@@ -13,8 +13,8 @@ body{
     /* font-family:  'Roboto', sans-serif; */
 }
 
-/*----------------------------- HEADER*-------------------*/
-header{
+/* /* /*----------------------------- HEADER*-------------------*/
+/* header{
     height: 100px;
     display: flex;
     flex-direction: column;
@@ -116,7 +116,7 @@ a:link {
 }
 .nav ul li a{
     color: black;
-}
+} */
 /*--------------------------////////ASIDE/////-------------------*/
 /*--------------------------////////MAIN/////-------------------*/
 /* MAIN*/
@@ -151,8 +151,8 @@ main{
     
 
 }
-img {
-    height: 150px;
+.foto img{
+    width: 30%;
 
     
 }
@@ -259,7 +259,7 @@ img {
 
 
 /*--------------------------////////FOOTER/////-------------------*/
-footer{
+/* footer{
     width: 100vw;
     background-color: #202020;
     color: white;
@@ -340,4 +340,4 @@ footer{
     justify-content: center;
     margin-top: 30px;
     flex-wrap: wrap;
- }
+ } 

@@ -17,88 +17,9 @@ CARRITO ESTILOS
 
 VISTA DE SHOP (ezequiel) 
 VISTA CHECKOUT
-VISTA ERROR 404 
+VISTA ERROR 404 (juli) 
 VISTA CARGAR PRODUCTO  
 VISTA CARGAR EDITAR *
 VISTA CARGAR VER *
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Cart</title>
-    <link rel="stylesheet" href="/stylesheets/style-cart.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-</head>
-<body>
+NUEVO HOME (juli)
     
-    <header>
-        <%- include("./partials/header.ejs")%>
-    </header>
-    <!-- <aside></aside>
-    <main>
-        <div class="contenedor">
-            <div class="caja1">
-                <div class="imagen">
-                    <div class="foto">
-                        <img class="zapatilla" src="/images/air_max_hombre_zapatillas_nike-661sgr.jpg" >
-                    </div>
-                    <div class="descripcion">
-                        <h3>Zapatilla Nike</h3>
-                        <h4>Talle 40</h4>
-                        <h4>Item n°3242514</h4>                        
-                    </div>
-                    <div>    
-                        <select name="cantidad">
-                            
-                            <option value="1">1</option>
-                            <option value="1">2</option>
-                            <option value="1">3</option>
-                            <option value="1">4</option>
-                        </select>
-                        
-                    </div>
-                    
-                    <div class="total">
-                        <p>Total</p>
-                        <p>$5000</p>
-
-                    </div>
-                    
-                </div>
-                <div class="texto">
-                    <label class="promocion">¿Tienes un codigo de promocion ?</label>
-                    <div class="codigo">
-                        <input type="text" class="input" placeholder="Ingrese su codigo aquí" required="">
-                        <input class="validar" type="submit" value="Validar">
-
-                    </div>
-                    <label class="envio"><p>Calcular costo de envio</p></label>
-                    <div class="codigo">
-                        <input type="text" class="input" placeholder="Codigo postal" required="">
-                        <input class="validar" type="submit" value="calcular">
-
-                    </div>
-                    <div class="boleta">
-                        <input type="text" class="campos" placeholder="Costo de envio regular" required="">
-                        <input type="text" class="campos" placeholder="Subtotal" required="">
-                        <input type="text" class="campos" placeholder="Envio desde" required="">
-                        <input type="text" class="campos" placeholder="total" required="">
-                    </div>
-                    <div class= "boton-comprar">
-                    <input class="comprar" type="submit" value="COMPRAR">
-                    </div>   
-                        
-                </div>
-
-            </div>
-            
-        </div>
-        
-       
-    </main> -->
-   <%- include("./partials/footer")%>
-
-</body>
-</html>

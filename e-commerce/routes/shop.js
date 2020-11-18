@@ -8,4 +8,5 @@ router.get('/product', shopController.product );
 
 router.get('/', shopController.shop );
 
-  module.exports = router ;
+
+module.exports = router ;

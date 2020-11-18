@@ -57,6 +57,11 @@ h3{
     width: 100%;
     padding: 10px;
 }
+.input-fields input:focus{
+    
+    border-bottom: 2.5px solid  #d6002a ;
+   
+}
 .send{
 
     display: flex;

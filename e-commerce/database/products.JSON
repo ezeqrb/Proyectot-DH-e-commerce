@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "precio": "a",
+    "descuento": "a",
+    "descripcion": "a",
+    "img": "",
+    "categoria": "masvendido",
+    "genero": "hombre",
+    "marca": "adidas",
+    "deporte": "basket",
+    "color": "Rojo",
+    "talle": "9"
+  }
+]

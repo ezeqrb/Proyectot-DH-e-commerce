@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor{
+    border: black solid 1px;
+    border-radius: 20px;
+    padding: 30px
+    
+}
+
+.left-right{
+    display: flex;
+    
+}
+
+.tallesycolores{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.enviar{
+    display: flex;
+    justify-content: center;
+}
+
+div{
+    margin: 10px;
+}w

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style-create.css">
+    <title>Create</title>
+</head>
+<body>
+    <div class="contenedor">
+        <form  method="POST">
+
+            <div class="left-right">
+                <div class="left">
+                    <div class="titulo">TITULO DEL PRODUCTO <br>
+                        <input type="text">
+                    </div>
+                    
+                    <div>PRECIO <br>
+                        <input type="text" name="precio">
+                    </div>
+
+                    <div>DESCUENTO <br>
+                        <input type="text" name="descuento">
+                    </div>
+                        
+                    
+                    <div class="descripcion">DESCRIPCION DEL PRODUCTO <br>
+                        
+                        <input type="text" name="descripcion">
+                    </div>
+                    <div class="imagenes">
+                        <input type="file" name="img" >
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div>CATEGORÍA <br>
+                        <select name="categoria">
+                            <option value="masvendido" selected> Más Vendido</option> 
+                            <option value="ofertas" > Ofertas</option>
+                            <option value="destacados"> Destacados</option>
+                        </select>
+                    </div>
+                    <div class="genero"> GÉNERO <br>
+                        <select name="genero">
+                            <option value="hombre" selected>Hombre</option> 
+                            <option value="mujer" >Mujer</option>
+                            <option value="niño">Niño</option>
+                        </select>
+                    </div>
+                    <div class="marca"> MARCA <br>
+                        <select name="marca">
+                            <option value="adidas" selected>Adias</option> 
+                            <option value="asics" >Asics</option> 
+                            <option value="fila" >Fila</option> 
+                            <option value="nike" >Nike</option> 
+                            <option value="puma" >Puma</option>
+                            <option value="Under-Armour">Under Armour</option>
+                        </select>            
+                    </div>
+                    <div class="deporte"> DEPORTE <br>
+                        <select name="deporte">
+                            <option value="basket" selected> Basket</option> 
+                            <option value="futbol" >Futbol</option>
+                            <option value="running">Running</option>
+                            <option value="training">Training</option>
+                        </select>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="tallesycolores">
+                <div class="colores"> COLOR <br>
+                    <input type="checkbox"  name="color" value="Rojo">
+                    <label > ROJO</label><br>
+                    <input type="checkbox"  name="color" value="Negro">
+                    <label > NEGRO</label><br>
+                    <input type="checkbox" name="color" value="Blanco">
+                    <label > I have a boat</label><br>
+
+                </div>
+                <div class="talles"> TALLE <br>
+                    <input type="checkbox"  name="talle" value="9">
+                    <label > 9</label><br>
+                    <input type="checkbox"  name="talle" value="10">
+                    <label > 10</label><br>
+                    <input type="checkbox" name="talle" value="11">
+                    <label > 11</label><br>
+
+                </div>
+            </div>
+            
+
+            <div class="enviar">
+                <button type="submit">
+                    ENVIAR
+                </button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

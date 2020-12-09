@@ -1,8 +1,10 @@
+/* NO SE PARA QUE ESTA ESTE ARCHIVO
+
 var express = require('express');
 var router = express.Router();
 var productController = require('../controllers/productController')
 
-/* GET users listing. */
+/* GET users listing. 
 router.get('/',productController.hiprod );
 router.get('/create',productController.createView );
 router.post('/create',productController.create);

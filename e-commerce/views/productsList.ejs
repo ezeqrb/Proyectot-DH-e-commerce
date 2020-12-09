@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<body>
+    <%- include("./partials/header.ejs")%>
+    <p>Lista de productos:</p>
+    <% if (products.length >0){ %>
+        <ul>
+        <% for (let i = 0 ; i < products.length; i++){ %>
+            <li> <%= products[i].name %> </li>
+        <% } %>
+        </ul>
+    <% }else{ %>
+        <h5>No hay productos para mostrar</h5>
+       <% } %>
+        
+    <%- include("./partials/footer")%>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Product</title>
+</head>
+<body>
+    <form action="/products/<%=product.id %>/edit" method="POST">
+        <!--Falta insertar imagenes -->
+        <input type="hidden" name="id" placeholder="Ingrese un Id de producto" value="<%= product.id%>">
+        <br>
+        <input type="text" name="name" placeholder="Ingrese un nombre" value="<%= product.name%>">
+        <br>
+        <input type="number" name="price" placeholder="Precio" value="<%= product.price%>">
+        <br>
+        <input type="text" name="description" placeholder="Ingrese descripcion" value="<%= product.description%>">
+        <br>
+        <input type="text" name="category" placeholder="Ingrese categoria" value="<%= product.category%>">
+        <br>
+        <input type="text" name="size" placeholder="Ingrese talle" value="<%= product.size%>">
+        <br>
+        <input type="text" name="color" placeholder="Ingrese color" value="<%= product.color%>">
+        <br>
+        <input type="text" name="brand" placeholder="Marca" value="<%= product.brand%>">
+        <br>
+        <input type="number" name="stock" placeholder="Stock" value="<%= product.stock%>">
+        <br>
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>

@@ -34,9 +34,7 @@ let controller = {
     },
     storeEdition : function (req, res, next){
       let productEdit = products.map (function (product){
-          console.log (product.id) ;
-          console.log (req.body);
-          console.log (req.params.id);
+    
         if(product.id == req.params.id){
           return req.body;
         }

@@ -11,7 +11,7 @@
     <% if (products.length >0){ %>
         <ul>
         <% for (let i = 0 ; i < products.length; i++){ %>
-            <li> <%= products[i].name %> </li>
+            <li><a href="products/<%= products[i].id %>"><%= products[i].name %></a> </li>
         <% } %>
         </ul>
     <% }else{ %>

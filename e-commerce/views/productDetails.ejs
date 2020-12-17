@@ -7,8 +7,20 @@
 </head>
 <body>
     <%- include("./partials/header.ejs")%>
-    <p>Detalles</p>
-    <%= product %> <!--Lo lee como un objeto-->
+    <h4>Detalles</h4>
+    <p> 
+    Id: <%= product.id %> <br>
+    Nombre: <%= product.name %> <br>
+    Precio: <%= product.price %> <br>
+    Descripcion: <%= product.description %> <br>
+    Categoria: <%= product.category %> <br>
+    Talle: <%= product.size %> <br>
+    Color: <%= product.color %> <br>
+    Marca: <%= product.brand %> <br>
+    Stock: <%= product.stock %> <br>
+    </p>
+    <button><a href="/products/<%= product.id %>/edit">Editar</a></button>
+
     <%- include("./partials/footer")%>
 </body>
 </html>

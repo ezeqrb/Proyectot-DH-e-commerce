@@ -1,13 +1,2 @@
 [
-  {
-    "id": "1",
-    "name": "Remera Azul",
-    "price": "400",
-    "description": "Remera blanca manga larga",
-    "category": "Remeras",
-    "size": "S",
-    "color": "Blanco",
-    "brand": "Nike",
-    "stock": "3"
-  }
 ]

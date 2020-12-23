@@ -1,4 +1,5 @@
 Falta:
         Hacer la pagina interactiva
         Ponerle diseño al CRUD
-        Agregar imagenes al crear un producto
+        Sprint 5
+        Sprint 6

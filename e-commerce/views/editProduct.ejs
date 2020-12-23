@@ -6,7 +6,7 @@
     <title>Create Product</title>
 </head>
 <body>
-    <form action="/products/<%=product.id %>/edit" method="POST">
+    <form action="/products/<%=product.id %>/edit" method="POST" enctype="multipart/form-data">
         <!--Falta insertar imagenes -->
         <input type="hidden" name="id" placeholder="Ingrese un Id de producto" value="<%= product.id%>">
         <br>
@@ -25,6 +25,9 @@
         <input type="text" name="brand" placeholder="Marca" value="<%= product.brand%>">
         <br>
         <input type="number" name="stock" placeholder="Stock" value="<%= product.stock%>">
+        <br>
+        <label for="image">Agregue una imagen</label>
+        <input type="file" name="image" value="<%= product.image%>">
         <br>
         <button type="submit">Guardar</button>
     </form>

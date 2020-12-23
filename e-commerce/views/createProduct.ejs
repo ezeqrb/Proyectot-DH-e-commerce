@@ -6,8 +6,7 @@
     <title>Create Product</title>
 </head>
 <body>
-    <form action="/products/create" method="POST">
-        <!--Falta insertar imagenes -->
+    <form action="/products/create" method="POST" enctype="multipart/form-data">
         <input type="number" name="id" placeholder="Ingrese un Id de producto">
         <br>
         <input type="text" name="name" placeholder="Ingrese un nombre">
@@ -25,6 +24,9 @@
         <input type="text" name="brand" placeholder="Marca">
         <br>
         <input type="number" name="stock" placeholder="Stock">
+        <br>
+        <label for="image">Agregue una imagen</label>
+        <input type="file" name="image">
         <br>
         <button type="submit">Guardar</button>
     </form>

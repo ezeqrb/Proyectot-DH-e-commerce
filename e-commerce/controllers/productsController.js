@@ -10,7 +10,20 @@ let controller = {
         res.render ('createProduct');
     },
     store : function (req, res, next){
-        products.push (req.body);
+        console.log (req);
+        let userToStore = {
+            id: req.body.id,
+            name: req.body.name,
+            price: req.body.price,
+            description: req.body.price,
+            category: req.body.category,
+            size: req.body.size,
+            color: req.body.color,
+            brand: req.body.brand,
+            stock: req.body.stock,
+            imagen: req.files[0].filename
+        }
+        products.push (userToStore);
         fs.writeFileSync (__dirname + "/../data/products.json", JSON.stringify(products, null, 2));
         return res.redirect ('/products/list');
     },
@@ -33,10 +46,22 @@ let controller = {
 
     },
     storeEdition : function (req, res, next){
+        let userToStore = {
+            id: req.body.id,
+            name: req.body.name,
+            price: req.body.price,
+            description: req.body.price,
+            category: req.body.category,
+            size: req.body.size,
+            color: req.body.color,
+            brand: req.body.brand,
+            stock: req.body.stock,
+            imagen: req.files[0].filename
+        }
       let productEdit = products.map (function (product){
     
         if(product.id == req.params.id){
-          return req.body;
+          return userToStore;
         }
         return product;
       });

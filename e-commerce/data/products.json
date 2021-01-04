@@ -1,2 +1,13 @@
 [
+  {
+    "id": "1",
+    "name": "Remera",
+    "price": "500",
+    "description": "Remera manga larga",
+    "category": "Remeras",
+    "size": "S",
+    "color": "Blanca",
+    "brand": "Nike",
+    "imagen": "image-1609339690774.jpeg"
+  }
 ]

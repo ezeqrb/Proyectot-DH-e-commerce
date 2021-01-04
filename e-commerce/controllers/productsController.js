@@ -11,7 +11,7 @@ let controller = {
     },
     store : function (req, res, next){
         console.log (req);
-        let userToStore = {
+        let productToStore = {
             id: req.body.id,
             name: req.body.name,
             price: req.body.price,
@@ -20,10 +20,9 @@ let controller = {
             size: req.body.size,
             color: req.body.color,
             brand: req.body.brand,
-            stock: req.body.stock,
             imagen: req.files[0].filename
         }
-        products.push (userToStore);
+        products.push (productToStore);
         fs.writeFileSync (__dirname + "/../data/products.json", JSON.stringify(products, null, 2));
         return res.redirect ('/products/list');
     },
@@ -46,7 +45,7 @@ let controller = {
 
     },
     storeEdition : function (req, res, next){
-        let userToStore = {
+        let productToStore = {
             id: req.body.id,
             name: req.body.name,
             price: req.body.price,
@@ -55,13 +54,12 @@ let controller = {
             size: req.body.size,
             color: req.body.color,
             brand: req.body.brand,
-            stock: req.body.stock,
             imagen: req.files[0].filename
         }
       let productEdit = products.map (function (product){
     
         if(product.id == req.params.id){
-          return userToStore;
+          return productToStore;
         }
         return product;
       });

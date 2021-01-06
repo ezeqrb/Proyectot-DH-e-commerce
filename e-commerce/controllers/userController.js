@@ -11,6 +11,9 @@ var controller = {
     registerpost: function(req, res, next) {
         res.render('register');
     },
+    createUser: function(req,res,next){
+        res.render('createUser')
+    }
 }
 
 module.exports = controller 

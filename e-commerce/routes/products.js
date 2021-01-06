@@ -4,6 +4,7 @@ var productsController = require('../controllers/productsController');
 var path = require ("path");
 var productsMiddlewares = require ("../controllers/productsMiddlewares")
 
+
 var multer  = require('multer')
 var upload = multer({ dest: 'uploads/' })
 var storage = multer.diskStorage({

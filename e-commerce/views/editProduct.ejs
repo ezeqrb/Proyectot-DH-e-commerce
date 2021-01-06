@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Product</title>
+    <title>Create Product</title>
 </head>
 <body>
     <form action="/products/<%=product.id %>/edit" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="id" placeholder="Ingrese un Id de producto" value="<%= product.Id%>">
+        <!--Falta insertar imagenes -->
+        <input type="hidden" name="id" placeholder="Ingrese un Id de producto" value="<%= product.id%>">
         <br>
-        <input type="text" name="name" placeholder="Ingrese un nombre" value="<%= product.Name%>">
+        <input type="text" name="name" placeholder="Ingrese un nombre" value="<%= product.name%>">
         <br>
-        <input type="number" name="price" placeholder="Precio" value="<%= product.Price%>">
+        <input type="number" name="price" placeholder="Precio" value="<%= product.price%>">
         <br>
-        <input type="text" name="description" placeholder="Ingrese descripcion" value="<%= product.Description%>">
+        <input type="text" name="description" placeholder="Ingrese descripcion" value="<%= product.description%>">
         <br>
-        <input type="text" name="category" placeholder="Ingrese categoria" value="<%= product.Category%>">
+        <input type="text" name="category" placeholder="Ingrese categoria" value="<%= product.category%>">
         <br>
-        <input type="text" name="size" placeholder="Ingrese talle" value="<%= product.Size%>">
+        <input type="text" name="size" placeholder="Ingrese talle" value="<%= product.size%>">
         <br>
-        <input type="text" name="color" placeholder="Ingrese color" value="<%= product.Colour%>">
+        <input type="text" name="color" placeholder="Ingrese color" value="<%= product.color%>">
         <br>
-        <input type="text" name="brand" placeholder="Marca" value="<%= product.Brand%>">
+        <input type="text" name="brand" placeholder="Marca" value="<%= product.brand%>">
         <br>
         <label for="image">Agregue una imagen</label>
-        <input type="file" name="image" value="<%= product.Image%>">
+        <input type="file" name="image" value="<%= product.image%>">
         <br>
         <button type="submit">Guardar</button>
-<!--Chequear mayusculas/minusculas en los product. -->
     </form>
 </body>
 </html>

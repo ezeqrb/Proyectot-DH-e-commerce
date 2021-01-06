@@ -8,10 +8,10 @@
 <body>
     <%- include("./partials/header.ejs")%>
     <p>Lista de productos:</p>
-    <% if (productsDB.length >0){ %>
+    <% if (products.length >0){ %>
         <ul>
-        <% for (let i = 0 ; i < productsDB.length; i++){ %>
-            <li><a href="products/<%= productsDB[i].Id %>"><%= productsDB[i].Name %></a> </li>
+        <% for (let i = 0 ; i < products.length; i++){ %>
+            <li><a href="products/<%= products[i].id %>"><%= products[i].name %></a> </li>
         <% } %>
         </ul>
     <% }else{ %>
@@ -21,5 +21,3 @@
     <%- include("./partials/footer")%>
 </body>
 </html>
-
-<!--Chequear mayusculas/minusculas en productsDB.Id y .Name si no funciona -->

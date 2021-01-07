@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var productsController = require('../controllers/productsController');
 var path = require ("path");
-var productsMiddlewares = require ("../controllers/productsMiddlewares")
+/*var productsMiddlewares = require ("../middlewares/products/productsMiddlewares")*/
 
 
 var multer  = require('multer')

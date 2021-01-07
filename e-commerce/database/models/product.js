@@ -40,7 +40,7 @@ module.exports = function (sequelize , dataTypes) {
         timestamps: false
     };
 
-    let producctsDb = sequelize.define (alias , cols , config);
-    return producctsDb;
+    let productsDb = sequelize.define (alias , cols , config);
+    return productsDb;
 }
 

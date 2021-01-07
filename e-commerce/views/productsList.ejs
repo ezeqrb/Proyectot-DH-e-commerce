@@ -7,19 +7,21 @@
 </head>
 <body>
     <%- include("./partials/header.ejs")%>
-    <p>Lista de productos:</p>
-    <% if (productsDB.length >0){ %>
-        <ul>
-        <% for (let i = 0 ; i < productsDB.length; i++){ %>
-            <li><a href="products/<%= productsDB[i].Id %>"><%= productsDB[i].Name %></a> </li>
+    <main>
+        <p>Lista de productos:</p>
+        <% if (productsDB.length >0){ %>
+            <ul>
+            <% for (let i = 0 ; i < productsDB.length; i++){ %>
+                <li><a href="<%= productsDB[i].Id %>"><%= productsDB[i].Name %></a> </li>
+            <% } %>
+            </ul>
+        <% }else{ %>
+            <h5>No hay productos para mostrar</h5>
         <% } %>
-        </ul>
-    <% }else{ %>
-        <h5>No hay productos para mostrar</h5>
-       <% } %>
-        
+
+    </main>
     <%- include("./partials/footer")%>
-</body>
+    </body>
 </html>
 
 <!--Chequear mayusculas/minusculas en productsDB.Id y .Name si no funciona -->

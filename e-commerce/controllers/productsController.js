@@ -14,7 +14,7 @@ let controller = {
         res.render ('createProduct');
     },
     store : function (req, res, next){
-        db.product.create ({
+        db.product.create({
             Id: req.body.id,
             Name: req.body.name,
             Price: req.body.price,
@@ -25,7 +25,7 @@ let controller = {
             Brand: req.body.brand,
             Picture: req.files[0].filename
         });
-        res.redirect ("/products/list")
+        res.redirect ("/")
     },
     details : function (req, res , next){
         db.product.findByPK (req.params.id)

@@ -19,7 +19,7 @@ module.exports = function (sequelize , dataTypes) {
             type: dataTypes.STRING
         },
         Size : {
-            type: dataTypes.STRING
+            type: dataTypes.INTEGER
         },
         Colour: {
             type: dataTypes.STRING

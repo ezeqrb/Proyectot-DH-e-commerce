@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
+    
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.titulares{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.a{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.b{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color: silver;
+
+}
+h3{
+    width: 12.5%;
+    text-align: center;
+}
+.volver{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.volver h1{
+    font-size: 30px;
+}

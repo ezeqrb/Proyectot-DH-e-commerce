@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/userList.css">
+    <title>Document</title>
+</head>
+<body>
+   
+        <div class="volver">
+            <h1><A href="/products">VOLVER AL MENÚ PRINCIPAL</A></h1>
+        </div>
+        <div class="titulares">
+            <h3>ID</h3>
+            <h3>TITULO</h3>
+            <h3>PRECIO</h3>
+            <h3>TIPO</h3>
+            <h3>DEPORTE</h3>
+            <h3>TALLE</h3>
+            <h3>EDITAR</h3>
+            <h3>ELIMINAR</h3>
+        </div>
+    <% for(let i = 0; i < products.length;i++){ %>
+        <% if(i %2 == 0){ %>
+            <div class="a">
+                <h3><%= products[i].id %></h3>
+                <h3><%= products[i].titulo %></h3>
+                <h3><%= products[i].precio %></h3>
+                <h3><%= products[i].tipo %></h3>
+                <h3><%= products[i].deporte %></h3>
+                <h3><%= products[i].talle %></h3>
+                <h3><a href="/products/update/<%= products[i].id %>">EDITAR</a></h3>
+                <h3><a href="/products/delete/<%= products[i].id %>">ELIMINAR</a></h3>
+            </div>
+        <% }else{ %>
+            <div class="b">
+                <h3><%= products[i].id %></h3>
+                <h3><%= products[i].titulo %></h3>
+                <h3><%= products[i].precio %></h3>
+                <h3><%= products[i].tipo %></h3>
+                <h3><%= products[i].deporte %></h3>
+                <h3><%= products[i].talle %></h3>
+                <h3><a href="/products/update/<%= products[i].id %>">EDITAR</a></h3>
+                <h3><a href="/products/delete/<%= products[i].id %>">ELIMINAR</a></h3>
+            </div>    
+        <% }; %>
+    <% }; %>
+            
+
+</body>
+</html>

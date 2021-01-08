@@ -15,7 +15,7 @@ body{
 
 /* ---------------------- NUEVO HEADER----------------------------*/
 header{
-    background: radial-gradient(#fff,#ffd6d6);
+    background: radial-gradient(#fff,hsl(29, 93%, 70%));
 
 
 }

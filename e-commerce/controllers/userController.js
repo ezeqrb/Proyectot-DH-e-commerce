@@ -15,7 +15,13 @@ var controller = {
         res.render('register');
     },
     userlist: function(req, res) {
-        res.render('home');
+        db.User.findAll().then(function(result){
+            res.send(result)
+        }).catch(function(error){
+            console.log(error)
+            res.send('error')
+        })
+        
     },
     userhome: function(req, res) {
         res.render('home');

@@ -19,15 +19,18 @@ module.exports = function(sequelize, DataTypes){
             "type": DataTypes.STRING(45),
             "allowNull": false,
         },
-        "updateAT":{
+        "updatedAt":{
             "type": DataTypes.DATE(6),
             "allowNull": false,
         },
-        "createAt":{
+        "createdAt":{
             "type": DataTypes.DATE(6),
             "allowNull": false,
-        },
+        }
+    }, {
+        "tableName":"users",
+
     })
     return user;
-}
 
+}

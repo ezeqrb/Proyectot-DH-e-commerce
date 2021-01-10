@@ -12,8 +12,13 @@ var controller = {
         res.render('register');
     },
     registerpost: function(req, res, next) {
-        res.render('register');
-    },
+        db.User.create({
+            username: req.body.username,
+            email:req.body.email,
+            passcrypt: req.body.passcrypt,
+        });
+        res.redirect('/home');
+    },  
     userlist: function(req, res) {
         db.User.findAll().then(function(result){
             res.send(result)
@@ -21,7 +26,6 @@ var controller = {
             console.log(error)
             res.send('error')
         })
-        
     },
     userhome: function(req, res) {
         res.render('home');
@@ -31,4 +35,4 @@ var controller = {
     },
 }
 
-module.exports = controller 
+module.exports = controller

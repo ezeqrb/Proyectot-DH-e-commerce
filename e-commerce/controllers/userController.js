@@ -25,8 +25,9 @@ var controller = {
     },  
     //Listado
     list: function(req, res) {
-        db.User.findAll().then(function(users){
-            res.render('userList',{users:users})
+        db.User.findAll()
+            .then(function(users){
+                res.render('userList',{users:users})
         }).catch(function(error){
             console.log(error)
             res.send('error')

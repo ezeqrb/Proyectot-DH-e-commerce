@@ -14,11 +14,13 @@
 .box1{
     padding: 20px;
     border-bottom: solid rgb(190, 190, 190) 1px;
+    
 }
 nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
 }
 nav ul {
     display: inline-block;
@@ -28,6 +30,7 @@ nav ul {
 nav ul li{
     display: inline-block;
     margin-right: 20px;
+    
 }
 a{
     text-decoration: none;
@@ -79,4 +82,24 @@ p{
 .big{
     font-weight: bold;
     font-size: medium;
+}
+
+.sub-menu{
+    position:absolute;
+    background: white;
+    width: 100%;
+    display: none;
+    color: black;
+}
+.sub-menu li{
+    display: block;
+    
+}
+
+
+nav li:hover .sub-menu {
+    display: block;
+}
+nav li:hover .sub-menu {
+    display: block;
 }

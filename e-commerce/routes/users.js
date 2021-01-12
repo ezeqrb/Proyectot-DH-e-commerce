@@ -12,5 +12,5 @@ router.get('/list',userController.list);
 router.get('/:id',userController.detail);
 router.get('/:id/edit',userController.edit);
 router.post('/:id/edit',userController.update);
-
+router.post('/:id/delete',userController.delete);
 module.exports = router;

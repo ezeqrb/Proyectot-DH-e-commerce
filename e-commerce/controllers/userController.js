@@ -66,7 +66,15 @@ var controller = {
         });
         
         res.redirect('/');
-    },    
+    },  
+    delete: function(req, res) {
+        db.User.destroy({
+            where:{
+                idusers: req.params.id
+            }
+        })
+        res.redirect('/users/list');
+    },  
 
 
 }

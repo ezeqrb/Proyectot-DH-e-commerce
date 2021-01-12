@@ -6,6 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hola mundo</h1>
+    
+    <%- include("./partials/headerUsers.ejs")%>
+       
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>Listado de Usuarios</h1>
+       
+    <ul>
+        <% for(let i=0; i < users.length ; i++){ %>
+        <li>
+          <a href="/users/<%=users[i].idusers %>">  <%= users[i].username %> </a>
+        </li>
+
+        <% } %>
+    </ul>
+
 </body>
 </html>
+

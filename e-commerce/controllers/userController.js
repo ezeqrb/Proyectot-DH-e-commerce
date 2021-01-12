@@ -2,12 +2,16 @@ const db = require('../database/models')
 
 
 var controller = {
+    
+    //Login
     login: function(req, res, next) {
         res.render('login');
     },
     loginpost: function(req, res, next) {
     res.render('login');
     },
+
+    // Registro
     register: function(req, res, next) {
         res.render('register');
     },
@@ -17,22 +21,55 @@ var controller = {
             email:req.body.email,
             passcrypt: req.body.passcrypt,
         });
-        res.redirect('/home');
+        res.redirect('/');
     },  
-    userlist: function(req, res) {
-        db.User.findAll().then(function(result){
-            res.send(result)
+    //Listado
+    list: function(req, res) {
+        db.User.findAll().then(function(users){
+            res.render('userList',{users:users})
         }).catch(function(error){
             console.log(error)
             res.send('error')
         })
     },
-    userhome: function(req, res) {
-        res.render('home');
+    //Detalle
+
+    detail: function(req, res) {
+        db.User.findByPk(req.params.id)
+            .then(function(users){
+            res.render('userDetail',{users:users})
+        }).catch(function(error){
+            console.log(error)
+            res.send('error')
+        })
     },
-    createUser: function(req,res,next){
-        res.render('createUser')
+
+    //Actualizar Usuario
+    edit: function(req, res) {
+        db.User.findByPk(req.params.id)
+            .then(function(user){
+                res.render('updateUsers',{user:user})
+        }).catch(function(error){
+            console.log(error)
+            res.send('error')
+        })
     },
+    update: function(req, res) {
+        db.User.update({
+            username: req.body.username,
+            email:req.body.email,
+            passcrypt: req.body.passcrypt,
+        },{
+        where: {
+            idusers:req.params.id   
+        }
+        });
+        
+        res.redirect('/');
+    },    
+
+
 }
+
 
 module.exports = controller

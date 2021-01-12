@@ -8,11 +8,9 @@ router.get('/login',userController.login);
 router.post('/login',userController.loginpost);
 router.get('/register',userController.register);
 router.post('/register',userController.registerpost);
-router.get('/list',userController.userlist);
-/*
-router.get('/:iduser',userController.profile);
-router.get('/:iduser/edit',userController.showedit);
-router.post('/:iduser/edit',userController.edit);
-router.get('/',userController.menu);
-*/
+router.get('/list',userController.list);
+router.get('/:id',userController.detail);
+router.get('/:id/edit',userController.edit);
+router.post('/:id/edit',userController.update);
+
 module.exports = router;

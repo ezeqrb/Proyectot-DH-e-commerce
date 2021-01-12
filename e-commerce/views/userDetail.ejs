@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+     <%- include("./partials/headerUsers.ejs")%>
+       
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h1>Detalles de Usuarios</h1>
+       
+    <ul>
+        
+        <li>
+          <%= users.idusers %>
+        </li>
+        <li>
+            <%= users.username %>
+        </li>
+        <li>
+            <%= users.email %>
+        </li>
+        <li>
+            <a href="/users/<%= users.idusers %>/edit">
+                <button>EDITAR</button>
+            </a>
+        </li>
+        
+    </ul>
+
+</body>
+</html>

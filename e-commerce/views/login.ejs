@@ -14,11 +14,19 @@
         <div class="logo">
             <h1>Ingresar</h1>
         </div>
-
+        <% if (errors) { %>
+        <ul>
+            <% for (let i =0 ; i<errors.length ; i++) { %>
+                <li>
+                    <%= errors[i].msg %>
+                </li>
+                <% } %>
+        </ul>
+        <% } %>
         <div>
             <div class="input-fields">
-                <input type="text" class="input" placeholder="Email" required="Debe ingresar datos">
-                <input type="password" class="input" placeholder="Contraseña" required="Debe ingresar datos">
+                <input type="text" class="input" placeholder="Email" required="Debe ingresar datos" name="email">
+                <input type="password" class="input" placeholder="Contraseña" required="Debe ingresar datos" name="passcrypt">
             </div>
 
             <div class="forget">

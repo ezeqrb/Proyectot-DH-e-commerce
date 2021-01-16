@@ -1,4 +1,5 @@
 const db = require('../database/models')
+const {check , validationResult , body} =require ("express-validator");
 
 
 var controller = {
@@ -16,12 +17,17 @@ var controller = {
         res.render('register');
     },
     registerpost: function(req, res, next) {
-        db.User.create({
-            username: req.body.username,
-            email:req.body.email,
-            passcrypt: req.body.passcrypt,
-        });
-        res.redirect('/');
+        let errors = validationResult (req);
+        if (errors != "undefined") {
+            db.User.create({
+                username: req.body.username,
+                email:req.body.email,
+                passcrypt: req.body.passcrypt,
+            });
+            res.redirect('/');
+        }else{
+            res.redirect ("/users/login" , {errors : errors.errors})
+        }
     },  
     //Listado
     list: function(req, res) {

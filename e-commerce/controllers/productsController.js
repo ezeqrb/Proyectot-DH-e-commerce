@@ -1,5 +1,6 @@
 const db = require('../database/models');
 
+
 let controller = {
 
     list : function (req, res, next){

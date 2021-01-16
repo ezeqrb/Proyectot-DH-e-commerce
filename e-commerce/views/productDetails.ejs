@@ -9,18 +9,19 @@
     <%- include("./partials/header.ejs")%>
     <h4>Detalles</h4>
     <p> 
-    Id: <%= req.params.Id %> <br>
-    Nombre: <%= product.Name %> <br>
-    Precio: <%= product.Price %> <br>
-    Descripcion: <%= product.Description %> <br>
-    Categoria: <%= product.Category %> <br>
-    Talle: <%= product.Size %> <br>
-    Color: <%= product.Colour %> <br>
-    Marca: <%= product.Brand %> <br>
-    Imagen: <%= product.Picture %> <img src="/images/Products/<%= product.imagen %> " alt="Imagen del producto"> <br>
-
-    </p>
-    <button><a href="/products/<%= product.id %>/edit">Editar</a></button>
+        <br><br><br><br><br><br>
+        Id: <%= product.Id %> <br>
+        Nombre: <%= product.Name %> <br>
+        Precio: <%= product.Price %> <br>
+        Descripcion: <%= product.Description %> <br>
+        Categoria: <%= product.Category %> <br>
+        Talle: <%= product.Size %> <br>
+        Color: <%= product.Colour %> <br>
+        Marca: <%= product.Brand %> <br>
+        Imagen: <%= product.Picture %> <img src="/images/Products/<%= product.Picture %> " alt="Imagen del producto"> <br>
+    
+        </p>
+    <button><a href="/products/<%= product.Id %>/edit">Editar</a></button>
 
     <%- include("./partials/footer")%>
 </body>

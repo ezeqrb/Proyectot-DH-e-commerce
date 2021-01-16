@@ -8,11 +8,12 @@
 <body>
     <%- include("./partials/header.ejs")%>
     <main>
+        <br><br><br><br><br><br><br><br><br><br>
         <p>Lista de productos:</p>
         <% if (productsDB.length >0){ %>
             <ul>
             <% for (let i = 0 ; i < productsDB.length; i++){ %>
-                <li><a href="<%= productsDB[i].Id %>"><%= productsDB[i].Name %></a> </li>
+                <li><a href="/products/<%=productsDB[i].Id %>"><%= productsDB[i].Name %></a> </li>
             <% } %>
             </ul>
         <% }else{ %>

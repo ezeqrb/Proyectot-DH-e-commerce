@@ -1,46 +1,42 @@
-module.exports = function (sequelize , dataTypes) {
-    let alias ="product";
-    let cols = {
-        Id: {
-            type: dataTypes.INTEGER,
-            primaryKey: true,
-            autoIncrement: true
-        },
-        Name: {
-            type: dataTypes.STRING
-        },
-        Price : {
-            type: dataTypes.INTEGER
-        },
-        Description: {
-            type: dataTypes.STRING
-        },
-        Category: {
-            type: dataTypes.STRING
-        },
-        Size : {
-            type: dataTypes.INTEGER
-        },
-        Colour: {
-            type: dataTypes.STRING
-        },
-        Brand: {
-            type: dataTypes.STRING
-        },
-        Picture: {
-            type: dataTypes.STRING,
-            allowNull: true
+module.exports = function (sequelize , DataTypes) {
 
-        }
+    let productsDb = sequelize.define('Product' ,
+     {  "Id": {
+             "type": DataTypes.INTEGER,
+             "primaryKey": true,
+            "autoIncrement": true
+                 },
+        "Name": {
+             "type": DataTypes.STRING
+             },
+        "Price" : {
+            "type": DataTypes.INTEGER
+            },
+        "Description": {
+            "type": DataTypes.STRING
+            },
+        "Category": {
+            "type": DataTypes.STRING
+            },
+        "Size" : {
+             "type": DataTypes.INTEGER
+            },
+        "Colour": {
+            "type": DataTypes.STRING
+             },
+        "Brand": {
+             "type": DataTypes.STRING
+         },
+        "Picture": {
+             "type": DataTypes.STRING,
+            "allowNull": true
 
+         }
 
-    }
-    let config = {
-        tableName: "Products",
-        timestamps: false
-    };
+    } ,  {"tableName": "Products",
+    "timestamps": false }
+    )
 
-    let productsDb = sequelize.define (alias , cols , config);
     return productsDb;
 }
-
+    

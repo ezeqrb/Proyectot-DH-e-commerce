@@ -1,4 +1,3 @@
-const bcrypt = require('bcrypt');
 const db = require('../database/models');
 const {check , validationResult , body} =require ("express-validator");
 

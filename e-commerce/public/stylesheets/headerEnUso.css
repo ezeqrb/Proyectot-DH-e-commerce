@@ -10,10 +10,12 @@
     font-family: 'Poppins', sans-serif;
     background-color: white;
     position: fixed;
+    z-index: 99999;
+    display: block;
 }
 .box1{
     padding: 20px;
-    border-bottom: solid rgb(190, 190, 190) 1px;
+    border-bottom: solid rgb(218, 218, 218) 1px;
     
 }
 nav{
@@ -82,6 +84,7 @@ p{
 .big{
     font-weight: bold;
     font-size: medium;
+
 }
 
 .sub-menu{
@@ -90,10 +93,11 @@ p{
     width: 100%;
     display: none;
     color: black;
-}
+
 
 .sub-menu li{
     display: block;
+    
     
 }
 

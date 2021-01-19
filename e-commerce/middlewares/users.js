@@ -1,7 +1,5 @@
 const db = require('../database/models');
 const {check , validationResult , body} =require ("express-validator");
-var bcrypt = require('bcryptjs');
-var salt = bcrypt.genSaltSync(10);
 
 
 let middleware = {
@@ -10,22 +8,7 @@ let middleware = {
         check ("passcrypt").isLength().withMessage ("Campo vacio");
         next ();
     },
-    
-    hashing:function (req,res,next) {
-        var hash = bcrypt.hashSync(req.body.passcrypt, salt); 
-        db.User.create({
-            passcrypt: hash
-        });
-            
-        next()
-   },
-   compareHashing:function(Req,res,next) {
-        db.User.findAll(req.body.email)
-            .then(function(pw) {
-                bcrypt.compareSync(pw.bcrypt, req.body.passcrypt)
-            })
-        next()
-   }
+   
    
     // isEmail: function ()
 
@@ -41,3 +24,5 @@ module.exports = (middleware);
     Que los campos esten llenos
     Que el usuario exista
     Que la contraseña coincida con ese usuario  */
+
+// cookies y session 

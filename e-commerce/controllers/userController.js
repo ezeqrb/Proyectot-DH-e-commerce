@@ -22,7 +22,6 @@ var controller = {
             db.User.create({
                 username: req.body.username,
                 email:req.body.email,
-                passcrypt: req.body.passcrypt,
             });
             res.redirect('/');
         }else{

@@ -14,15 +14,7 @@
         <div class="logo">
             <h1>Ingresar</h1>
         </div>
-        <% if (errors) { %>
-        <ul>
-            <% for (let i =0 ; i<errors.length ; i++) { %>
-                <li>
-                    <%= errors[i].msg %>
-                </li>
-                <% } %>
-        </ul>
-        <% } %>
+        
         <div>
             <div class="input-fields">
                 <input type="text" class="input" placeholder="Email" required="Debe ingresar datos" name="email">

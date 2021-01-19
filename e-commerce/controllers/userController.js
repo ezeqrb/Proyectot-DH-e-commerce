@@ -6,49 +6,6 @@ var salt = bcrypt.genSaltSync(10);
 
 var controller = {
     
-    //Login
-    login: function(req, res, next) {
-        res.render('login');
-    },
-
-    loginpost: function(req, res, next){
-        db.User.findOne({where: {email :req.body.email}} )
-            .then(function(person){
-                console.log(person)
-                console.log(req.body.passcrypt)
-                console.log(person.passcrypt)
-                if(bcrypt.compareSync( req.body.passcrypt , person.passcrypt)){
-                    res.render('home');
-                }else{
-                    res.send("usuario o contraseña invalidos")}
-           
-            }).catch(function(error){
-                console.log(error)
-                res.send('error')
-            })
-        
-    },
-
-    // Registro
-
-    register: function(req, res, next){
-        res.render('register');
-    },
-
-    registerpost: function(req, res, next) {
-        let errors = validationResult (req);
-        if (errors.isEmpty()) {
-            var hash = bcrypt.hashSync(req.body.passcrypt, salt); 
-            db.User.create({
-                username: req.body.username,
-                email:req.body.email,
-                passcrypt: hash
-            });
-            res.redirect('/');
-        }else{
-            res.redirect ("/users/login" , {errors : errors.errors})
-        }
-    },  
     //Listado
     list: function(req, res) {
         db.User.findAll()

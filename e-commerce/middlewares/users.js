@@ -4,10 +4,26 @@ const {check , validationResult , body} =require ("express-validator");
 
 let middleware = {
     isFull: function (req, res, next){
-        check ("email").isLength().withMessage ("El campo Email debe ser completado");
-        check ("passcrypt").isLength().withMessage ("Campo vacio");
+        check('passcrypt', 'This username must be 3+ characters long')
+        .exists()
+        .isLength({ min: 3 }),
+        check('email', 'Email is not valid')
+        .isEmail()
+        .normalizeEmail()
         next ();
     },
+   
+   /*
+    isAdmin:function(req,res,next){
+        db.User.findAll(req.session.usuario){
+            then.(function(user){
+                if(user.admin!=true){
+                    res.redirect('home');
+                }
+            }) 
+        }
+        
+    },  */
    
    
     // isEmail: function ()

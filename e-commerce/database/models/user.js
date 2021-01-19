@@ -2,10 +2,14 @@ module.exports = function(sequelize, DataTypes){
 
 
     let user= sequelize.define('User',{
-        "idusers":{
+            "idusers":{
             "type": DataTypes.INTEGER,
             "autoIncrement": true,
             "primaryKey": true,
+        },
+        "admin":{
+            "type": DataTypes.STRING(5),
+            "allowNull": false,
         },
         "username":{
             "type": DataTypes.STRING(45),

@@ -12,18 +12,18 @@ let middleware = {
         .normalizeEmail()
         next ();
     },
-   
-   /*
     isAdmin:function(req,res,next){
         db.User.findAll(req.session.usuario){
             then.(function(user){
                 if(user.admin!=true){
                     res.redirect('home');
+                }else{
+                    res.redirect('home')
                 }
             }) 
         }
-        
-    },  */
+        next()
+    },
    
    
     // isEmail: function ()

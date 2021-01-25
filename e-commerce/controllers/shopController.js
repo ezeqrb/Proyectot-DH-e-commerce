@@ -3,7 +3,7 @@ var controller = {
         res.render('cart');
       },
     product: function(req, res, next) {
-        res.render('product');
+        res.render('shop');
       },
     shop: function(req, res, next) {
       res.render('shop');

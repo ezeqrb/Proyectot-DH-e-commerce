@@ -12,7 +12,7 @@ let middleware = {
         .normalizeEmail()
         next ();
     },
-    isAdmin:function(req,res,next){
+    /* isAdmin:function(req,res,next){
         db.User.findAll(req.session.usuario){
             then.(function(user){
                 if(user.admin!=true){
@@ -23,7 +23,7 @@ let middleware = {
             }) 
         }
         next()
-    },
+    }, */
    
    
     // isEmail: function ()

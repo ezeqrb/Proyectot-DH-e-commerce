@@ -10,36 +10,47 @@ var controller = {
     shop: function(req, res, next) {
       res.render('shop');
     }, 
+    marcas: function(req, res, next) {
+      res.render('marcas');
+    },
     hombre: async (req, res) => {
       try {
           let products = await db.Product.findAll({where: {
             Category:'Hombre'
           }});
           
-          res.render('shop', {products:products});
+          res.render('shopHombre', {products:products});
       } catch (error) {
           console.log(error);
           res.status(500).render('error-500', { error });
       }
     },
-    mujer : function (req, res, next){
-      db.Product.findAll()
-          .then(function(productsDB){
-              res.render ("productsList" , {productsDB});
-          }).catch(function(error){
-              console.log(error)
-              res.send('error')
-          })
+    mujer: async (req, res) => {
+      try {
+          let products = await db.Product.findAll({where: {
+            Category:'Mujer'
+          }});
+          
+          res.render('shopMujer', {products:products});
+      } catch (error) {
+          console.log(error);
+          res.status(500).render('error-500', { error });
+      }
   },
-  niño : function (req, res, next){
-    db.Product.findAll()
-        .then(function(productsDB){
-            res.render ('niño' , {productsDB});
-        }).catch(function(error){
-            console.log(error)
-            res.send('error')
-        })
-  },
+  
+  niño: async (req, res) => {
+    try {
+        let products = await db.Product.findAll({where: {
+          Category:'Niño'
+        }});
+        
+        res.render('shopNiño', {products:products});
+    } catch (error) {
+        console.log(error);
+        res.status(500).render('error-500', { error });
+    }
+  }
 }
 
-module.exports = controller 
+
+module.exports = controller

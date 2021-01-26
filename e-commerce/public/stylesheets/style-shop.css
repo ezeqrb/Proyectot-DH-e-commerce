@@ -19,10 +19,20 @@ aside{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 25%;
+    width: 30%;
 }
 main{
+    
+    max-width: 70%;
     box-sizing: border-box;
-        width: 75%;
-    display: flex;
+    
+}
+.cards{
+    display: inline-block;
+    margin: 10px 10px 10px 10px;
+}
+
+.pags{
+    margin-top: 30px;
+    margin-bottom: 30px;
 }

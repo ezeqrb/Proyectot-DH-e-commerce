@@ -4,7 +4,7 @@ var shopController = require('../controllers/shopController')
 
 router.get('/cart',shopController.cart);
 
-router.get('/', shopController.product );
+router.get('/hombre', shopController.hombre);
 
 router.get('/', shopController.shop );
 

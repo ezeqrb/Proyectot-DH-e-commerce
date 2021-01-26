@@ -5,7 +5,7 @@ var userMiddleware = require('../middlewares/users')
 /* GET home page. */
 
 router.get('/login' ,indexController.login);
-router.post('/login',userMiddleware.isFull , indexController.loginpost);
+router.post('/login',userMiddleware.isFull, indexController.loginpost);
 router.get('/register',indexController.register);
 router.post('/register',indexController.registerpost);
 router.get('/', indexController.index);

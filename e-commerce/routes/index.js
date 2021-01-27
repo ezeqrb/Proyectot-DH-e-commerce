@@ -1,7 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var indexController = require('../controllers/indexController')
-var userMiddleware = require('../middlewares/user')
+var user = require('../middlewares/user')
+var guess = require('../middlewares/guess')
+var admin = require('../middlewares/admin')
+
 /* GET home page. */
 
 router.get('/login' ,indexController.login);

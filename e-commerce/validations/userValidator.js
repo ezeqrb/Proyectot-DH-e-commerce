@@ -28,6 +28,14 @@ module.exports = {
 
     ],
     recoverForm: [
+        check('email').notEmpty().withMessage('Ingrese una direccion de correo electronico').bail().
+        isEmail().withMessage('La direccion de correo electronico no es valida').bail()
+        custom(async value => {
+            let match = await db.User.findeOne({where:{email:value}})
+            if(!match){
+                return Promise.rejecte('La direccion de correo electronico no coicide con ningún usuario existente')
+            }
+        })
         
     ]
 

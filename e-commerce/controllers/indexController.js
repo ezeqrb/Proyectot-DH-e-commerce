@@ -3,7 +3,7 @@ const {check , validationResult , body} =require ("express-validator");
 var bcrypt = require('bcryptjs');
 var salt = bcrypt.genSaltSync(10);
 const session = require('express-session');
-
+const crypto = require('crypto-js')
 var controller = {
     
     // Login
@@ -11,7 +11,34 @@ var controller = {
     login: function(req, res, next) {
         res.render('login');
     },
+    authenticate: async (req,res) => {
+        try {
+            let errors = validationResult(req);
+            if (errors.isEmpty()) {
+                let userAuthenticated = await Users.findOne({ where: { email: req.body.email } });
+                if (userAuthenticated && bcrypt.compareSync(req.body.password, userAuthenticated.password)){
+                    req.session.user = { id: userAuthenticated.id, name: userAuthenticated.firstname, isAdmin: userAuthenticated.isAdmin};
 
+                    /*
+                    if (req.body.remember){
+                        const tokenCrypto = crypto.randomBytes(64).toString('base64');
+                        await token.create({ user_id: userAuthenticated.id, token: tokenCrypto });
+                        res.cookie('userToken', tokenCrypto, { maxAge: 1000 * 60 * 60 * 24 * 30 });
+                    }
+                    res.redirect('/');
+                    */
+
+                } else {
+                    res.render('users/login', { errors: { form: { msg: 'Credenciales no válidas' }}});
+                }
+            } else {
+                res.render('users/login', { errors: errors.mapped() });
+            }
+        } catch (error) {
+            console.log(error);
+            res.status(500).render('error-500', {error});
+        }
+    },
     loginpost: function(req, res, next){
         let errors= validationResult(req);
         

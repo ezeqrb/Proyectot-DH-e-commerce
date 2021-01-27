@@ -5,8 +5,15 @@ var controller = {
         res.render('cart');
       },
     product: function(req, res, next) {
-        res.render('shop');
-      },
+      res.render('product');
+      /*
+     if(req.params.sex == "hombre" ||req.params.sex == "hombre" || req.params.sex == "hombre"){
+        res.render('product');
+      }else{
+        res.status(500).render('error-500', {error})
+      }
+      */
+    },
     shop: function(req, res, next) {
       res.render('shop');
     }, 
@@ -19,7 +26,7 @@ var controller = {
             Category:'Hombre'
           }});
           
-          res.render('shopHombre', {products:products});
+          res.render('shop', {products:products});
       } catch (error) {
           console.log(error);
           res.status(500).render('error-500', { error });
@@ -31,7 +38,7 @@ var controller = {
             Category:'Mujer'
           }});
           
-          res.render('shopMujer', {products:products});
+          res.render('shop', {products:products});
       } catch (error) {
           console.log(error);
           res.status(500).render('error-500', { error });
@@ -44,7 +51,7 @@ var controller = {
           Category:'Niño'
         }});
         
-        res.render('shopNiño', {products:products});
+        res.render('shop', {products:products});
     } catch (error) {
         console.log(error);
         res.status(500).render('error-500', { error });

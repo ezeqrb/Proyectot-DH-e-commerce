@@ -14,9 +14,12 @@ var controller = {
     authenticate: async (req,res) => {
         try {
             let errors = validationResult(req);
+            console.log (errors)
             if (errors.isEmpty()) {
-                let userAuthenticated = await Users.findOne({ where: { email: req.body.email } });
-                if (userAuthenticated && bcrypt.compareSync(req.body.password, userAuthenticated.password)){
+
+                let userAuthenticated = await db.User.findOne({where: { email: req.body.email }});
+                console.log(userAuthenticated,"hola")
+                if (userAuthenticated && bcrypt.compareSync(req.body.passcrypt, userAuthenticated.passcrypt)){
                     req.session.user = { id: userAuthenticated.id, name: userAuthenticated.firstname, isAdmin: userAuthenticated.isAdmin};
 
                     /*
@@ -27,7 +30,7 @@ var controller = {
                     }
                     res.redirect('/');
                     */
-
+                    res.redirect('/')
                 } else {
                     res.render('users/login', { errors: { form: { msg: 'Credenciales no válidas' }}});
                 }

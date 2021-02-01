@@ -21,7 +21,7 @@ let controller = {
             Id: req.body.id,
             Name: req.body.name,
             Price: req.body.price,
-            Description: req.body.price,
+            Description: req.body.description,
             Category: req.body.category,
             Size: req.body.size,
             Colour: req.body.color,

@@ -7,7 +7,7 @@ var admin = require('../middlewares/admin')
 var userValidator = require('../validations/userValidator')
 /* GET home page. */
 
-router.get('/login', user ,indexController.login);
+router.get('/login',indexController.login);
 router.post('/login', userValidator.loginForm , indexController.authenticate);
 router.get('/register',indexController.register);
 router.post('/register',indexController.registerpost);

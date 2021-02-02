@@ -28,7 +28,7 @@ app.use(session({
   secret: 'hello-stranger', 
   name : 'sessionID',
   resave: false,
-  saveUninitialized: true
+  saveUninitialized: false
 }));
 
 

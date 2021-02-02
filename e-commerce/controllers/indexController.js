@@ -21,7 +21,7 @@ var controller = {
                 console.log(userAuthenticated,"hola")
                 if (userAuthenticated && bcrypt.compareSync(req.body.passcrypt, userAuthenticated.passcrypt)){
                     req.session.user = { id: userAuthenticated.id, name: userAuthenticated.firstname, isAdmin: userAuthenticated.isAdmin};
-
+                    console.log("entraste")
                     /*
                     if (req.body.remember){
                         const tokenCrypto = crypto.randomBytes(64).toString('base64');

@@ -1,5 +1,5 @@
 const formulario = document.getElementById('form')
-const imputs = document.querySelectorAll('#form input')
+const inputs = document.querySelectorAll('#form input')
 
 // Expresiones regulares para email y contraseña 
 const expresiones = {
@@ -12,11 +12,11 @@ const expresiones = {
 
 // campos inicialmente en false para la validación posterior 
 const campos = {
-email: false,
-password: false
+    email: false,
+    password: false
 }
 
-// Funcion que valida los campos 
+// Funcion que valida el formulario
 const validarFormulario = (e)=>{
     switch (e.target.name){
         case "email":
@@ -24,15 +24,16 @@ const validarFormulario = (e)=>{
         break;
         case "passcrypt": 
             validarCampo(expressiones.password,e.target,"passcrypt")
+        break;
     }
 }
 
 // Validar campos 
-const validarCampos = (expresiones,input,campo) =>{
+const validarCampo = (expresiones,input,campo) =>{
     if(expresiones.test(input.value)){
-        
+        campos.campo = true
     }else{
-
+        campos.campo= false
     }
 }
 
@@ -43,9 +44,11 @@ inputs.forEach((input) =>{
 
 
 // Logica principal del formulario 
-
-if(campos){
-
-}else{
-
+formulario.onsubmit = function(e){
+    if(campos){
+        alert('formulario enviado con exito')
+    }else{
+        e.preventDefault()
+        alert('formulario no se pudo enviar')
+    }
 }

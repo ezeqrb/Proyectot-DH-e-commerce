@@ -5,16 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
     <link rel="stylesheet" href="/stylesheets/style-home.css">
+    <link rel="stylesheet" href="/node_modules/@splidejs/splide/dist/css/splide.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
 </head>
 <body>
    <!--  _______________________________________
             HEADER
             _______________________________________ -->
+    
+    
+    <%- include("./partials/header.ejs")%>
     <header>
-        <%- include("./partials/header.ejs")%>
+       
+    
+
         <div class="row">
             <div class="colmun1">
                 <h1>Da a tu entrenamiento<br>Un nuevo estilo!</h1>
@@ -28,11 +36,10 @@
             </div>
         
             </div>
-
-    </header>
-    <aside>
-
-    </aside>
+     </header>
+    
+  
+    
     <main>
        <!--  _______________________________________
          las 3 imagenes abajo del header (categorias) 
@@ -290,8 +297,10 @@
     <%- include("./partials/footer")%>
     
 
-        
-<script src="/javascripts/home.js"></script>
+    
+<script src="/javascripts/home.js"> 
+
+</script>
     
 </body>
 </html>

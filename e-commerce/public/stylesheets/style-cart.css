@@ -2,342 +2,87 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 *{
-    margin: 0;
-    padding: 0;
+    
     box-sizing: border-box;
-    font-family: "Poppins" ;
-    font-size: 16px;
-}
-body{
-    font-family: "poppins"
-    /* font-family:  'Roboto', sans-serif; */
-}
-
-/* /* /*----------------------------- HEADER*-------------------*/
-/* header{
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-}
-
-
-a:link {
-    color:black;
-    background-color: transparent;
-    text-decoration: none;
-}
-
-.nav a:hover {
-    color: red;
-    background-color: transparent;
-    border-bottom: solid 2px red;
-}
-
-.search{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border: solid black 2px;
-    border-radius: 30px;
-    width: 250px;
-}
-.search input{
-    border: none;
-    background-color: transparent;
-    padding: 3px;
+    font-family: "Roboto" ;
     font-size: 20px;
-}
-.search input:focus{
-    outline: none;
-    
-}
-.box1{
-    width: 100%;
-    height: 70%;
-    display: flex;
-    align-items: center;
-    padding: 0 30px;
-    
-}
-
-.box2{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 30%;
-    width: 100%;
-    background-color: black;
-    color: white;
-}
-
-
-.menu{  
-   
-    padding: 10px; 
-    display: flex;
-    
-    
-    
-    
-   
-    
-}
-.menu a,i{
-    color: black;
-    margin-right: 10px;
-    font-size: 20px ;
-    display: flex;
-}
-
-
- 
-
-.nav{
-    display: flex;
-   
-
-}
-.nav ul{
-     
-    display: flex;
-    
-}
-.nav ul li{
-     
-    display: flex;
-    justify-content: space-around;
-    padding: 0px 20px;
-    font-size: 20px;
-    
-}
-.nav ul li a{
-    color: black;
-} */
-/*--------------------------////////ASIDE/////-------------------*/
-/*--------------------------////////MAIN/////-------------------*/
-/* MAIN*/
-main{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center ;
-    position: relative;
-    
+    box-sizing: border-box;
 }
 
 
 .contenedor{
-    width: 70vw;
-    border: solid 1px white;
-    border-radius: 15px;
-    background-color: #F3F2F3;
-    
-}
-.imagen{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center; 
-    height: 150px;
-    width: 100%;
-    border: 1px solid grey;
-    border-radius: 17px;
-    margin:20px 20px 10px 20px;
-    
-    
+display:flex;
+position: relative;
 
 }
-.foto img{
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 70%;
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 30%;
 
-    
-}
-.descripcion h4{
-    font-weight: 300;
-}
-.total{
-    display: flex;
-    
-    
-    flex-direction: column;
-    text-align: center;
-
-}
-.cantidad{
-    display: flex;
-    
-    
-    padding-left: 10%;
-}
-.caja1 {
-    display: flex;
-    flex-direction: row;
-    
-    
-    justify-content: space-between;
-}
-.validar{
-   
-    color: black;
-    text-decoration: none;
-    padding: 0% 2%;
-    border-radius: 17px;
-    transition-duration: 0.5;
-}
-.validar:hover{
-    background-color: red;
-    color: white;
 }
 
-.codigo{
-    padding-top: 5%;
-}
-.costo{
-    
-    color: white;
-    text-decoration: none;
-    padding-top: 4%;
-}
-.costo .calcular{
-    background-color: black;
-    color: white;
-    text-decoration: none;
-}
-.envio p{
-    padding-top: 4%;
-    
-   
-}
-.texto{
-    display: flex;
-    padding-top: 2%;
-    flex-direction: column;
-    margin:20px 20px 20px 10px;
-    border: 1px solid grey;
-    border-radius: 17px;
-    padding: 20px;
-}
-.boleta{
-    display: flex;
-    justify-content: space-around;
-    padding-top: 5%;
-    flex-direction: column;
-}
-.boleta .campos{
+.card{
     display: flex;
     justify-content: space-between;
-    
-}
+    width: 80%;
+    height: auto;
+    border: 2px solid grey;
 
-.comprar{
+}
+.cardContainer{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 310px;
-    text-align: center;
-    transition-duration: 0.5%; 
-    border-radius: 17px; 
-    
 }
-.comprar:hover{
-    background-color: red;
-    color: white;
-
+.detail{
+margin-left: 20px;
+height: auto;
+display: flex;
+flex-direction: column;
+justify-content: space-around   ;
 }
-.boton-comprar{
-    padding-top: 15px;
+.quantity{
+    display: flex;
 }
-
-
-
-/*------------------------------------------------*/
-
-
-
-/*--------------------------////////FOOTER/////-------------------*/
-/* footer{
-    width: 100vw;
-    background-color: #202020;
-    color: white;
-    padding: 20px;
-    margin-top: 50px;
+.image img{
+    width: 255px;
+    height: 255px;
 }
-.container-footer{
-    margin: auto;
+.icons{
+    height: auto;
     display: flex;
     flex-direction: column;
-    
-    
-
-}
-.body-footer{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-
-}
-.columna1{
-    max-width: 39%;
-}
-.columna1 h3{
-    font-size: 22px;
-}
-.columna1 p{
-    font-size: 14px;
-    color: #c7c7c7;
-    margin-top: 20px;
-}
-.columna2 {
-    max-width: 30%;
-
-}
-.columna2 h3{
-    font-size: 22px;
-}
-.redes{
-    margin-top: 20px;
-    display: flex;
     align-items: center;
+}
 
+.icons i{
+    margin: 4px 4px 4px 4px;
 }
-.redes label, i {
 
-     color: #c7c7c7
+.resumen{
+    border: 2px solid grey;
+    width: 90%;
+    padding: 5px;
 }
-.columna3{
 
-    max-width: 30%;   
-}
-.columna3 h3{
-    font-size: 22px;
-}
-.contacto-copy{
-    margin-top: 20px;
+.products{
     display: flex;
-    align-items: center;
-    
-}
-.contacto-copy label{
-    display: flex;
-    
+    justify-content: space-between;
+    padding: 5px 10px;
 }
 
-.copyright{
-    padding-right: 20px;
-}
-.politica a{
-    color: white;
-    background-color: transparent;
-    text-decoration: none;
-}
-
-.footer-abajo{
+.deliver{
     display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    flex-wrap: wrap;
- } 
+    justify-content: space-between;
+    padding: 5px 10px;
+}

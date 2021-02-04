@@ -6,6 +6,8 @@
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
+    "@csstools/normalize.css": "^11.0.1",
+    "@splidejs/splide": "^2.4.21",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "~1.4.4",
     "crypto-js": "^4.0.0",

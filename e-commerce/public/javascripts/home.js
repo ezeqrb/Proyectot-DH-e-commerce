@@ -9,11 +9,11 @@ let navbar = document.getElementById('navBar')
 
 window.addEventListener('scroll', ()=> {
     var scrolled = window.scrollY;
-    if (scrolled > 500 ){
-        navBar.classList.add("header-container-scroll")
-        navBar.classList.remove("header-container")
-    }else{
+    if (scrolled > 600 ){
         navBar.classList.remove("header-container-scroll")
         navBar.classList.add("header-container")
+    }else{
+        navBar.classList.add("header-container-scroll")
+        navBar.classList.remove("header-container")
     }
 })

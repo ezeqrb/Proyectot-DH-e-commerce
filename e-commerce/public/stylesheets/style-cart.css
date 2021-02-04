@@ -53,10 +53,11 @@ justify-content: space-around   ;
 }
 .quantity{
     display: flex;
+    align-items: center;
 }
 .image img{
-    width: 255px;
-    height: 255px;
+    width: 222px;
+    height: 222px;
 }
 .icons{
     height: auto;
@@ -75,6 +76,13 @@ justify-content: space-around   ;
     padding: 5px;
 }
 
+.resum span{
+    font-size: 25px;
+    font-weight:600;
+    display: flex;
+    justify-content: center;
+}
+
 .products{
     display: flex;
     justify-content: space-between;
@@ -82,6 +90,12 @@ justify-content: space-around   ;
 }
 
 .deliver{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+.total{
     display: flex;
     justify-content: space-between;
     padding: 5px 10px;

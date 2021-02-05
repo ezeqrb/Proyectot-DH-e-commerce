@@ -20,8 +20,8 @@ var controller = {
                 let userAuthenticated = await db.User.findOne({where: { email: req.body.email }});
                 console.log(userAuthenticated,"hola")
                 if (userAuthenticated && bcrypt.compareSync(req.body.passcrypt, userAuthenticated.passcrypt)){
-                    req.session.user = { id: userAuthenticated.id, name: userAuthenticated.firstname, isAdmin: userAuthenticated.isAdmin};
-                    console.log("entraste")
+                    req.session.user = userAuthenticated;
+                    
                     /*
                     if (req.body.remember){
                         const tokenCrypto = crypto.randomBytes(64).toString('base64');
@@ -42,26 +42,9 @@ var controller = {
             res.status(500).render('error-500', {error});
         }
     },
-    loginpost: function(req, res, next){
-        let errors= validationResult(req);
-        
-        if(errors.isEmpty()){
-        db.User.findOne({where: {email :req.body.email}} )
-            .then(function(person){
-                
-                if(bcrypt.compareSync( req.body.passcrypt , person.passcrypt)){
-                    
-                    res.render('home', req.session.log=person);
-                }else{
-                    res.redirect('login',{msg:"usuario o contraseña invalidos"})}
-           
-            }).catch(function(error){
-                console.log(error)
-                res.redirect('login',{msg:"Usuario o contraseña invalidos"})
-            })
-        }else{
-            res.send("Campos Invalidos")
-        }
+    check: function (req,res){
+        res.send("el usuario logueado es:" + req.session.user.email)
+    
 
     },
 
@@ -69,6 +52,7 @@ var controller = {
 
     register: function(req, res, next){
         res.render('register');
+        
     },
 
     registerpost: function(req, res, next) {

@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    
+  
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab-content{
+    width: 400px;
+   
+}
+
+.adminButtons{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.adminButtons button{
+    margin: 10px;
+}

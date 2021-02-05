@@ -19,13 +19,19 @@ var controller = {
     //Detalle
 
     detail: function(req, res) {
+        if (req.params.id == req.session.user.idusers){
         db.User.findByPk(req.params.id)
-            .then(function(users){
+            .then(function(users){ 
+
             res.render('userDetail',{users:users})
         }).catch(function(error){
             console.log(error)
             res.send('error')
         })
+        }else{
+            res.send("No tiene acceso a este usuario")
+        }
+
     },
 
     //Actualizar Usuario

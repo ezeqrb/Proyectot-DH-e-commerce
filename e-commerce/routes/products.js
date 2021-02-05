@@ -3,7 +3,8 @@ var router = express.Router();
 var productsController = require('../controllers/productsController');
 var path = require ("path");
 /*var productsMiddlewares = require ("../middlewares/products/productsMiddlewares")*/
-
+var admin = require('../middlewares/admin')
+var user = require('../middlewares/user')
 
 var multer  = require('multer')
 var upload = multer({ dest: 'uploads/' })
@@ -19,20 +20,21 @@ var storage = multer.diskStorage({
   var upload = multer({ storage: storage })
  
 
-router.get ('/' , productsController.list);
 
-router.get ('/list' , productsController.list); 
+//Listado de productos
+router.get ('/' ,admin , productsController.list);
+router.get ('/list',admin , productsController.list); 
 
-router.get ('/create' , productsController.create);
+router.get ('/create' , admin , productsController.create);
 
-router.post ('/create' , upload.any(), productsController.store);
+router.post ('/create' , admin, upload.any(), productsController.store);
 
-router.get ('/:id' , productsController.details);
+router.get ('/:id', productsController.details);
 
-router.get ('/:id/edit' , productsController.edit);
+router.get ('/:id/edit',admin , productsController.edit);
 
-router.post ('/:id/edit' ,upload.any(), productsController.storeEdition);
+router.post ('/:id/edit', admin ,upload.any(), productsController.storeEdition);
 
-router.get('/delete/:id', productsController.delete);
+router.get('/delete/:id',admin, productsController.delete);
 
 module.exports = router;

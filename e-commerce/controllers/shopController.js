@@ -22,13 +22,21 @@ var controller = {
     },
     hombre: async (req, res) => {
       try {
-          let products = await db.Product.findAll({where: {
-            Category:'Hombre'
-          }});
+          let products = await db.Product.findAndCountAll({
+            where: {
+              Category:'Hombre'
+            },
+            offset: Number(req.query.page) ? Number(req.query.page) + 1 : 0  ,
+            limit: 5 
+        });
           
-          res.render('shop', {products:products});
+          res.render('shop', {
+            products:products.rows,
+            offset: Number(req.query.page) ? Number(req.query.page) + 1 : 1
+            
+            });
       } catch (error) {
-          console.log(error);
+          console.log(error); 
           res.status(500).render('error-500', { error });
       }
     },
@@ -61,3 +69,6 @@ var controller = {
 
 
 module.exports = controller
+
+//Optimizar controladores 3
+

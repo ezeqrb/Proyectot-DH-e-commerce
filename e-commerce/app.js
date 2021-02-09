@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session')
-
+var locals = require('./middlewares/locals')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -27,14 +27,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
   secret: 'hello-stranger', 
   name : 'sessionID',
-  cookie: {maxAge: 60000}
-  /*
+  cookie: {maxAge: 60000},
   resave: false,
   saveUninitialized: false
-*/
 }));
 
-
+app.use(locals);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/shop', shopRouter);

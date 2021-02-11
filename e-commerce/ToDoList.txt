@@ -1,0 +1,26 @@
+HTML y CSS
+    Vistas: 
+            Mejorar Carrito ZEKER
+            Hacer Wishlist
+            Mejorar Home, agregarle nuestros productos (Zapatillas en carpeta shoes), darle un link a las 3 imagenes de categorias
+            Perfil
+            Agregar Deporte en formularios de Productos
+            Vista de crear producto y crear usuario (Hacer que categoria y talles pase a ser un Select)
+            Agregar Is Admin a las vistas de usuario
+            Actualizar producto y actualizar usuario (Hacer que categoria y talles pase a ser un Select)
+            Detalle de producto
+            Vista de Marcas: Mandar a todos los productos y mostrar los que estan en oferta, agregando en base de datos una columna para aclarar que los productos esten en oferta
+            Vista de Shop 
+    Express:
+            Cookies, agregar un Remember Me EIAL
+            Validacion de formularios de creacion de productos, de actualizacion de productos, de actualizacion de usuarios (chequear que esten todos)
+    Base de datos: 
+            Hacer Carrito EIAL
+            Mejorar Usuarios EIAL
+            Agregar Columna Deporte EIAL
+            Exportacion de Base de Datos
+    JS de Front:
+            Chequear Validacion de formularios
+    APIs
+            Consumir una API externa (MercadoPago o Argentina con datos geograficos)
+    

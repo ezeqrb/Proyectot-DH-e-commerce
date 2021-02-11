@@ -19,7 +19,7 @@ var controller = {
     //Detalle
 
     detail: function(req, res) {
-        if (req.params.id == req.session.user.idusers){
+        if(req.params.id == req.session.user.id){
         db.User.findByPk(req.params.id)
             .then(function(users){ 
 

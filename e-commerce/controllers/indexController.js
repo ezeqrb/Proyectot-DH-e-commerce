@@ -20,7 +20,7 @@ var controller = {
                 let userAuthenticated = await db.User.findOne({where: { email: req.body.email }});
                 console.log(userAuthenticated,"hola")
                 if (userAuthenticated && bcrypt.compareSync(req.body.passcrypt, userAuthenticated.passcrypt)){
-                    req.session.user = {id:userAuthenticated.userId ,email:userAuthenticated.email, usuario:userAuthenticated.username};
+                    req.session.user = {id:userAuthenticated.idusers ,email:userAuthenticated.email, usuario:userAuthenticated.username};
                     
                     /*
                     if (req.body.remember){

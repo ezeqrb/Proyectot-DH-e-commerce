@@ -21,20 +21,25 @@ var controller = {
       res.render('marcas');
     },
     hombre: async (req, res) => {
+ //MANDAR SOLAMENTE LOS PRIMEROS 5 PRODUCTOS !!!!
+      
       try {
           let products = await db.Product.findAndCountAll({
             where: {
               Category:'Hombre'
             },
-            offset: Number(req.query.page) ? Number(req.query.page) + 1 : 0  ,
-            limit: 5 
-        });
+            offset: 0  , //Number(req.query.page) ? Number(req.query.page) + 1 : 0 
+            limit: 5     //Number(req.query.page) ? Number(req.query.page) * 5 : 5
+            });
           
           res.render('shop', {
             products:products.rows,
-            offset: Number(req.query.page) ? Number(req.query.page) + 1 : 1
-            
+            pagina: Number(req.query.page) ? Number(req.query.page) + 1 : 1,
+            ruta:req.originalUrl,
+            total:products.count
+                     
             });
+              
       } catch (error) {
           console.log(error); 
           res.status(500).render('error-500', { error });
@@ -42,9 +47,13 @@ var controller = {
     },
     mujer: async (req, res) => {
       try {
-          let products = await db.Product.findAll({where: {
+          let products = await db.Product.findAndCountAll({
+            where: {
             Category:'Mujer'
-          }});
+            },
+            offset:10,
+            limit:2
+            });
           
           res.render('shop', {products:products});
       } catch (error) {
@@ -53,16 +62,29 @@ var controller = {
       }
   },
   
-  niño: async (req, res) => {
+  vermas: async (req, res) => {
     try {
-        let products = await db.Product.findAll({where: {
-          Category:'Niño'
-        }});
+      let products = await db.Product.findAndCountAll({
+        where: {
+          Category:'Hombre'
+        },
+        offset: Number(req.query.page) ? Number(req.query.page) * 5 : 0 ,
+        limit: 6     //Number(req.query.page) ? Number(req.query.page) * 5 : 5
+        });
+
+      if(products.rows<6 ){
+        products.ro
+      
+      }
+
+      res.json({
+        products:products.rows,
         
-        res.render('shop', {products:products});
-    } catch (error) {
-        console.log(error);
-        res.status(500).render('error-500', { error });
+      });
+          
+    }catch (error) {
+      console.log(error); 
+      res.status(500).render('error-500', { error });
     }
   }
 }

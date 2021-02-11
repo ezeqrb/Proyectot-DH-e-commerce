@@ -109,3 +109,18 @@ p{
     color: black;
 }
 
+
+
+li .guess{
+    position: absolute;
+    display: none;
+
+}
+
+li .guess:hover{
+
+    position: absolute;
+    display:block;
+    flex-direction: column;
+    justify-content: center;
+}

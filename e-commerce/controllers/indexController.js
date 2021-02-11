@@ -20,7 +20,7 @@ var controller = {
                 let userAuthenticated = await db.User.findOne({where: { email: req.body.email }});
                 console.log(userAuthenticated,"hola")
                 if (userAuthenticated && bcrypt.compareSync(req.body.passcrypt, userAuthenticated.passcrypt)){
-                    req.session.user = userAuthenticated;
+                    req.session.user = {id:userAuthenticated.userId ,email:userAuthenticated.email, usuario:userAuthenticated.username};
                     
                     /*
                     if (req.body.remember){
@@ -59,6 +59,9 @@ var controller = {
         let errors = validationResult (req);
         if (errors.isEmpty()) {
             var hash = bcrypt.hashSync(req.body.passcrypt, salt); 
+            
+            //USAR METODO FIND OR CREATE !!!
+
             db.User.create({
                 admin: "false",
                 username: req.body.username,

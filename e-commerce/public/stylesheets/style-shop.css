@@ -18,13 +18,14 @@ aside{
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items:center;
     width: 30%;
 }
 main{
     
     max-width: 70%;
     box-sizing: border-box;
+    
     
 }
 .cards{
@@ -35,4 +36,11 @@ main{
 .pags{
     margin-top: 30px;
     margin-bottom: 30px;
+}
+
+.vermas{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px;
+    
 }

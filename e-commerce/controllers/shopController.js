@@ -73,7 +73,7 @@ var controller = {
         });
 
       if(products.rows<6 ){
-        products.ro
+        products.row
       
       }
 

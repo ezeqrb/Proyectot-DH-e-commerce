@@ -10,6 +10,7 @@ var userValidator = require('../validations/userValidator')
 router.get('/', indexController.index);
 //Formulario de inicio de sesion
 router.get('/login', guess ,indexController.login);
+router.get('/logout' ,indexController.logout);
 router.post('/login',guess, userValidator.loginForm , indexController.authenticate);
 router.get('/check',indexController.check);
 //Formulario de registro

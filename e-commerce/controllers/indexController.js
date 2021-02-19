@@ -32,7 +32,7 @@ var controller = {
                     */
                   
                     
-                    res.render('home')
+                    res.redirect('/')
                 } else {
                     res.render('users/login', { errors: { form: { msg: 'Credenciales no válidas' }}});
                 }
@@ -81,7 +81,16 @@ var controller = {
     index: function(req, res, next) {
         res.render('home');
     },
-       
+    logout: function(req , res , next){
+        if (req.session) {
+            req.session.destroy(function(err) {
+                if (err) return console.log(err);
+                return res.redirect('/');
+            });
+        }
+
+    }
+
 }
 
 module.exports = controller

@@ -41,9 +41,9 @@
                             <a href="/login"><img src="/images/user.png" width="30px" height="30px" class="dropbtn"></a>
                              
                             <div class="dropdown-content">
-                                <% if(typeof userLocals != "undefined"){  %>   
+                                <% if(locals.userLocals){  %>   
                                     
-                                            <a href="/users/<%= usuario.id %>">ver perfil</a>
+                                            <a href="/users/<%= locals.userLocals.id %>">ver perfil</a>
                                             <a href="/loguot"> Cerrar Session</a>
                                        
                                     

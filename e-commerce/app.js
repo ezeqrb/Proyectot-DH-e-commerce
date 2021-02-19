@@ -6,6 +6,7 @@ var logger = require('morgan');
 var session = require('express-session')
 var locals = require('./middlewares/locals')
 
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var shopRouter = require('./routes/shop');
@@ -27,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
   secret: 'hello-stranger', 
   name : 'sessionID',
-  cookie: {maxAge: 108000},
+  cookie: {maxAge: null},
   resave: false,
   saveUninitialized: false
 }));

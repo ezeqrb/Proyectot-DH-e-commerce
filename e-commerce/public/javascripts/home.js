@@ -3,6 +3,8 @@ let bg = document.querySelector('body');
 
 console.log(bg)
 
+
+
 let navbar = document.getElementById('navBar')
 
 

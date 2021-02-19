@@ -71,17 +71,18 @@ var controller = {
         offset: Number(req.query.page) ? Number(req.query.page) * 5 : 0 ,
         limit: 6     //Number(req.query.page) ? Number(req.query.page) * 5 : 5
         });
-
-      if(products.rows<6 ){
-        products.row
-      
-      }
-
-      res.json({
-        products:products.rows,
         
-      });
-          
+        if(products.count == 6 ){        
+          products.rows.pop()
+          let status = "continue" 
+          res.json({status,products:products.rows})
+
+        }else {
+          let status = "stop"
+          res.json({status,products:products.rows})
+        }
+
+
     }catch (error) {
       console.log(error); 
       res.status(500).render('error-500', { error });

@@ -30,7 +30,9 @@ var controller = {
                     }
                     res.redirect('/');
                     */
-                    res.redirect('/')
+                  
+                    
+                    res.render('home')
                 } else {
                     res.render('users/login', { errors: { form: { msg: 'Credenciales no válidas' }}});
                 }
@@ -39,7 +41,7 @@ var controller = {
             }
         } catch (error) {
             console.log(error);
-            res.status(500).render('error-500', {error});
+            res.status(500).render('login', {error});
         }
     },
     check: function (req,res){

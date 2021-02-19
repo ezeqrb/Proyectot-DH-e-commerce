@@ -19,13 +19,7 @@
                     </li>
                     <li class="big">
                         <a href="/shop/kid">Niño </a>
-                        <div class="sub-menu">
-                            <ul>
-                                <li><a href="">hola</a></li>
-                                <li><a href="">que</a></li>
-                                <li><a href="">tal</a></li>
-                            </ul>
-                        </div>
+                      
                     </li>
                    
                     
@@ -42,29 +36,33 @@
                     <li><a href="/shop/cart"><img src="/images/cart.png" width="30px" height="30px"></a></li>
                     <li>
                       <!---  <%= typeof userLocals != "undefined" ? userLocals.email : null %> --->
-
-                        <a href="/login"><img src="/images/user.png" width="30px" height="30px"></a>
-                        <% if(typeof userLocals != "undefined"){  %>
-                        <div class="user">
-                            <div>
-                                <p>ver perfil</p>  
+                            <div class="dropdown">
+                                
+                            <a href="/login"><img src="/images/user.png" width="30px" height="30px" class="dropbtn"></a>
+                             
+                            <div class="dropdown-content">
+                                <% if(typeof userLocals != "undefined"){  %>   
+                                    
+                                            <a href="/users/<%= usuario.id %>">ver perfil</a>
+                                            <a href="/loguot"> Cerrar Session</a>
+                                       
+                                    
+                                <% } else { %>
+                                    
+                                           <a href="/login">Iniciar Session</a> 
+                                           <a href="/register">Registrarse</a>
+                                       
+                                    
+                                    <% } %>
+                                </div>
+                               
                             </div>
-                            <div>
-                                <p>Cerrar Session</p>
-                            </div>
-                        </div>
-                        <% } else { %>
-                        <div class="guess">
-                            <div>
-                                <p>Iniciar Session</p>
-                            </div>
-                            <div>
-                                <p>Registrarse</p>
-                            </div>
-                        </div>
-                        <% } %>
+                          
                     </li>
-                    <li><a href="/shop/wishlist"><img src="/images/wishlist.png" width="30px" height="30px"></a></li>
+                  
+                    <li><a href="/shop/wishlist"><img src="/images/wishlist.png" width="30px" height="30px"  ></a>
+                        
+                    </li>
                 </ul>
             </div>    
         </nav>

@@ -45,7 +45,8 @@ var controller = {
         }
     },
     check: function (req,res){
-        res.send("el usuario logueado es:" + req.session.user.email)
+        console.log (req.session)
+        res.send("el usuario logueado es: " + req.session.user.email)
     
 
     },

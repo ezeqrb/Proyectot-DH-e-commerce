@@ -46,7 +46,7 @@ inputs.forEach((input) =>{
 // Logica principal del formulario 
 formulario.onsubmit = function(e){
     if(campos){
-        alert('formulario enviado con exito')
+        console.log ('formulario enviado con exito')
     }else{
         e.preventDefault()
         alert('formulario no se pudo enviar')

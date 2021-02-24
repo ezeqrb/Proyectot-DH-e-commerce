@@ -15,9 +15,9 @@ HTML y CSS
             Cookies, agregar un Remember Me EIAL
             Validacion de formularios de creacion de productos, de actualizacion de productos, de actualizacion de usuarios (chequear que esten todos)
     Base de datos: 
-            Hacer Carrito EIAL
+            Hacer Carrito DONE
             Mejorar Usuarios EIAL
-            Agregar Columna Deporte EIAL
+            Agregar Columna Deporte DONE
             Exportacion de Base de Datos
     JS de Front:
             Chequear Validacion de formularios

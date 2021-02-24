@@ -65,9 +65,12 @@
                 <input class="form-control" type="text" name="Brand" placeholder="Marca" aria-label="default input example" value="<%= product.Brand%>">
             </div>
             <div class="mb-3">
+                <input class="form-control" type="text" name="Sport" placeholder="Deporte" aria-label="default input example" value="<%= product.Sport%>">
+            </div>
+            <div class="mb-3">
                 <label for="Picture">Agregue una imagen</label>
                 <img id="preview" src="/images/Products/<%= product.Picture%>" >
-                <input type="file" name="Picture" value="<%= product.Picture%>" onchange="previewFile()">
+                <input type="file" name="Picture" value=""  onchange="previewFile()">
             </div>
             <button type="submit" class="btn btn-primary">Guardar</button>
 

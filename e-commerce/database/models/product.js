@@ -27,6 +27,9 @@ module.exports = function (sequelize , DataTypes) {
         "Brand": {
              "type": DataTypes.STRING
          },
+         "Sport": {
+            "type": DataTypes.STRING
+        },
         "Picture": {
              "type": DataTypes.STRING,
             "allowNull": true

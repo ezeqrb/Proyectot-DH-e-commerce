@@ -18,7 +18,6 @@ let controller = {
     store : function (req, res, next){
         console.log (req.body);
         db.Product.create({
-            Id: req.body.id,
             Name: req.body.name,
             Price: req.body.price,
             Description: req.body.description,
@@ -26,6 +25,7 @@ let controller = {
             Size: req.body.size,
             Colour: req.body.color,
             Brand: req.body.brand,
+            Sport: req.body.sport,
             Picture: req.files[0].filename
         });
         res.redirect ("/")
@@ -54,6 +54,7 @@ let controller = {
     },
     storeEdition : function (req, res, next){
         console.log (req.body)
+        console.log (req.files)
         db.Product.update ({
             Name: req.body.Name,
             Price: req.body.Price,
@@ -62,10 +63,11 @@ let controller = {
             Size: req.body.Size,
             Colour: req.body.Colour,
             Brand: req.body.Brand,
+            Sport: req.body.Sport,
             Picture: req.files[0].filename
         }, {
             where: {
-                Id: req.params.Id
+                Id: req.body.Id
             }
         });
         res.redirect ("/products/list")

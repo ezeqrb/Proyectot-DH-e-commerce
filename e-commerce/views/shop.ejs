@@ -18,30 +18,28 @@
     <div class="content">
 
         <aside>
+          <h3>DEPORTE</h3>
             <div class="sportFilter">
-                <h3>DEPORTE</h3>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="checkBasquet">
+                <div class="form-check" >
+                    <input class="form-check-input" type="checkbox" value="Basquet" id="checkBasquet">
                     <label class="form-check-label" for="checkBasquet">
                         Basquet
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="checkFutbol">
+                    <input class="form-check-input" type="checkbox" value="Futbol" id="checkFutbol">
                     <label class="form-check-label" for="checkFutbol">
                       Futbol
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="checkUrban">
+                    <input class="form-check-input" type="checkbox" value="Urban" id="checkUrban">
                     <label class="form-check-label" for="checkUrban">
                       Urban
                     </label>
                   </div> 
-
                   <div class="form-check">  
-                    
-                      <input class="form-check-input" type="checkbox" value="" id="checkRunning">
+                      <input class="form-check-input" type="checkbox" value="Running" id="checkRunning">
                       <label class="form-check-label" for="checkRunning">
                         Running
                       </label>
@@ -68,6 +66,7 @@
                 <div class="card" style="width: 18rem;">
                     <img src="/images/Products/<%= products[i].Picture %>" class="card-img-top" alt="...">
                     <div class="card-body">
+                      <p class="brand"><%= products[i].Brand %></p>
                       <h5 class="card-title"><%= products[i].Name %></h5>
                       <p class="card-text">$<%= products[i].Price %></p>
                       <a href="/products/<%= products[i].Id %>" class="btn btn-primary">Ver</a>

@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
@@ -17,7 +19,7 @@ body{
 aside{
     display:flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items:center;
     width: 30%;
 }
@@ -32,7 +34,12 @@ main{
     display: inline-block;
     margin: 10px 10px 10px 10px;
 }
-
+.card-body{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .pags{
     margin-top: 30px;
     margin-bottom: 30px;

@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Product</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <title>Edit Product</title>
+        <link rel="stylesheet" href="/stylesheets/style-DefaultForm.css">
 </head>
 <body>
+<!------
     <form action="/products/<%=product.Id %>/edit" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="Id" placeholder="Ingrese un Id de producto" value="<%= product.Id%>">
         <br>
@@ -17,7 +20,7 @@
         <br>
         <input type="text" name="Category" placeholder="Ingrese categoria" value="<%= product.Category%>">
         <br>
-        <input type="text" name="Size" placeholder="Ingrese talle" value="<%= product.Size%>">
+        <input type="text" name="Size" placeholder="Ingrese talle"  >
         <br>
         <input type="text" name="Colour" placeholder="Ingrese color" value="<%= product.Colour%>">
         <br>
@@ -27,7 +30,55 @@
         <input type="file" name="Picture" value="<%= product.Picture%>">
         <br>
         <button type="submit">Guardar</button>
-<!--Chequear mayusculas/minusculas en los product. -->
+
     </form>
+------>
+
+    <div class="container">
+
+        <form action="/products/<%=product.Id %>/edit" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="Id" value="<%= product.Id %>">
+
+            <div class="mb-3">
+                <input class="form-control" type="text" name="Name"  aria-label="default input example" value="<%= product.Name%>" >
+            </div>
+            <div class="mb-3">
+                <input class="form-control" type="text" name="Price"  aria-label="default input example" value="<%= product.Price%>">
+            </div>
+            <div class="mb-3">
+                <input class="form-control" type="text" name="Description"  aria-label="default input example" value="<%= product.Description%>">
+            </div>  
+            <div class="mb-3">
+                <select class="form-select" name="Category" aria-label="Default select example" value="<%= product.Category%>">
+                    <option selected value="Hombre">Hombre</option>
+                    <option value="Mujer">Mujer</option>
+                    <option value="Kid">Niño</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <input class="form-control" type="text" name="Size" placeholder="Talle" aria-label="default input example" value="<%= product.Size%>" >
+            </div>
+            <div class="mb-3">
+                <input class="form-control" type="text" name="Colour" placeholder="Ingrese color" aria-label="default input example" value="<%= product.Colour%>">
+            </div>
+            <div class="mb-3">
+                <input class="form-control" type="text" name="Brand" placeholder="Marca" aria-label="default input example" value="<%= product.Brand%>">
+            </div>
+            <div class="mb-3">
+                <label for="Picture">Agregue una imagen</label>
+                <img id="preview" src="/images/Products/<%= product.Picture%>" >
+                <input type="file" name="Picture" value="<%= product.Picture%>" onchange="previewFile()">
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+
+        </form>
+
+
+    </div>
+
+    <script src="/javascripts/productcreate.js"></script>
+
+
 </body>
+
 </html>

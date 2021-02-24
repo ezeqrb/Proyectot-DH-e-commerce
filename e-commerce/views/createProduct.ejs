@@ -1,30 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Product</title>
-</head>
-<body>
-    <form action="/products/create" method="POST" enctype="multipart/form-data">
-        <input type="text" name="name" placeholder="Ingrese un nombre">
-        <br>
-        <input type="number" name="price" placeholder="Precio">
-        <br>
-        <input type="text" name="description" placeholder="Ingrese descripcion">
-        <br>
-        <input type="text" name="category" placeholder="Ingrese categoria">
-        <br>
-        <input type="text" name="size" placeholder="Ingrese talle">
-        <br>
-        <input type="text" name="color" placeholder="Ingrese color">
-        <br>
-        <input type="text" name="brand" placeholder="Marca">
-        <br>
-        <label for="image">Agregue una imagen</label>
-        <input type="file" name="image">
-        <br>
-        <button type="submit">Guardar</button>
-    </form>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <title>Create Product</title>
+        <link rel="stylesheet" href="/stylesheets/style-DefaultForm.css">
+    </head>
+
+    <body>
+    <!--------
+        <form action="/products/create" method="POST" enctype="multipart/form-data">
+            <div class="contact-form">
+                <input type="text" name="name" placeholder="Ingrese un nombre">
+                <br>
+                <input type="number" name="price" placeholder="Precio">
+                <br>
+                <input type="text" name="description" placeholder="Ingrese descripcion">
+                <br>
+                <input type="text" name="category" placeholder="Ingrese categoria">
+                <br>
+                <input type="text" name="size" placeholder="Ingrese talle">
+                <br>
+                <input type="text" name="color" placeholder="Ingrese color">
+                <br>
+                <input type="text" name="brand" placeholder="Marca">
+                <br>
+                <label for="image">Agregue una imagen</label>
+                <input type="file" name="image">
+                <br>
+                <button type="submit">Guardar</button>
+            </div>
+        </form>
+    ---->
+
+        <div class="container">
+
+            <form action="/products/create" method="POST" enctype="multipart/form-data">
+
+                <div class="mb-3">
+                    <input class="form-control" type="text" name="name" placeholder="Ingrese un nombre" aria-label="default input example">
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" type="text" name="price" placeholder="Precio" aria-label="default input example">
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" type="text" name="description" placeholder="Ingrese descripcion" aria-label="default input example">
+                </div>  
+                <div class="mb-3">
+                    <select class="form-select" name="category" aria-label="Default select example">
+                        <option selected value="Hombre">Hombre</option>
+                        <option value="Mujer">Mujer</option>
+                        <option value="Kid">Niño</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" type="text" name="size" placeholder="Talle" aria-label="default input example">
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" type="text" name="color" placeholder="Ingrese color" aria-label="default input example">
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" type="text" name="brand" placeholder="Marca" aria-label="default input example">
+                </div>
+                <div class="mb-3">
+                    <label for="image">Agregue una imagen</label>
+                    <img id="preview" src="http://placehold.it/180" >
+                    <input type="file" name="image" onchange="previewFile()">
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+
+            </form>
+
+
+        </div>
+
+        <script src="/javascripts/productcreate.js"></script>
+    </body>
 </html>

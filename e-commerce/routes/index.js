@@ -6,6 +6,7 @@ var guess = require('../middlewares/guess')
 var admin = require('../middlewares/admin')
 var userValidator = require('../validations/userValidator')
 
+
 //Home page
 router.get('/', indexController.index);
 //Formulario de inicio de sesion

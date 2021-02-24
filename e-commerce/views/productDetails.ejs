@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Details</title>
+    <link type="text/css" rel="stylesheet" href="magiczoomplus/magiczoomplus.css"/>
+    <link rel="stylesheet" href="style-productDetail.css">
 </head>
 <body>
     <%- include("./partials/header.ejs")%>
@@ -18,12 +20,14 @@
         Talle: <%= product.Size %> <br>
         Color: <%= product.Colour %> <br>
         Marca: <%= product.Brand %> <br>
-        Imagen: <%= product.Picture %> <img src="/images/Products/<%= product.Picture %> " alt="Imagen del producto"> <br>
+        Imagen: <%= product.Picture %><a href="large-image.jpg" class="MagicZoom"><img src="/images/Products/<%= product.Picture %> " alt="Imagen del producto" ></a> <br>
     
         </p>
     <button><a href="/products/<%= product.Id %>/edit">Editar</a></button>
 
     <%- include("./partials/footer")%>
+
+<script type="text/javascript" src="magiczoomplus/magiczoomplus.js"></script>
 </body>
 </html>
 

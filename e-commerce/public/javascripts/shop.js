@@ -1,5 +1,5 @@
 
-
+var sportCheck = document.querySelectorAll('.form-check input')
 var vermas = document.getElementById('vermas')
 
 console.log(vermas)
@@ -34,3 +34,23 @@ vermas.addEventListener('click', ()=> {
 
 })
 
+inputs.forEach((sportCheck) =>{
+    input.addEventListener('change',active)
+})
+
+const  active = (e) => {
+    
+        switch (e.target.value){
+            case "Basquet":
+                if(checked){
+                    URLSearchParams.append(sport=basquet)
+                }else{
+                    URLSearchParams.delete(sport=basquet)
+                }
+            break;
+            case "passcrypt": 
+                validarCampo(expressiones.password,e.target,"passcrypt")
+            break;
+        }
+    
+}

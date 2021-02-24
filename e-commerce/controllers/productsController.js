@@ -65,7 +65,7 @@ let controller = {
             Picture: req.files[0].filename
         }, {
             where: {
-                Id: req.params.id
+                Id: req.params.Id
             }
         });
         res.redirect ("/products/list")

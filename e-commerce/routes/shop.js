@@ -4,12 +4,14 @@ var shopController = require('../controllers/shopController')
 
 router.get('/cart',shopController.cart);
 
-router.get('/hombre', shopController.hombre);
-router.get('/mujer', shopController.mujer);
-//router.get('/kid', shopController.niño);
+router.get('/hombre', shopController.genero);
+router.get('/mujer', shopController.genero);
+// router.get('/kid', shopController.genero);
 router.get('/marcas', shopController.marcas);
 router.get('/product', shopController.product)
 router.get('/', shopController.shop );
+
+// ** API ** // 
 router.get('/vermas', shopController.vermas);
 
 

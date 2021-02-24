@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session')
 var locals = require('./middlewares/locals')
-
+var url = require('./middlewares/url')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -31,8 +31,9 @@ app.use(session({
   cookie: {maxAge: null},
   resave: false,
   saveUninitialized: false
-}));
-
+  })
+);
+app.use(url)
 app.use(locals);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

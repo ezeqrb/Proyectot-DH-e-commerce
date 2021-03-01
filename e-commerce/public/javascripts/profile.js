@@ -1,5 +1,5 @@
 const as = document.querySelectorAll('#v-pills-tab a')
-
+console.log(document.URL)
 
 
 // Event Listener para los inputs con blur para click fuera del campo + enviamos a otra función 

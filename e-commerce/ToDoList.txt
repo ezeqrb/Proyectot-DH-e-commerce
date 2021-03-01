@@ -22,8 +22,10 @@ HTML y CSS
     JS de Front:
             Chequear Validacion de formularios
     APIs
-            Consumir una API externa (MercadoPago o Argentina con datos geograficos)
-    
+            Consumir una API externa (MercadoPago o Argentina con datos geograficos
+
+
+
 
 
 Proyecto integrador - cosas minimas obligatorias:
@@ -45,4 +47,6 @@ OK -UN FORMULARIO AL MENOS VALIDANDO CON JS FRONT
 -TODOS LOS FORMULARIOS VALIDANDO DEL LADO DEL BACKEND
 -TODAS LAS VISTAS RESPONSIVE
 OK -MIDDLWARES IMPLEMENTADOS (AUTH, GUEST, ADMIN... COMO EJEMPLO)
+
+  
 

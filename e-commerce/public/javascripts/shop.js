@@ -1,14 +1,14 @@
 
 var sportCheck = document.querySelectorAll('.form-check input')
 var vermas = document.getElementById('vermas')
-
+console.log(document.URL)
 console.log(vermas)
 let click = 0 
 vermas.addEventListener('click', ()=> {
     click = click + 1;
     
 
-    fetch(`http://localhost:3000/shop/vermas?page=${click}`)
+    fetch(`http://localhost:3000/shop/vermas?page=${click}&category=`)
     .then(response => response.json())
     .then(function (data){
         var cardsContainer = document.querySelector('.cardsContainer')

@@ -31,28 +31,37 @@
                     </li>
                 </ul>
             </div>
-            <div>
-                <ul>    
-                    <li><a href="/shop/cart"><img src="/images/cart.png" width="30px" height="30px"></a></li>
+            <div class="icons-menu">
+                <ul class="icons">   
+
+                    <li>
+                        <div class="carrito">
+                            <a href="/shop/cart"><img src="/images/cart.png" width="30px" height="30px"></a>
+                            <div class="circle" id="counter">1</div>
+                        </div>
+                        
+                        
+                    </li>
+
                     <li>
                       <!---  <%= typeof userLocals != "undefined" ? userLocals.email : null %> --->
                             <div class="dropdown">
                                 
                             <a href="/login"><img src="/images/user.png" width="30px" height="30px" class="dropbtn"></a>
                              
-                            <div class="dropdown-content">
-                                <% if(locals.userLocals){  %>   
-                                    
-                                            <a href="/users/<%= locals.userLocals.id %>">ver perfil</a>
-                                            <a href="/logout"> Cerrar Session</a>
-                                       
-                                    
-                                <% } else { %>
-                                    
-                                           <a href="/login">Iniciar Session</a> 
-                                           <a href="/register">Registrarse</a>
-                                       
-                                    
+                                <div class="dropdown-content">
+                                    <% if(locals.userLocals){  %>   
+                                        
+                                                <a href="/users/<%= locals.userLocals.id %>">ver perfil</a>
+                                                <a href="/logout"> Cerrar Session</a>
+                                        
+                                        
+                                    <% } else { %>
+                                        
+                                            <a href="/login">Iniciar Session</a> 
+                                            <a href="/register">Registrarse</a>
+                                        
+                                        
                                     <% } %>
                                 </div>
                                
@@ -71,3 +80,5 @@
 
     </div>
 </div>
+
+<script src="../javascripts/headerCart.js"></script>

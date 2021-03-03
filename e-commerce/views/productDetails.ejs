@@ -3,39 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Details</title>
-    <link type="text/css" rel="stylesheet" href="magiczoomplus/magiczoomplus.css"/>
-    <link rel="stylesheet" href="style-productDetail.css">
+    <title><%= product.Name %></title>
+    <link rel="stylesheet" href="/stylesheets/style-productDetail.css">
+ 
 </head>
 <body>
     <%- include("./partials/header.ejs")%>
-    <h4>Detalles</h4>
-    <p> 
-        <br><br><br><br><br><br>
-        Id: <%= product.Id %> <br>
-        Nombre: <%= product.Name %> <br>
-        Precio: <%= product.Price %> <br>
-        Descripcion: <%= product.Description %> <br>
-        Categoria: <%= product.Category %> <br>
-        Talle: <%= product.Size %> <br>
-        Color: <%= product.Colour %> <br>
-        Marca: <%= product.Brand %> <br>
-        Deporte: <%= product.Sport %> <br>
-        Imagen: <%= product.Picture %><a href="large-image.jpg" class="MagicZoom"><img src="/images/Products/<%= product.Picture %> " alt="Imagen del producto" ></a> <br>
     
-        </p>
-    <button><a href="/products/<%= product.Id %>/edit">Editar</a></button>
+    
+        <br><br><br><br><br><br>
+    
+    
 
    
 
+    <div class="container">
+
+        <div class="banner">
+            <img src="/images/banner.jpg" alt="">
+        </div>
 
 
+        <div class="columnas">
+
+            <div class="col1">
+               
+                
+                    <img src="/images/Products/<%= product.Picture %>" alt="" >
+               
+
+            </div>
+            <div class="col2">
+                <div class="tittle">
+                    <h2><%= product.Name %></h2>
+                </div>
+                <div class="id">
+                   id del producto: <%= product.Id %>
+                </div>
+                <div class="price">
+                   $ <%= product.Price %> 
+                </div>
+                <div class="colour">
+                  color:  <%= product.Colour %>
+                </div>
+                <div class="size">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  talle:   <%= product.Size %>
+                </div>
+                <div class="addOrWish">
+                    <div class="addToCart"></div>
+                    <div class="wishlist"></div>
+
+                </div>
+                <div class="share"></div>
+
+            </div>
+        </div>
+
+
+        <div class="description">
+            <div class="columna1">
+                    <h2>Descripción</h2>
+            </div>
+            <div class="columna2">
+                <div class="desc">
+                    <h5>Descripcion: <%= product.Description %></h5>
+                </div>
+                <div class="datos">
+                    <h4>Deporte : <%= product.Sport %> </h4>
+                    <h4>Marca: <%= product.Brand %></h4>
+                    <h4>Categoría: <%= product.Category %></h4>
+                </div>
+               
+                 
+                
+                <button><a href="/products/<%= product.Id %>/edit">Editar</a></button>
+            </div>
+            
+        </div>
+
+    </div>
+    
 
 
     <%- include("./partials/footer")%>
 
-<script type="text/javascript" src="magiczoomplus/magiczoomplus.js"></script>
 </body>
 </html>
 
-<!--Chequear mayusculas/minusculas en los product. -->

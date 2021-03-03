@@ -53,11 +53,11 @@ var controller = {
    
   
   vermas: async (req, res) => {
-    
+    let cat = toString(req.query.category)
     try {
       let products = await db.Product.findAndCountAll({
         where: {
-          Category: 'Hombre'
+          Category: cat
         },
         offset: Number(req.query.page) ? Number(req.query.page) * 5 : 0 ,
         limit: 6     //Number(req.query.page) ? Number(req.query.page) * 5 : 5

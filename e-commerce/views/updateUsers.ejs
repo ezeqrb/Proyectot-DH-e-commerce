@@ -11,7 +11,7 @@
 
     
  
-                <h1>Registrarse</h1>
+                <h1>Actualiza tus datos de usuario</h1>
            
 
            <form action="/users/<%= user.idusers %>/edit" method="POST">
@@ -19,10 +19,10 @@
                     <input type="text" name="username" class="input" placeholder="Nombre de Usurio" required="" value="<%= user.username %>">
                 </div>   
                 <div class="input-fields">
-                    <input type="text" name="email" class="input" placeholder="Email" required="" value="<%= user.username %>">
+                    <input type="text" name="email" class="input" placeholder="Email" required="" value="<%= user.email %>">
                 </div>   
                 <div class="input-fields">
-                    <input type="text" name="passcrypt" class="input" placeholder="Contraseña" required="" value="<%= user.username %>">
+                    <input type="text" name="passcrypt" class="input" placeholder="Contraseña" required="">
                 </div>           
                 <input type="submit" class=button></div>    
             </form>

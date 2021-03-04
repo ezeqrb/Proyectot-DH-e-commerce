@@ -15,9 +15,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
 }
 
-.columnas{
+.columnas1{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,15 +27,17 @@ body{
 .dot {
     height: 25px;
     width: 25px;
-    background-color: #bbb;
+    background-color: #D80621;
     border-radius: 50%;
     display: inline-block;
+    text-align: center;
+    color: white;
   }
 
-.col1{
+.columna1a{
     padding-right: 30px;
 }
-.col2{
+.columna2a{
     padding-left: 30px;
     display: flex;
     flex-direction: column;
@@ -49,12 +52,12 @@ body{
     margin-top: 20px;
 }
 
-.columna1{
+.columna1b{
     padding-right: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.columna2{
+.columna2b{
     padding-left: 30px;
 }

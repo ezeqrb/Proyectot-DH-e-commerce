@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= product.Name %></title>
     <link rel="stylesheet" href="/stylesheets/style-productDetail.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
  
 </head>
 <body>
     <%- include("./partials/header.ejs")%>
     
     
-        <br><br><br><br><br><br>
+        <br><br><br>
     
     
 
@@ -24,16 +25,16 @@
         </div>
 
 
-        <div class="columnas">
+        <div class="columnas1">
 
-            <div class="col1">
+            <div class="columna1a">
                
                 
                     <img src="/images/Products/<%= product.Picture %>" alt="" >
                
 
             </div>
-            <div class="col2">
+            <div class="columna2a">
                 <div class="tittle">
                     <h2><%= product.Name %></h2>
                 </div>
@@ -47,14 +48,19 @@
                   color:  <%= product.Colour %>
                 </div>
                 <div class="size">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                  talle:   <%= product.Size %>
+                    <span class="dot">7</span>
+                    <span class="dot">8</span>
+                    <span class="dot">9</span>
+                    <span class="dot">10</span>
+                    <span class="dot">11</span>
+                    <span class="dot">12</span>
+                    <span class="dot">13</span>
+                    talle:   <%= product.Size %>
                 </div>
                 <div class="addOrWish">
-                    <div class="addToCart"></div>
+                    <div class="addToCart">
+                        <button type="button" class="btn btn-dark add-cart">Agregar al carrito</button>
+                    </div>
                     <div class="wishlist"></div>
 
                 </div>
@@ -65,10 +71,10 @@
 
 
         <div class="description">
-            <div class="columna1">
+            <div class="columna1b">
                     <h2>Descripción</h2>
             </div>
-            <div class="columna2">
+            <div class="columna2b">
                 <div class="desc">
                     <h5>Descripcion: <%= product.Description %></h5>
                 </div>

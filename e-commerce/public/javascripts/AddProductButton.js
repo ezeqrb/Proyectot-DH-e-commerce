@@ -1,17 +1,21 @@
+console.log ("cone")
+
 function cartNumbers(item){
     if (localStorage.getItem("cart")){
         let productsInCart = JSON.parse (localStorage.getItem ("cart"))
-        productsInCart.push (item)
+        productsInCart = {... productsInCart , item}
+        localStorage.setItem ("cart" , JSON.stringify (productsInCart))
     }else{
         localStorage.setItem ("cart" , JSON.stringify (item))
     }
 }
 
-let carts = document.querySelectorAll('.add-cart')
+let carts = document.querySelector('.add-cart')
 
-for (let i=0 ; i<carts.length; i++){
-    carts[i].addEventListener('click',()=>{
-        cartNumbers(carts[i])
-    })
+let id= document.URL.slice(document.URL.lastIndexOf('/')+1)
+carts.addEventListener('click',()=>{cartNumbers(id)})
 
-}
+console.log (id)
+
+
+

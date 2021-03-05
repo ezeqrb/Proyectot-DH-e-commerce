@@ -83,7 +83,37 @@ let controller = {
         });
         res.redirect ("/products/list");
 
-}
+    },
+    addCart: function(req,res,next){
+        console.log(typeof(req.body.qty))
+        if (req.session.user){
+            db.cart.findAll({
+                where:{
+                user_id: req.session.user.id,
+                state: "open"}
+            })
+            .then(function(params){
+                db.cart_product.create({
+                    Cart_id:params,
+                    Product_id:req.params.id
+                })
+            res.redirect
+            })
+            .catch(function(error){
+                db.cart.create({
+                    user_id: req.session.user.id,
+                    state:"open"
+                })
+                console.log(error)
+                res.redirect('/shop/cart')
+            })
+        
+        }
+        for(let i = 0; i<parseInt(req.body.cantidad) ;i++){
+            db.cart
+        }
+        
+    }
 }
 
 module.exports = controller;

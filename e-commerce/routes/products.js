@@ -37,4 +37,7 @@ router.post ('/:id/edit', admin ,upload.any(), productsController.storeEdition);
 
 router.get('/delete/:id',admin, productsController.delete);
 
+router.post('/:id/addcart' , productsController.addCart);
+
 module.exports = router;
+

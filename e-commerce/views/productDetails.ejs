@@ -59,7 +59,18 @@
                 </div>
                 <div class="addOrWish">
                     <div class="addToCart">
-                        <button type="button" class="btn btn-dark add-cart">Agregar al carrito</button>
+                        <form action="/products/<%= product.Id %>/addcart" method="POST">
+                            
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelect01">Cantidad</label>
+                                <select name="qty" class="form-select" id="inputGroupSelect01">
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-dark add-cart">Agregar al carrito</button>
+                        </form>
                     </div>
                     <div class="wishlist"></div>
 

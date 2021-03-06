@@ -85,30 +85,34 @@ let controller = {
 
     },
     addCart: function(req,res,next){
-        console.log(typeof(req.body.qty))
+        var cartId;
+
         if (req.session.user){
-            db.cart.findAll({
+            db.Cart.findOne({
                 where:{
                 user_id: req.session.user.id,
                 state: "open"}
             })
-            .then(function(params){
-                db.cart_product.create({
-                    Cart_id:params,
-                    Product_id:req.params.id
+            .then(function(cart){
+                cart.addCart_products(req.params.id) 
+                .then (function(a){
+                    return res.send (a)
                 })
-            res.redirect
+        
+            // res.redirect ("/products") 
             })
             .catch(function(error){
-                db.cart.create({
+                db.Cart.create({
                     user_id: req.session.user.id,
                     state:"open"
                 })
                 console.log(error)
                 res.redirect('/shop/cart')
-            })
+            }) 
         
         }
+        //Agregar Catch al data.addCart....
+        //Agregar el else al if
         for(let i = 0; i<parseInt(req.body.cantidad) ;i++){
             db.cart
         }

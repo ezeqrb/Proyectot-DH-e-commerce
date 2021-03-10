@@ -3,7 +3,42 @@ const db = require('../database/models')
 
 var controller = {
     cart: function(req, res, next) {
-        res.render('cart');
+      if (req.session.user){
+        db.Cart.findOne({
+            where:{
+            user_id: req.session.user.id,
+            state: "open"}
+        })
+        .then(function(cart){
+            db.cart_products.findAll({
+              where:{
+                Cart_id: cart
+              }
+            }) 
+            .then (function(r){res.send(r)})
+    
+        }) 
+            .catch (function (error){
+                console.log (error)
+                res.redirect ("/home")
+            })
+        .catch(function(error){
+            db.Cart.create({
+                user_id: req.session.user.id,
+                state:"open"
+            })
+            .then (function(cart){
+                cart.addCart_products(req.params.id) 
+                .then (res.redirect ("/shop/hombre"))
+        
+            }) 
+          
+        }) 
+    
+    }else{
+        let msg= "Para poder comprar es necesario estar logueado"
+        res.render ("login" , {msg});
+    }
       },
     product: function(req, res, next) {
       res.render('product');

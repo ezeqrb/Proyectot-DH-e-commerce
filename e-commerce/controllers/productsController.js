@@ -85,7 +85,6 @@ let controller = {
 
     },
     addCart: function(req,res,next){
-        var cartId;
 
         if (req.session.user){
             db.Cart.findOne({
@@ -95,27 +94,31 @@ let controller = {
             })
             .then(function(cart){
                 cart.addCart_products(req.params.id) 
-                .then (function(a){
-                    return res.send (a)
-                })
+                .then (res.redirect ("/shop/hombre"))
         
-            // res.redirect ("/products") 
-            })
+            }) 
+                .catch (function (error){
+                    console.log (error)
+                    res.redirect ("/home")
+                })
             .catch(function(error){
                 db.Cart.create({
                     user_id: req.session.user.id,
                     state:"open"
                 })
-                console.log(error)
-                res.redirect('/shop/cart')
+                .then (function(cart){
+                    cart.addCart_products(req.params.id) 
+                    .then (res.redirect ("/shop/hombre"))
+            
+                }) 
+              
             }) 
         
+        }else{
+            let msg= "Para poder comprar es necesario estar logueado"
+            res.render ("login" , {msg});
         }
-        //Agregar Catch al data.addCart....
-        //Agregar el else al if
-        for(let i = 0; i<parseInt(req.body.cantidad) ;i++){
-            db.cart
-        }
+
         
     }
 }

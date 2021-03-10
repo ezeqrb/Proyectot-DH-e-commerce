@@ -9,7 +9,8 @@ var controller = {
     // Login
     
     login: function(req, res, next) {
-            return res.render('login');
+        let msg;
+            return res.render('login' , {msg});
  
     },
     authenticate: async (req,res) => {

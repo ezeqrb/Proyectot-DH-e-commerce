@@ -34,3 +34,9 @@ body{
 .adminButtons button{
     margin: 10px;
 }
+
+.turn-blue:hover{
+    background-color:#0d6efd;
+    color: white;
+    
+}

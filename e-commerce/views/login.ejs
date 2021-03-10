@@ -8,10 +8,12 @@
     <title>Login</title>
 </head>
 <body>
-            
+    
 <form action="/login" method="POST" id="form">
     <div class="contact-form">
-        
+        <% if (msg){ %>
+            <alert> <%= msg%> </alert>
+        <% } %>
         <div class="logo">
             <h1>Ingresar</h1>
         </div>

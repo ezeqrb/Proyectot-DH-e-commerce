@@ -6,6 +6,7 @@
     <title>Cart</title>
     <link rel="stylesheet" href="/stylesheets/style-cart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     
 </head>
 
@@ -18,25 +19,27 @@
         <main>
 
             <!---- tarjeta de producto-->
-            <div class="card">
-                <div class="cardContainer">
-                    <div class="image">
-                        <img src="/images/shoes/1-500x500.jpg" alt="">
-                    </div>
-                    <div class="detail">
-                        <div class="tittle">Zapatilla Nike - Metcon 4</div>
-                        <div class="size"> Talle 11</div>
-                        <div class="price">Precio $7800</div>
-                        <div class="quantity">
-                            <i class="fas fa-minus-circle"></i>                            
-                            <span>  1    </span>
-                            <i class="fas fa-plus-circle"></i>
+            
+
+            <div class="tarjeta">
+                
+                    <div class="card mb-3" >
+                        <div class="row g-0">
+                          <div class="col-md-4">
+                            <img src="/images/shoes/1-500x500.jpg" alt="..." style="max-width: 250px;">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                          </div>
                         </div>
-                    </div>
-                </div>    
-                <div class="icons">
-                    <div class="x"><i class="fas fa-times"></i></div>
-                    <div class="like"><i class="far fa-heart"></i></div>
+                      
+                </div>
+                <div class="cruz">
+
                 </div>
             </div>
 
@@ -46,6 +49,8 @@
             </div>
             <!---- informacion extra-->
         </main>
+
+
         <aside>
             <!---- Resumen de pago -->
             <div class="resumen">

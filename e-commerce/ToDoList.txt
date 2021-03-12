@@ -31,7 +31,11 @@ HTML y CSS
 Proyecto integrador - cosas minimas obligatorias:
 OK -REGISTRO    
 OK -LOGIN
+<<<<<<< Updated upstream
 OK-VER PERFIL
+=======
+OK -VER PERFIL
+>>>>>>> Stashed changes
 -EDITAR PERFIL
 OK -VER PRODUCTOS
 -BUSCAR/FILTRAR PRODUCTOS (puede ser buscador o filtros por categoria/marca)

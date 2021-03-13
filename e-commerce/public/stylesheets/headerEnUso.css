@@ -3,10 +3,9 @@
 
 .header-container{
     width:100vw;
-    margin: 0;
-    padding: 0;
+   
     box-sizing: border-box;
-    margin:auto;
+    
     font-family: 'Poppins', sans-serif;
     background-color: white;
     position: fixed;
@@ -15,50 +14,38 @@
     border-bottom: solid rgb(218, 218, 218) 1px;
 
 }
-.header-container-scroll{
-    width:100vw;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    margin:auto;
-    font-family: 'Poppins', sans-serif;
-    background-color: transparent;
-    position: fixed;
-    z-index: 99999;
-    display: block;
-    
-}
+
 .box1{
     padding: 20px;
     
 }
-nav{
+.header-container nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
     position: relative;
 }
-nav ul {
+.header-container nav ul {
     display: inline-block;
     list-style-type: none;
     
 }
-nav ul li{
+.header-container nav ul li{
     display: inline-block;
     margin-right: 20px;
     
 }
-a{
+.header-container a{
     text-decoration: none;
     color: #555;
 
 }
-a:hover{
+.header-container a:hover{
     text-decoration: solid;
 
 }
 
-p{
+.header-container p{
     color: #555;
 }
 

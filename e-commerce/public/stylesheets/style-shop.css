@@ -17,12 +17,19 @@ body{
 
 
 aside{
+    
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items:center;
+    align-items: center;
     width: 30%;
+    height: 100%;
 }
+aside h3{
+    display: flex;
+    justify-content: center;
+}
+
 main{
     
     max-width: 70%;

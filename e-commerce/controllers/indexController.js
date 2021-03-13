@@ -82,8 +82,15 @@ var controller = {
     //Home
 
     index: function(req, res, next) {
-        res.render('home');
-    },
+        db.Product.findAll()
+            .then(function(product){
+                res.render('home',{products:product})
+        }).catch(function(error){
+            console.log(error)
+            res.send('error')
+        })
+    
+},
     logout: function(req , res , next){
         if (req.session) {
             req.session.destroy(function(err) {

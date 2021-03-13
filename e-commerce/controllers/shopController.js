@@ -58,9 +58,7 @@ var controller = {
     },
     genero: async (req, res) => {
  //MANDAR SOLAMENTE LOS PRIMEROS 5 PRODUCTOS !!!!
-        let categ = req.path.replace('/', '')
-        console.log(categ)
-       
+        let categ = req.path.replace('/', '')    
 
 
       try {
@@ -69,16 +67,23 @@ var controller = {
               Category: categ
             },
             offset: 0  , //Number(req.query.page) ? Number(req.query.page) + 1 : 0 
-            limit: 5     //Number(req.query.page) ? Number(req.query.page) * 5 : 5
+            limit: 6     //Number(req.query.page) ? Number(req.query.page) * 5 : 5
             });
+            console.log(products.rows)
+          if(products.rows.length = 6){
+            products.rows.pop()
+            res.render('shop',{
+              products:products.rows,
+              status:"continue",
+              pagina: Number(req.query.page) ? Number(req.query.page) + 1 : 1,   
+            })
+          }else{
+            res.render('shop',{
+              products:products.rows,
+              status:"stop"
+            })
           
-          res.render('shop', {
-            products:products.rows,
-            pagina: Number(req.query.page) ? Number(req.query.page) + 1 : 1,
-            ruta:req.originalUrl,
-            total:products.count
-                     
-            });
+          }
               
       } catch (error) {
           console.log(error); 

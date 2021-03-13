@@ -48,7 +48,7 @@ var controller = {
         db.User.update({
             username: req.body.username,
             email:req.body.email,
-            passcrypt: req.body.passcrypt,
+            passcrypt: bcrypt.hashSync(req.body.passcrypt, salt),
         },{
         where: {
             idusers:req.params.id   

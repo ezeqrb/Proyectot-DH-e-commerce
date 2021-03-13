@@ -25,7 +25,7 @@ module.exports = {
         check('username')
     ],
     updateUserForm:[
-
+        
     ],
     recoverForm: [
         check('email').notEmpty().withMessage('Ingrese una direccion de correo electronico').bail().

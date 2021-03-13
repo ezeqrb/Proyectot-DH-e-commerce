@@ -20,6 +20,28 @@
 	}
 }
 
+i{
+    color: white;
+    font-size: 17px;
+}
+.steps{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px ;    
+}
+.shipping{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shipping i{
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
 .seccion{
     margin: 30px 0px;
     
@@ -61,7 +83,7 @@
     background-image: url(/images/banner/banner4.jpg);
     background-repeat:round;
     height: 500px;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,6 +120,26 @@ margin: -20px;
 font-weight: bold;
 color: white;
 }
+
+.banner2{
+    background-image: url("/images/banner51.jpg");
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.formcont{
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .Reviews{
     display: flex;

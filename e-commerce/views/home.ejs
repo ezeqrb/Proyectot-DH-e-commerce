@@ -12,39 +12,47 @@
 
 <body>
     
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-            <div class="container-fluid set">
+    <header class="sticky-top ">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          
+            <div class="container-md set">
               
-              <div class="hola"> 
-                <a class="navbar-brand" href="#">Navbar</a>
-              </div>
+             
+              <a class="navbar-brand" href="/home">Navbar</a>
+              
               
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link " aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="/shop/hombre">Hombre</a>
                   </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/shop/mujer">Mujer</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/shop/kid">Niño</a>
                   </li>
                   
                 </ul>
               </div>
-              <div class="d-flex" id="navbarSupportedContent">
-                <h2 style="color: white;">holka</h2>
-                <h2 style="color: white;">holka</h2>
+              <div class="d-flex" id="navbarSupportedContent ">
+                <div class="dropdown" >
+                  <a class="nav-link dropdown-toggle" id="dropdownMenu" data-bs-toggle="dropdown" href=""><i class="bi bi-person"></i></a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <% if(locals.userLocals){  %>   
+                      <li><a class="dropdown-item" href="/users/<%= locals.userLocals.id %>">Ver Perfil</a></li>
+                      <li><a class="dropdown-item" href="/logout">Cerrar Sesion</a></li>
+                    <% } else { %>
+                      <li><a class="dropdown-item" href="/login">Iniciar Sesion</a></li>
+                      <li><a class="dropdown-item" href="/register">Registratse</a></li>
+                    <% } %>
+                  </ul>
+                </div>
+                <a class="nav-link" href="/shop/cart"><i class="bi bi-bag"></i></a> 
+                <a class="nav-link" href="/shop/wishlist"><i class="bi bi-heart"></i></a>
               </div>
               
             </div>
@@ -64,11 +72,11 @@
                    
                   </div>
                   <div class="carousel-item">
-                    <img src="/images/banner/1.jpg" class="d-block w-100" alt="...">
+                    <img src="/images/banner/2.jpg" class="d-block w-100" alt="...">
                     
                   </div>
                   <div class="carousel-item">
-                    <img src="/images/banner/l.jpg" class="d-block w-100" alt="...">
+                    <img src="/images/banner/3.jpg" class="d-block w-100" alt="...">
                    
                   </div>
                 </div>
@@ -81,6 +89,37 @@
                   <span class="visually-hidden">Next</span>
                 </button>
               </div>
+        </div>
+        <div class="steps">
+          <div class="shipping">
+            <i class="bi bi-truck"></i>
+            <div class="steptext">
+              <h4>FREE SHIPPING</h4>
+              <p>On Order Over $100</p>
+            </div>
+          </div>
+          <div class="support">
+            <i class="bi bi-truck"></i>
+            <div class="steptext">
+              <h4>FREE SHIPPING</h4>
+              <p>On Order Over $100</p>
+            </div>
+          </div>
+          <div class="garanty">
+            <i class="bi bi-cash"></i>
+            <div class="steptext">
+              <h4>FREE SHIPPING</h4>
+              <p>On Order Over $100</p>
+            </div>
+          </div>
+          <div class="shop">
+            <i class="bi bi-gift"></i>
+            <div class="steptext">
+              <h4>FREE SHIPPING</h4>
+              <p>On Order Over $100</p>
+            </div>
+          </div>
+
         </div>
         <div class="seccion">
           <div class="title">
@@ -109,9 +148,7 @@
                 <h2> SAVE UP TO $40</h2>
                 <button type="button" class="btn btn-light">SEE ALL COLLECTION</button>
                 
-              </div>
-              
-            
+              </div> 
         </div>
         <div class="seccion">
           <div class="title">
@@ -132,10 +169,28 @@
                   <% } %>
           </div>
         </div>
-        
+
+        <div class="banner2">
+          <div class="formcont">
+            
+             <h1>Suscribe our NewssLetter </h1> 
+             <h2>Grab a 20% discount for your next purchase</h2>
+            
+            <form class="row g-3">
+              <div class="col-auto">
+                
+                <input type="text" class="form-control" style="width: 300px;">
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-dark mb-3">Send</button>
+              </div>
+            </form>
+          </div> 
+        </div> 
+
         <div class="Reviews">
           <div class="customers">
-            <img class="avatar" src="/images/user-1.png" alt="">
+            <img class="avatar" src="/images/customers/user-1.png" alt="">
             <div class="stars">
               <i class="bi bi-star-fill"></i>
               <i class="bi bi-star-fill"></i>
@@ -148,7 +203,7 @@
             <p>Business Woman - New York</p>
           </div>
           <div class="customers">
-            <img class="avatar" src="/images/user-2.png" alt="">
+            <img class="avatar" src="/images/customers/user-2.png" alt="">
             <div class="stars">
               <i class="bi bi-star-fill"></i>
               <i class="bi bi-star-fill"></i>
@@ -161,7 +216,7 @@
             <p>Business Woman - New York</p>
           </div>
           <div class="customers">
-            <img class="avatar" src="/images/user-3.png" alt="">
+            <img class="avatar" src="/images/customers/user-3.png" alt="">
             <div class="stars">
               <i class="bi bi-star-fill"></i>
               <i class="bi bi-star-fill"></i>
@@ -174,7 +229,7 @@
             <p>Business Woman - New York</p>
           </div>
           <div class="customers">
-            <img class="avatar" src="/images/user-1.png" alt="">
+            <img class="avatar" src="/images/customers/user-1.png" alt="">
             <div class="stars">
               <i class="bi bi-star-fill"></i>
               <i class="bi bi-star-fill"></i>
@@ -191,7 +246,7 @@
     </main>
 
     <footer>
-      <%- include("./partials/Footer.ejs")%>
+      <%- include("./partials/footer.ejs")%>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>

@@ -81,7 +81,7 @@ let controller = {
                 Id: req.params.id
             }
         });
-        res.redirect ("/products/list");
+        res.redirect ("/admin");
 
     },
     addCart: function(req,res,next){

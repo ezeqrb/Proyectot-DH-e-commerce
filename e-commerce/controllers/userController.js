@@ -63,7 +63,7 @@ var controller = {
                 idusers: req.params.id
             }
         })
-        res.redirect('/users/list');
+        res.redirect('/admin');
     },  
 
 

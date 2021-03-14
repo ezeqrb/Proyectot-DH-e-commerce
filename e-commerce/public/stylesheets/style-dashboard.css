@@ -129,9 +129,10 @@ height: 100%;
 }
 
 .fullContainer{
-    width: 800px;
+    
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    
-    
+    align-items: center;
+    padding-left: 60px;    
 }

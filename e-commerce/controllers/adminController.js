@@ -17,8 +17,8 @@ module.exports = {
     },
     productList: function(req,res,next){
         db.Product.findAll()
-            .then(function(productsDB){
-                res.render ("productsList" , {productsDB});
+            .then(function(product){
+                res.render ('dashboardProducts' , {product:product});
             }).catch(function(error){
                 console.log(error)
                 res.send('error')

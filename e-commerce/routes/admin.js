@@ -5,6 +5,6 @@ var adminController = require('../controllers/adminController')
 
 router.get('/', adminController.dashboard);
 router.get('/userlist', adminController.userList);
-router.get('/productslist', adminController.productList);
+router.get('/productlist', adminController.productList);
 
 module.exports = router;

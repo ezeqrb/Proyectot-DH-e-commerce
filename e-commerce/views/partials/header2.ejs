@@ -1,0 +1,85 @@
+<head><link rel="stylesheet" href="../stylesheets/headerEnUso.css">
+</head>
+
+<div class="header-container" id="navBar">
+            
+    <div class="box1">
+    
+        
+        <nav class="nav">
+            <div class="logo">
+                <a href="/"><img  src="/images/LOGO.PNG" alt="sport.limits" width= 150px></a>
+            </div>
+            <div>
+                <ul>
+                    <li class="big">
+                        <a href="/shop/hombre">Hombre</a>
+                    </li>
+                    <li class="big">
+                        <a href="/shop/mujer">Mujer</a>
+                    </li>
+                    <li class="big">
+                        <a href="/shop/kid">Niño </a>
+                      
+                    </li>
+                   
+                    
+                    <li>
+                        <a href="/shop/marcas">Marcas</a>
+                    </li>
+                    <li>
+                        <a href="/">Ofertas</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="icons-menu">
+                <ul class="icons">   
+
+                    <li>
+                        <div class="carrito">
+                            <a href="/shop/cart"><img src="/images/cart.png" width="30px" height="30px"></a>
+                            
+                        </div>
+                        
+                        
+                    </li>
+
+                    <li>
+                      <!---  <%= typeof userLocals != "undefined" ? userLocals.email : null %> --->
+                            <div class="dropdown">
+                                
+                            <a href="/login"><img src="/images/user.png" width="30px" height="30px" class="dropbtn"></a>
+                             
+                                <div class="dropdown-content">
+                                    <% if(locals.userLocals){  %>   
+                                        
+                                                <a href="/users/<%= locals.userLocals.id %>">ver perfil</a>
+                                                <a href="/logout"> Cerrar Session</a>
+                                        
+                                        
+                                    <% } else { %>
+                                        
+                                            <a href="/login">Iniciar Session</a> 
+                                            <a href="/register">Registrarse</a>
+                                        
+                                        
+                                    <% } %>
+                                </div>
+                               
+                            </div>
+                          
+                    </li>
+                  
+                    <li><a href="/shop/wishlist"><img src="/images/wishlist.png" width="30px" height="30px"  ></a>
+                        
+                    </li>
+                </ul>
+            </div>    
+        </nav>
+        
+
+
+    </div>
+</div>
+
+<script src="../javascripts/CountProducts.js"></script>

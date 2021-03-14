@@ -9,5 +9,5 @@ router.get('/list', admin ,userController.list);
 router.get('/:id', user ,userController.detail);
 router.get('/:id/edit',admin,userController.edit);
 router.post('/:id/edit',admin,userController.update);
-router.post('/:id/delete',user,userController.delete);
+router.get('/:id/delete', user , userController.delete);
 module.exports = router;

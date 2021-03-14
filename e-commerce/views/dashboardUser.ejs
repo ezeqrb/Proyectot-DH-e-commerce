@@ -10,46 +10,38 @@
 
 </head>
 <body>
-
+    <header>
     <%- include("./partials/dashLateral.ejs")%>
-
+    </header>
         <div class="fullContainer">
             <div class="title" style="text-align: center;">
                 LISTADO DE USUARIOS
             </div>
             <div class="links">
-                <div></div>
-                <div></div>
-                <div></div>
+                <div><a href="/register"><button type="button" class="btn btn-primary">Registrar nuevo usuario</button></a></div>
+                
             </div>
             <div class="tablecont" >
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                          <th scope="col">#</th>
-                          <th scope="col">First</th>
-                          <th scope="col">Last</th>
-                          <th scope="col">Handle</th>
+                          <th scope="col">Id</th>
+                          <th scope="col">UserName</th>
+                          <th scope="col">Email</th>
+                          <th scope="col">Editar</th>
+                          <th scope="col">Eliminar</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <% for(let i = 0; i < users.length; i++){ %>
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <th scope="row"><%= users[i].idusers %>  </th>
+                            <td><%= users[i].username %> </td>
+                            <td><%= users[i].email %>  </td>
+                            <td> <a href="/users/<%= users[i].idusers %>/edit"><button type="button" class="btn btn-success">Editar</button></a></td>
+                            <td> <a href="/users/<%= users[i].idusers %>/delete"> <button type="button" class="btn btn-danger">Eliminar</button></a></td>
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+                      <% } %>
                 </tbody>
                 </table>
             </div>

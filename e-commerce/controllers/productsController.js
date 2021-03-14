@@ -70,7 +70,7 @@ let controller = {
                 Id: req.body.Id
             }
         });
-        res.redirect ("/products/list")
+        res.redirect ("/home")
 
        
       },
@@ -93,21 +93,28 @@ let controller = {
                 state: "open"}
             })
             .then(function(cart){
-                cart.addCart_products(req.params.id) 
+                console.log (cart);
+                db.cart_product.create({
+                    Cart_id: cart.dataValues.id,
+                    Product_id: req.params.id
+                })
+
+               
+               // cart.addCart_products(req.params.id) 
                 .then (res.redirect ("/shop/hombre"))
         
             }) 
-                .catch (function (error){
-                    console.log (error)
-                    res.redirect ("/home")
-                })
             .catch(function(error){
                 db.Cart.create({
                     user_id: req.session.user.id,
                     state:"open"
                 })
                 .then (function(cart){
-                    cart.addCart_products(req.params.id) 
+                    db.cart_product.create({
+                        Cart_id: cart,
+                        Product_id: req.params.id
+                    })
+                    //cart.addCart_products(req.params.id) 
                     .then (res.redirect ("/shop/hombre"))
             
                 }) 

@@ -29,7 +29,7 @@
             <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <a class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Perfil</a>
             <a class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Mis compras</a>
-            <a class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Cambiar contraseña</a>
+
             <% if( users.admin == "true"){%>
             <a class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Administrador</a>
             <% } %>
@@ -41,42 +41,16 @@
                     
                         <img class="avatar" src="/images/img_avatar.png" alt="Avatar">
                        <h1>Hola <%= users.username %> !</h1> 
+                       <div style="display: flex; flex-direction: column;"><p>Para editar tu informacion hace click aqui!</p>
+                        <a href="/users/<%= users.idusers %>/edit"><button class="btn btn-primary">Editar</button></a></div>
+                       
                    
                 </div>
             </div>
             <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                 MIS COMPRAS
             </div>
-            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-            <div class="password">
-                <p>CAMBIAR CONTRASEÑA</p>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="inputGroup-sizing-default">Contraseña Actual</span>
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                </div>
-                <div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default">Nueva Contraseña</span>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                </div>
-                <div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default">Repetir Contraseña</span>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                </div>
-                <button type="button" class="btn btn-light">Actualizar</button>
-
-            </div>
-            <br><br>
-            <div class="email">
-                <p>CAMBIAR  EMAIL</p>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="inputGroup-sizing-default">Confirmar</span>
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                </div>
-                <button type="button" class="btn btn-light">Actualizar</button>
+         
 
                 </div> 
 

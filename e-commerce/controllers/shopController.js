@@ -2,7 +2,8 @@ const db = require('../database/models')
 
 
 var controller = {
-    cart: function(req, res, next) {
+     cart: function(req, res, next) {
+       
       if (req.session.user){
         db.Cart.findOne({
             where:{
@@ -10,12 +11,16 @@ var controller = {
             state: "open"}
         })
         .then(function(cart){
-            db.cart_products.findAll({
+            db.cart_product.findAll({
+              include: db.Product,
               where:{
-                Cart_id: cart
+                Cart_id: cart.dataValues.id
               }
             }) 
-            .then (function(r){res.send(r)})
+            .then (function(r){
+              res.send(r)
+              //res.render("cart", {products:r})
+            })
     
         }) 
             .catch (function (error){
@@ -42,13 +47,13 @@ var controller = {
       },
     product: function(req, res, next) {
       res.render('product');
-      /*
+      
      if(req.params.sex == "hombre" ||req.params.sex == "hombre" || req.params.sex == "hombre"){
         res.render('product');
       }else{
         res.status(500).render('error-500', {error})
       }
-      */
+     
     },
     shop: function(req, res, next) {
       res.render('shop');
@@ -58,7 +63,9 @@ var controller = {
     },
     genero: async (req, res) => {
  //MANDAR SOLAMENTE LOS PRIMEROS 5 PRODUCTOS !!!!
-        let categ = req.path.replace('/', '')    
+        let categ = req.path.replace('/', '')
+        console.log(categ)
+       
 
 
       try {
@@ -67,23 +74,16 @@ var controller = {
               Category: categ
             },
             offset: 0  , //Number(req.query.page) ? Number(req.query.page) + 1 : 0 
-            limit: 6     //Number(req.query.page) ? Number(req.query.page) * 5 : 5
+            limit: 5     //Number(req.query.page) ? Number(req.query.page) * 5 : 5
             });
-            console.log(products.rows)
-          if(products.rows.length = 6){
-            products.rows.pop()
-            res.render('shop',{
-              products:products.rows,
-              status:"continue",
-              pagina: Number(req.query.page) ? Number(req.query.page) + 1 : 1,   
-            })
-          }else{
-            res.render('shop',{
-              products:products.rows,
-              status:"stop"
-            })
           
-          }
+          res.render('shop', {
+            products:products.rows,
+            pagina: Number(req.query.page) ? Number(req.query.page) + 1 : 1,
+            ruta:req.originalUrl,
+            total:products.count
+                     
+            });
               
       } catch (error) {
           console.log(error); 
@@ -121,6 +121,25 @@ var controller = {
       console.log(error); 
       res.status(500).render('error-500', { error });
     }
+  },
+  checkout: function(res,req, next){
+    db.Cart.findOne({
+      where:{
+      user_id: req.session.user.id,
+      state: "open"}
+  }).then(function(a){
+    db.Cart.update({
+      state: "closed"
+  },{
+  where: {
+    id: a.dataValues.id  
+  }
+  });
+   
+  })
+  .then (function (s){
+    res.redirect ("/home")
+  })
   }
 }
 

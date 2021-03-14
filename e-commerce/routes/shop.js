@@ -13,6 +13,7 @@ router.get('/', shopController.shop );
 
 // ** API ** // 
 router.get('/vermas', shopController.vermas);
+router.get('/checkout', shopController.checkout);
 
 
 

@@ -15,25 +15,8 @@
     
            
 
-<<<<<<< HEAD
-           <form action="/users/<%= user.idusers %>/edit" method="POST">
-                <div class="input-fields">
-                    <input type="text" name="username" class="input" placeholder="Nombre de Usurio" required="" value="<%= user.username %>">
-                </div>   
-                <div class="input-fields">
-                    <input type="text" name="email" class="input" placeholder="Email" required="" value="<%= user.email %>">
-                </div>   
-                <div class="input-fields">
-                    <input type="password" name="passcrypt" class="input" placeholder="Contraseña" required="">
-                </div>           
-                <input type="submit" class=button></div>    
-            </form>
-       
-    
-=======
     <form action="/users/<%= user.idusers %>/edit" method="POST">
         <h1>Actualiza tus datos de usuario</h1>
->>>>>>> 88eb87261291492c48e3275679cebffe504b5a65
 
         <div class="mb-3">
             <input class="form-control" type="text" name="username" placeholder="Nombre de Usurio"  aria-label="default input example" value="<%= user.username %>" >

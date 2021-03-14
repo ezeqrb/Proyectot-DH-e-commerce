@@ -36,10 +36,10 @@ var controller = {
                     
                     res.redirect('/')
                 } else {
-                    res.render('users/login', { errors: { form: { msg: 'Credenciales no válidas' }}});
+                    res.render('login', { errors: { form: { msg: 'Credenciales no válidas' }}});
                 }
             } else {
-                res.render('users/login', { errors: errors.mapped() });
+                res.render('login', { errors: errors.mapped() });
             }
         } catch (error) {
             console.log(error);

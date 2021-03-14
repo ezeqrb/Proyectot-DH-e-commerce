@@ -20,7 +20,7 @@
 
             <!---- tarjeta de producto-->
             
-
+            <% for(let i=0; i< products.length; i++) { %>
             <div class="tarjeta">
                 
                     <div class="card mb-3" >
@@ -42,10 +42,11 @@
 
                 </div>
             </div>
+            <% } %>
 
             <!---- Botón de pago -->
             <div class="pay">
-                <button type="button" class="btn btn-outline-dark">Dark</button>
+                <button type="button" class="btn btn-outline-dark">Checkout</button>
             </div>
             <!---- informacion extra-->
         </main>

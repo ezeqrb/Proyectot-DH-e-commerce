@@ -42,10 +42,9 @@ module.exports = function (sequelize , DataTypes) {
 
     productsDb.associate = function (models){
         productsDb.belongsToMany (models.Cart , {
-             as: "products_cart",
              foreignKey : "Product_id",
              otherKey : "Cart_id",
-             through : "Cart_Product"
+             through : models.cart_product
         }) 
     }
 

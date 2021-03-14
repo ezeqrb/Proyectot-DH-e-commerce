@@ -70,7 +70,7 @@ let controller = {
                 Id: req.body.Id
             }
         });
-        res.redirect ("/products/list")
+        res.redirect ("/home")
 
        
       },

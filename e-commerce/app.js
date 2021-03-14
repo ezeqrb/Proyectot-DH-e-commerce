@@ -6,6 +6,8 @@ var logger = require('morgan');
 var session = require('express-session')
 var locals = require('./middlewares/locals')
 var url = require('./middlewares/url')
+const cors = require('cors');
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -33,6 +35,7 @@ app.use(session({
   saveUninitialized: false
   })
 );
+app.use(cors());
 app.use(url)
 app.use(locals);
 app.use('/', indexRouter);

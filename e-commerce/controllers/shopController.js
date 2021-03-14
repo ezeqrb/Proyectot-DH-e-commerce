@@ -55,9 +55,7 @@ var controller = {
       }
      
     },
-    shop: function(req, res, next) {
-      res.render('shop');
-    }, 
+   
     marcas: function(req, res, next) {
       res.render('marcas');
     },
@@ -65,30 +63,37 @@ var controller = {
  //MANDAR SOLAMENTE LOS PRIMEROS 5 PRODUCTOS !!!!
         let categ = req.path.replace('/', '')
         console.log(categ)
-       
-
-
       try {
           let products = await db.Product.findAndCountAll({
             where: {
               Category: categ
             },
-            offset: 0  , //Number(req.query.page) ? Number(req.query.page) + 1 : 0 
-            limit: 5     //Number(req.query.page) ? Number(req.query.page) * 5 : 5
+            offset: 0  , 
+            limit: 6     //Number(req.query.page) ? Number(req.query.page) * 5 : 5
             });
-          
-          res.render('shop', {
-            products:products.rows,
-            pagina: Number(req.query.page) ? Number(req.query.page) + 1 : 1,
-            ruta:req.originalUrl,
-            total:products.count
-                     
-            });
+              if(products.rows.length = 6 ){
+                
+                products.rows.pop()
+                
+                res.render('shop', {
+                  products:products.rows,
+                  pagina: Number(req.query.page) ? Number(req.query.page) + 1 : 1,
+                  ruta:req.originalUrl,
+                  status:"continue"    
+                });
+              }else{
+                res.render('shop', {
+                  products:products.rows,
+                  pagina: Number(req.query.page) ? Number(req.query.page) + 1 : 1,
+                  ruta:req.originalUrl,
+                  status:"stop"
+                })
+              }
               
-      } catch (error) {
-          console.log(error); 
-          res.status(500).render('error-500', { error });
-      }
+          } catch (error) {
+              console.log(error); 
+              res.status(500).render('error-500', { error });
+          }
     },
    
   
@@ -100,12 +105,13 @@ var controller = {
           Category: cat
         },
         offset: Number(req.query.page) ? Number(req.query.page) * 5 : 0 ,
-        limit: 6     //Number(req.query.page) ? Number(req.query.page) * 5 : 5
+        limit: 6     
         });
-        
+        console.log(products.rows)
+        console.log(products.rows.length)
         if(products.rows.length = 6 ){        
-          console.log(products.count)
-          console.log(products.rows.length)
+          
+          
           products.rows.pop()
           let status = "continue" 
           res.json({status,products:products.rows})
@@ -115,8 +121,6 @@ var controller = {
           let status = "stop"
           res.json({status,products:products.rows})
         }
-
-
     }catch (error) {
       console.log(error); 
       res.status(500).render('error-500', { error });

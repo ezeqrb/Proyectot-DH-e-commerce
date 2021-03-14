@@ -9,7 +9,7 @@ const db = require("../../database/models");
 // Cantidad de ventas realizadas 
 
 let controller = {
-    countProducts: async function (req, res , next) {
+    countProducts: async function (req, res) {
         
         const quantity ={
             status : "200",
@@ -21,7 +21,7 @@ let controller = {
         }
         return res.status(201).json(quantity);
     },
-    countUsers: async function (req, res , next) {
+    countUsers: async function (req, res ) {
         
         const users ={
             status : "200",

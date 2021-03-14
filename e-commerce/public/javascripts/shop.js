@@ -2,18 +2,13 @@
 var sportCheck = document.querySelectorAll('.form-check input')
 var vermas = document.getElementById('vermas')
 var prods = document.querySelectorAll('.cards')
-console.log(document.URL)
-console.log(vermas)
-console.log(prods)
+
+
+
 let click = 0 
-
-
-console.log(document.URL)
 let asd = document.URL.slice(document.URL.lastIndexOf('/')+1)
-console.log(asd)
 
 
-if(prods.length<5){
 
     vermas.addEventListener('click', ()=> {
         click = click + 1;
@@ -44,9 +39,7 @@ if(prods.length<5){
             })
 
     })
-}else{
-    vermas.style.display="none"
-}
+
 /*
 
 inputs.forEach((sportCheck) =>{

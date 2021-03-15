@@ -65,8 +65,16 @@
                     
                 </div>
                 <div class="products">
-                    <span>1 PRODUCTO</span>
-                    <span>$7800</span>
+                    <span> 
+                        <%= cart.Products.length %> PRODUCTOS</span>
+                    <span>
+                        <% for(let i=0; i< cart.Products.length; i++) { %>
+                            <% var precio = Number (cart.Products[i].Price) %>
+                            <% var total = total +precio %>
+                            <%= total %> 
+
+                        <% } %>
+                    </span>
                 </div>
                 <div class="deliver">
                     <span>ENVIO</span>

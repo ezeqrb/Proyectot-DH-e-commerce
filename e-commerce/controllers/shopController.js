@@ -116,7 +116,7 @@ var controller = {
   },
   
   checkout: function(res,req, next){
-    console.log(req.body)
+    console.log(req.session.user)
     db.Cart.findOne({
       where:{
       user_id: req.session.user.id,

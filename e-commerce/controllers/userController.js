@@ -29,13 +29,14 @@ var controller = {
             res.send('error')
         })
         }else{
-            res.send("No tiene acceso a este usuario")
+            res.redirect('/')
         }
 
     },
 
     //Actualizar Usuario
     edit: function(req, res) {
+        if(req.params.id == req.session.user.id){
         db.User.findByPk(req.params.id)
             .then(function(user){
                 res.render('updateUsers',{user:user})
@@ -43,6 +44,9 @@ var controller = {
             console.log(error)
             res.send('error')
         })
+    }else{
+        res.redirect('/')
+    }
     },
     update: function(req, res) {
         db.User.update({
@@ -58,12 +62,16 @@ var controller = {
         res.redirect('/');
     },  
     delete: function(req, res) {
+        if(req.params.id == req.session.user.id){
         db.User.destroy({
             where:{
                 idusers: req.params.id
             }
         })
         res.redirect('/admin');
+    }else{
+        res.redirect('/')
+    }
     },  
 
 

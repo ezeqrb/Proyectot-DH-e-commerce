@@ -89,7 +89,7 @@ var controller = {
             console.log(error)
             res.send('error')
         })
-    
+    // IMPLEMENTAR LOGICA DE MANDAR 5 DE HOBRE Y 5 DE MUJER 
 },
     logout: function(req , res , next){
         if (req.session) {

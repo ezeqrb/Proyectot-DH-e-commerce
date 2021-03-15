@@ -11,11 +11,19 @@ var controller = {
             state: "open"},
             include: db.Product
         })
-            .then (cart => res.render('cart',{cart:cart}))
+        .then(function(cart){
+            db.cart_product.findOne({
               
-            
-    
-      //  }) 
+              where:{
+                Cart_id: cart.id
+              },
+              include: db.Product
+            }) 
+            .then (function(r){
+              res.send(r)
+              //res.render("cart", {products:r})
+            })
+        }) 
             .catch (function (error){
                 console.log (error)
                 res.redirect ("/home")

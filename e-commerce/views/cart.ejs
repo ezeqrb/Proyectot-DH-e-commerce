@@ -18,6 +18,7 @@
     <div class="contenedor">
         <main>
             <!---- tarjeta de producto-->
+            <% if(cart){ %>
             <% for(let i=0; i< cart.Products.length; i++) { %>
               
             <div class="tarjeta">
@@ -42,6 +43,9 @@
                 </div>
             </div>
             <% } %>
+            <% }else{ %>
+                <h3>No tenes productos en el carrito</h3>
+                <% } %>
             
             <!---- Botón de pago --->
             <div class="pay">

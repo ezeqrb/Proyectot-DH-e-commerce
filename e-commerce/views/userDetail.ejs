@@ -39,7 +39,7 @@
                 
                 <div class="info">
                     
-                        <img class="avatar" src="/images/img_avatar.png" alt="Avatar">
+                        
                        <h1>Hola <%= users.username %> !</h1> 
                        <div style="display: flex; flex-direction: column;"><p>Para editar tu informacion hace click aqui!</p>
                         <a href="/users/<%= users.idusers %>/edit"><button class="btn btn-primary">Editar</button></a></div>
@@ -50,20 +50,15 @@
             <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                 MIS COMPRAS
             </div>
-         
-
-                </div> 
-
-                </div>
-                <% if( users.admin == "true"){%>
-                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-                    <div class="adminButtons">
-                        <button type="button" class="btn btn-primary">LISTAR USURIOS</button>
-                        <button type="button" class="btn btn-primary">LISTAR PRODUCTOS</button>
-                    </div>
+            <% if( users.admin == "true"){%>
+            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                <div class="adminButtons">
+                <a href="/admin"><button type="button" class="btn btn-primary">IR AL PANEL DE ADMINISTRADOR</button></a> 
                     
                 </div>
-                <% } %>
+                
+            </div>
+            <% } %>
             </div>
         </div>
     </div>

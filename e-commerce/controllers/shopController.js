@@ -59,7 +59,7 @@ var controller = {
             offset: 0  , 
             limit: 6     //Number(req.query.page) ? Number(req.query.page) * 5 : 5
             });
-              if(products.rows.length = 6 ){
+              if(products.rows.length == 6 ){
                 
                 products.rows.pop()
                 
@@ -86,7 +86,8 @@ var controller = {
    
   
   vermas: async (req, res) => {
-    let cat = toString(req.query.category)
+    let cat = req.query.category
+    console.log(cat + "hoolaaa")
     try {
       let products = await db.Product.findAndCountAll({
         where: {
@@ -95,13 +96,13 @@ var controller = {
         offset: Number(req.query.page) ? Number(req.query.page) * 5 : 0 ,
         limit: 6     
         });
-        console.log(products.rows)
-        console.log(products.rows.length)
-        if(products.rows.length = 6 ){        
+       
+        if(products.rows.length == 6 ){        
           
           
           products.rows.pop()
           let status = "continue" 
+          console.log(products.rows)
           res.json({status,products:products.rows})
 
         }else {
@@ -115,8 +116,8 @@ var controller = {
     }
   },
   
-  checkout: function(res,req, next){
-    console.log(req.session.user)
+  checkout: async (req,res) => {
+   
     db.Cart.findOne({
       where:{
       user_id: req.session.user.id,

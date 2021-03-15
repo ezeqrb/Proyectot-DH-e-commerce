@@ -9,11 +9,11 @@ router.get('/mujer', shopController.genero);
 router.get('/kid', shopController.genero);
 router.get('/marcas', shopController.marcas);
 router.get('/product', shopController.product)
-
+router.post('/checkout', shopController.checkout);
 
 // ** API ** // 
 router.get('/vermas', shopController.vermas);
-router.post('/checkout', shopController.checkout);
+
 
 
 

@@ -13,7 +13,7 @@
     <%- include("./partials/header.ejs")%>
 
       
-
+  <% console.log(status) %>
 
     <div class="content">
 
@@ -140,7 +140,7 @@
 
 
           <% console.log(status) %>
-          <% if( status = "continue"){ %>
+          <% if( status != "stop"){ %>
             <div class="vermas" >
               <button type="button" class="vermas" id="vermas">Ver mas productos</button>
             </div>

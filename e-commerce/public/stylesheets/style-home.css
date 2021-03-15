@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-*{
-    font-family: 'Oswald', sans-serif;
-}
+
 @keyframes bounce {
 	0%, 100%, 20%, 50%, 80% {
 		-webkit-transform: translateY(0);

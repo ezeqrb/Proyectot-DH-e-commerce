@@ -14,7 +14,7 @@ var controller = {
         .then (cart => res.render('cart',{cart:cart}))
             .catch (function (error){
                 console.log (error)
-                res.redirect ("/home")
+                res.redirect ("/")
             })
         .catch(function(error){
             db.Cart.create({
@@ -22,8 +22,7 @@ var controller = {
                 state:"open"
             })
             .then (function(cart){
-                cart.addCart_products(req.params.id) 
-                .then (res.redirect ("/shop/hombre"))
+                res.render ("cart")
         
             }) 
           
@@ -115,6 +114,7 @@ var controller = {
       res.status(500).render('error-500', { error });
     }
   },
+  
   checkout: function(res,req, next){
     console.log(req.body)
     db.Cart.findOne({
@@ -134,7 +134,7 @@ var controller = {
    
   })
   .then (function (s){
-    res.redirect ("/home")
+    res.redirect ("/")
   })
   }
 }

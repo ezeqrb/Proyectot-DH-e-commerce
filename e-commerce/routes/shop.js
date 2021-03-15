@@ -13,7 +13,7 @@ router.get('/product', shopController.product)
 
 // ** API ** // 
 router.get('/vermas', shopController.vermas);
-router.get('/checkout', shopController.checkout);
+router.post('/checkout', shopController.checkout);
 
 
 

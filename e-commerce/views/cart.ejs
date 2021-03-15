@@ -17,22 +17,21 @@
         <br><br><br><br>
     <div class="contenedor">
         <main>
-
             <!---- tarjeta de producto-->
-            
-            <% for(let i=0; i< products.length; i++) { %>
+            <% for(let i=0; i< cart.Products.length; i++) { %>
+              
             <div class="tarjeta">
                 
                     <div class="card mb-3" >
                         <div class="row g-0">
                           <div class="col-md-4">
-                            <img src="/images/shoes/1-500x500.jpg" alt="..." style="max-width: 250px;">
+                            <img src="/images/Products/<%= cart.Products[i].Picture %>" alt="..." style="max-width: 250px;">
                           </div>
                           <div class="col-md-8">
                             <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                              <h5 class="card-title"><%= cart.Products[i].Name %></h5>
+                              <p class="card-text"><%= cart.Products[i].Description %></p>
+                              <p class="card-text"><small class="text-muted"><%= cart.Products[i].Brand %></small></p>
                             </div>
                           </div>
                         </div>
@@ -46,7 +45,9 @@
 
             <!---- Botón de pago -->
             <div class="pay">
-                <button type="button" class="btn btn-outline-dark">Checkout</button>
+                <form action="/shop/checkout" method="POST" >
+               <button type="submit" class="btn btn-outline-dark">Checkout</button>
+            </form>
             </div>
             <!---- informacion extra-->
         </main>

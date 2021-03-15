@@ -5,6 +5,9 @@
     
 }
 
+.card {
+    width: 60vw
+}
 
 .contenedor{
 display:flex;

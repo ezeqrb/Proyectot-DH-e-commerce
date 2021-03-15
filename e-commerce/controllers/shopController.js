@@ -8,21 +8,14 @@ var controller = {
         db.Cart.findOne({
             where:{
             user_id: req.session.user.id,
-            state: "open"}
+            state: "open"},
+            include: db.Product
         })
-        .then(function(cart){
-            db.cart_product.findAll({
-              include: db.Product,
-              where:{
-                Cart_id: cart.dataValues.id
-              }
-            }) 
-            .then (function(r){
-              res.send(r)
-              //res.render("cart", {products:r})
-            })
+            .then (cart => res.render('cart',{cart:cart}))
+              
+            
     
-        }) 
+      //  }) 
             .catch (function (error){
                 console.log (error)
                 res.redirect ("/home")
@@ -127,18 +120,21 @@ var controller = {
     }
   },
   checkout: function(res,req, next){
+    console.log(req.body)
     db.Cart.findOne({
       where:{
       user_id: req.session.user.id,
       state: "open"}
-  }).then(function(a){
+  })
+  .then(function(a){
+    console.log(a)
     db.Cart.update({
       state: "closed"
   },{
   where: {
     id: a.dataValues.id  
   }
-  });
+  })
    
   })
   .then (function (s){
@@ -150,8 +146,6 @@ var controller = {
 
 module.exports = controller
 
-//Optimizar controladores 3 Listo 
-// Optimizar vermas api  3 
 
 
 
